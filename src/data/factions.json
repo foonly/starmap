@@ -3,9 +3,9 @@
 		"id": "alliance",
 		"name": "Alliance of Free Worlds",
 		"color": "rgba(100, 100, 100, 0.15)",
-		"x": 220,
-		"y": 250,
-		"fontSize": 26,
+		"x": 298,
+		"y": 259,
+		"fontSize": 17,
 		"rotate": 0
 	},
 	{
@@ -23,7 +23,7 @@
 		"color": "rgba(100, 100, 100, 0.15)",
 		"x": 680,
 		"y": 180,
-		"fontSize": 26,
+		"fontSize": 22,
 		"rotate": 0
 	},
 	{

@@ -6,11 +6,15 @@ import Starmap from "./components/Starmap.vue";
 import ControlPanel from "./components/ControlPanel.vue";
 import SystemInspector from "./components/SystemInspector.vue";
 
-import systemsData from "./data/systems.json";
-import connectionsData from "./data/connections.json";
-import factionsData from "./data/factions.json";
+import systemsDataRaw from "./data/systems.json";
+import connectionsDataRaw from "./data/connections.json";
+import factionsDataRaw from "./data/factions.json";
 
 // Reactive State
+const systemsData = ref(JSON.parse(JSON.stringify(systemsDataRaw)));
+const connectionsData = ref(JSON.parse(JSON.stringify(connectionsDataRaw)));
+const factionsData = ref(JSON.parse(JSON.stringify(factionsDataRaw)));
+
 const searchQuery = ref("");
 const selectedFactionId = ref("");
 const selectedSystemId = ref(null);
@@ -18,6 +22,7 @@ const hoveredSystemId = ref(null);
 const originId = ref(null);
 const destinationId = ref(null);
 const theme = ref("dark");
+const isEditMode = ref(false);
 
 // Hyperlane toggles
 const activeLanes = ref({
@@ -29,14 +34,19 @@ const activeLanes = ref({
 
 // Compute connections based on active lane filters
 const activeConnections = computed(() => {
-	return connectionsData.filter((conn) => activeLanes.value[conn.type]);
+	return connectionsData.value.filter((conn) => activeLanes.value[conn.type]);
 });
 
 // Search & Filter systems
 const filteredSystems = computed(() => {
-	return systemsData.filter((sys) => {
+	return systemsData.value.filter((sys) => {
 		// 1. Faction filter
-		if (selectedFactionId.value && sys.faction !== selectedFactionId.value) {
+		if (selectedFactionId.value === "independent") {
+			if (sys.faction && sys.faction !== "") return false;
+		} else if (
+			selectedFactionId.value &&
+			sys.faction !== selectedFactionId.value
+		) {
 			return false;
 		}
 
@@ -63,13 +73,14 @@ const filteredSystems = computed(() => {
 
 // Get system & faction record for the active inspector selection
 const selectedSystem = computed(() => {
-	return systemsData.find((s) => s.id === selectedSystemId.value) || null;
+	return systemsData.value.find((s) => s.id === selectedSystemId.value) || null;
 });
 
 const selectedSystemFaction = computed(() => {
 	if (!selectedSystem.value) return null;
 	return (
-		factionsData.find((f) => f.id === selectedSystem.value.faction) || null
+		factionsData.value.find((f) => f.id === selectedSystem.value.faction) ||
+		null
 	);
 });
 
@@ -80,13 +91,13 @@ const findShortestPath = (startId, endId) => {
 
 	// Build adjacency list utilizing only ACTIVE hyperlanes
 	const adj = {};
-	systemsData.forEach((sys) => {
+	systemsData.value.forEach((sys) => {
 		adj[sys.id] = [];
 	});
 
 	activeConnections.value.forEach((conn) => {
-		const fromSys = systemsData.find((s) => s.id === conn.from);
-		const toSys = systemsData.find((s) => s.id === conn.to);
+		const fromSys = systemsData.value.find((s) => s.id === conn.from);
+		const toSys = systemsData.value.find((s) => s.id === conn.to);
 
 		if (fromSys && toSys) {
 			// Euclidean distance coordinates calculation
@@ -104,7 +115,7 @@ const findShortestPath = (startId, endId) => {
 	const previous = {};
 	const queue = [];
 
-	systemsData.forEach((sys) => {
+	systemsData.value.forEach((sys) => {
 		distances[sys.id] = Infinity;
 		previous[sys.id] = null;
 	});
@@ -179,6 +190,99 @@ const clearRouteSelection = () => {
 	destinationId.value = null;
 };
 
+const handleUpdateSystem = (updatedSystem) => {
+	const index = systemsData.value.findIndex((s) => s.id === updatedSystem.id);
+	if (index !== -1) {
+		systemsData.value[index] = updatedSystem;
+	}
+};
+
+const handleDeleteSystem = (sysId) => {
+	if (!confirm(`Are you sure you want to delete ${sysId}?`)) return;
+
+	// Remove system
+	systemsData.value = systemsData.value.filter((s) => s.id !== sysId);
+
+	// Remove associated connections
+	connectionsData.value = connectionsData.value.filter(
+		(c) => c.from !== sysId && c.to !== sysId,
+	);
+
+	if (selectedSystemId.value === sysId) {
+		selectedSystemId.value = null;
+	}
+	if (originId.value === sysId) originId.value = null;
+	if (destinationId.value === sysId) destinationId.value = null;
+};
+
+const handleAddSystem = () => {
+	const newId = `new_system_${Date.now()}`;
+	const newSystem = {
+		id: newId,
+		name: "New System",
+		type: "star",
+		color: "#ffffff",
+		x: 500,
+		y: 400,
+		faction: "",
+		planets: [],
+		bases: [],
+		description: "Newly discovered star system.",
+	};
+	systemsData.value.push(newSystem);
+	selectedSystemId.value = newId;
+};
+
+const handleAddConnection = ({ from, to, type }) => {
+	const existing = connectionsData.value.find(
+		(c) => (c.from === from && c.to === to) || (c.from === to && c.to === from),
+	);
+
+	if (existing) {
+		existing.type = type;
+	} else {
+		connectionsData.value.push({ from, to, type });
+	}
+};
+
+const handleUpdateFaction = (updatedFaction) => {
+	const index = factionsData.value.findIndex((f) => f.id === updatedFaction.id);
+	if (index !== -1) {
+		factionsData.value[index] = updatedFaction;
+	}
+};
+
+const handleRemoveConnection = ({ from, to }) => {
+	connectionsData.value = connectionsData.value.filter(
+		(c) =>
+			!((c.from === from && c.to === to) || (c.from === to && c.to === from)),
+	);
+};
+
+const downloadData = () => {
+	const data = {
+		systems: systemsData.value,
+		connections: connectionsData.value,
+		factions: factionsData.value,
+	};
+
+	Object.entries(data).forEach(([key, value]) => {
+		const blob = new Blob([JSON.stringify(value, null, "\t")], {
+			type: "application/json",
+		});
+		const url = URL.createObjectURL(blob);
+		const a = document.createElement("a");
+		a.href = url;
+		a.download = `${key}.json`;
+		a.click();
+		URL.revokeObjectURL(url);
+	});
+};
+
+const toggleEditMode = () => {
+	isEditMode.value = !isEditMode.value;
+};
+
 // Class-based Theme Toggler
 const toggleTheme = () => {
 	theme.value = theme.value === "dark" ? "light" : "dark";
@@ -200,6 +304,13 @@ onMounted(() => {
 	const savedTheme = localStorage.getItem("theme");
 	theme.value = savedTheme ? savedTheme : "dark";
 	applyTheme();
+
+	// Hidden shortcut to toggle edit mode: Alt + Shift + E
+	window.addEventListener("keydown", (e) => {
+		if (e.altKey && e.shiftKey && e.key === "E") {
+			toggleEditMode();
+		}
+	});
 });
 </script>
 
@@ -224,7 +335,9 @@ onMounted(() => {
 					>
 						🌌 STARNAV
 						<span
-							class="text-blue-500 text-xs font-bold font-mono px-1.5 py-0.5 bg-blue-500/10 rounded-md border border-blue-500/20"
+							@click="toggleEditMode"
+							class="cursor-default select-none text-blue-500 text-xs font-bold font-mono px-1.5 py-0.5 bg-blue-500/10 rounded-md border border-blue-500/20 hover:bg-blue-500/20 transition-colors"
+							title="System Version"
 							>V1.0</span
 						>
 					</h1>
@@ -242,7 +355,27 @@ onMounted(() => {
 			</div>
 
 			<!-- Quick Actions (Theme Switch) -->
-			<div>
+			<div class="flex items-center gap-2">
+				<button
+					v-if="isEditMode"
+					@click="downloadData"
+					class="px-3 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 text-white border border-blue-600 transition-colors flex items-center gap-2 text-xs font-bold font-mono animate-pulse"
+					title="Download JSON Data"
+				>
+					DOWNLOAD DATA
+				</button>
+
+				<button
+					v-if="isEditMode"
+					@click="toggleEditMode"
+					class="px-3 py-2 rounded-lg bg-amber-500/10 border border-amber-500/50 text-amber-600 dark:text-amber-400 text-xs font-bold font-mono hover:bg-amber-500/20 transition-colors"
+					title="Exit Edit Mode"
+				>
+					EXIT EDITING
+				</button>
+
+				<div class="w-px h-6 bg-slate-200 dark:bg-slate-800 mx-1"></div>
+
 				<button
 					@click="toggleTheme"
 					class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700/50 transition-colors flex items-center justify-center"
@@ -267,8 +400,10 @@ onMounted(() => {
 				:shortest-path="shortestPath"
 				:origin-id="originId"
 				:destination-id="destinationId"
+				:is-edit-mode="isEditMode"
 				@select-system="handleSelectSystem"
 				@hover-system="handleHoverSystem"
+				@update-system="handleUpdateSystem"
 			/>
 
 			<!-- Left Console Control Panel -->
@@ -281,10 +416,13 @@ onMounted(() => {
 				:origin-id="originId"
 				:destination-id="destinationId"
 				:shortest-path="shortestPath"
+				:is-edit-mode="isEditMode"
 				@toggle-lane="toggleLaneType"
 				@swap-route="swapRoutePoints"
 				@clear-route="clearRouteSelection"
 				@select-system="handleSelectSystem"
+				@add-system="handleAddSystem"
+				@update-faction="handleUpdateFaction"
 			/>
 
 			<!-- Right Slideway Inspector Sidebar -->
@@ -293,12 +431,18 @@ onMounted(() => {
 				:faction="selectedSystemFaction"
 				:systems="systemsData"
 				:connections="connectionsData"
+				:factions="factionsData"
 				:origin-id="originId"
 				:destination-id="destinationId"
+				:is-edit-mode="isEditMode"
 				@close="handleSelectSystem(null)"
 				@select-system="handleSelectSystem"
 				@set-origin="setRouteOrigin"
 				@set-destination="setRouteDestination"
+				@update-system="handleUpdateSystem"
+				@delete-system="handleDeleteSystem"
+				@add-connection="handleAddConnection"
+				@remove-connection="handleRemoveConnection"
 			/>
 		</main>
 	</div>

@@ -39,9 +39,13 @@ const props = defineProps({
 		type: String,
 		default: null,
 	},
+	isEditMode: {
+		type: Boolean,
+		default: false,
+	},
 });
 
-const emit = defineEmits(["select-system", "hover-system"]);
+const emit = defineEmits(["select-system", "hover-system", "update-system"]);
 
 // Pan & Zoom State
 const svgContainer = ref(null);
@@ -50,6 +54,10 @@ const panX = ref(100);
 const panY = ref(60);
 const isDragging = ref(false);
 const dragStart = ref({ x: 0, y: 0 });
+
+// Edit Mode Drag State
+const draggedSystemId = ref(null);
+const systemDragOffset = ref({ x: 0, y: 0 });
 
 // Compute direct transform string for the SVG main group
 const transformString = computed(() => {
@@ -60,6 +68,12 @@ const transformString = computed(() => {
 const onMouseDown = (e) => {
 	// Only pan on left click
 	if (e.button !== 0) return;
+
+	// If clicking a system in edit mode, don't pan the map
+	if (props.isEditMode && draggedSystemId.value) {
+		return;
+	}
+
 	isDragging.value = true;
 	dragStart.value = {
 		x: e.clientX - panX.value,
@@ -68,6 +82,25 @@ const onMouseDown = (e) => {
 };
 
 const onMouseMove = (e) => {
+	if (props.isEditMode && draggedSystemId.value) {
+		const rect = svgContainer.value.getBoundingClientRect();
+		const mouseX = e.clientX - rect.left;
+		const mouseY = e.clientY - rect.top;
+
+		const newX = Math.round((mouseX - panX.value) / zoom.value);
+		const newY = Math.round((mouseY - panY.value) / zoom.value);
+
+		const star = props.systems.find((s) => s.id === draggedSystemId.value);
+		if (star) {
+			emit("update-system", {
+				...star,
+				x: newX,
+				y: newY,
+			});
+		}
+		return;
+	}
+
 	if (!isDragging.value) return;
 	panX.value = e.clientX - dragStart.value.x;
 	panY.value = e.clientY - dragStart.value.y;
@@ -75,6 +108,13 @@ const onMouseMove = (e) => {
 
 const onMouseUp = () => {
 	isDragging.value = false;
+	draggedSystemId.value = null;
+};
+
+const onSystemMouseDown = (e, sysId) => {
+	if (!props.isEditMode) return;
+	e.stopPropagation();
+	draggedSystemId.value = sysId;
 };
 
 const onWheel = (e) => {
@@ -315,6 +355,7 @@ const getLaneColor = (type) => {
 						:x="fac.x"
 						:y="fac.y"
 						:font-size="fac.fontSize"
+						:transform="`rotate(${fac.rotate || 0}, ${fac.x}, ${fac.y})`"
 						text-anchor="middle"
 						class="font-display font-black tracking-[0.25em] select-none pointer-events-none fill-slate-300/40 dark:fill-slate-800/35 uppercase"
 					>
@@ -383,10 +424,18 @@ const getLaneColor = (type) => {
 					<g
 						v-for="star in systems"
 						:key="star.id"
-						class="group cursor-pointer"
+						:class="[
+							'group cursor-pointer',
+							isEditMode && draggedSystemId === star.id
+								? 'cursor-grabbing'
+								: isEditMode
+									? 'cursor-grab'
+									: 'cursor-pointer',
+						]"
 						@mouseenter="emit('hover-system', star.id)"
 						@mouseleave="emit('hover-system', null)"
 						@click="emit('select-system', star.id)"
+						@mousedown="onSystemMouseDown($event, star.id)"
 					>
 						<!-- A. Dynamic Map Indicators (Origin / Dest / Selection Rings) -->
 						<!-- Active Origin Pulse (Green) -->

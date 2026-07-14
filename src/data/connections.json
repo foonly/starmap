@@ -1,72 +1,362 @@
 [
-	{ "from": "sol", "to": "valhalla", "type": "class 3" },
-	{ "from": "valhalla", "to": "sinistra", "type": "class 3" },
-	{ "from": "sinistra", "to": "ghienna", "type": "class 3" },
-	{ "from": "ghienna", "to": "capella", "type": "class 2" },
-	{ "from": "ghienna", "to": "enif", "type": "class 1" },
-	{ "from": "ghienna", "to": "aldhafera", "type": "class 1" },
-	{ "from": "valhalla", "to": "vega", "type": "class 1" },
-	{ "from": "vega", "to": "holborn", "type": "class 1" },
-	{ "from": "holborn", "to": "kelsen", "type": "class 1" },
-	{ "from": "kelsen", "to": "the_cradle", "type": "class 1" },
-	{ "from": "the_cradle", "to": "vega", "type": "class 2" },
-	{ "from": "the_cradle", "to": "holborn", "type": "class 2" },
-	{ "from": "the_cradle", "to": "kelsen", "type": "class 2" },
-	{ "from": "the_cradle", "to": "krane_daes", "type": "class 2" },
-	{ "from": "krane_daes", "to": "io", "type": "class 2" },
-	{ "from": "io", "to": "the_edge_bh", "type": "class 3" },
-	{ "from": "nair_al_saif", "to": "sinistra", "type": "class 3" },
-	{ "from": "nair_al_saif", "to": "aldhafera", "type": "class 3" },
-	{ "from": "nair_al_saif", "to": "rana", "type": "class 3" },
-	{ "from": "nair_al_saif", "to": "nashira", "type": "class 3" },
-	{ "from": "nair_al_saif", "to": "adrianus", "type": "class 3" },
-	{ "from": "nair_al_saif", "to": "the_edge_bh", "type": "class 4" },
-	{ "from": "nashira", "to": "terebel", "type": "class 2" },
-	{ "from": "nashira", "to": "zaniah", "type": "class 1" },
-	{ "from": "nashira", "to": "adrianus", "type": "class 1" },
-	{ "from": "adrianus", "to": "zaniah", "type": "class 1" },
-	{ "from": "adrianus", "to": "tyl", "type": "class 1" },
-	{ "from": "the_edge_bh", "to": "rana", "type": "class 3" },
-	{ "from": "the_edge_bh", "to": "shaula", "type": "class 3" },
-	{ "from": "the_edge_bh", "to": "betria", "type": "class 3" },
-	{ "from": "rana", "to": "fornax", "type": "class 2" },
-	{ "from": "fornax", "to": "kelsen", "type": "class 1" },
-	{ "from": "fornax", "to": "meka", "type": "class 1" },
-	{ "from": "meka", "to": "pictor", "type": "class 1" },
-	{ "from": "pictor", "to": "enif", "type": "class 1" },
-	{ "from": "pictor", "to": "minkar", "type": "class 1" },
-	{ "from": "pictor", "to": "kastra", "type": "class 1" },
-	{ "from": "kastra", "to": "aldhafera", "type": "class 1" },
-	{ "from": "kastra", "to": "ghienna", "type": "class 2" },
-	{ "from": "shaula", "to": "rana", "type": "class 2" },
-	{ "from": "valhalla", "to": "valhalla_nexus", "type": "class 2" },
-	{ "from": "valhalla", "to": "valhalla_south", "type": "class 1" },
-	{ "from": "sol", "to": "vanguard_prime", "type": "class 3" },
-	{ "from": "vanguard_prime", "to": "vanguard_alpha", "type": "class 1" },
-	{ "from": "vanguard_alpha", "to": "vanguard_beta", "type": "class 1" },
-	{ "from": "vanguard_beta", "to": "valhalla_south", "type": "class 2" },
-	{ "from": "sinistra", "to": "sinistra_minor", "type": "class 1" },
-	{ "from": "sinistra_minor", "to": "valhalla_nexus", "type": "class 3" },
-	{ "from": "capella", "to": "capella_minor", "type": "class 1" },
-	{ "from": "nair_al_saif", "to": "nair_gateway", "type": "class 3" },
-	{ "from": "nair_gateway", "to": "sinistra", "type": "class 3" },
-	{ "from": "adrianus", "to": "adrianus_outpost", "type": "class 1" },
-	{ "from": "terebel", "to": "terebel_outpost", "type": "class 1" },
-	{ "from": "shaula", "to": "ombra_outpost_alpha", "type": "class 2" },
-	{ "from": "ombra_outpost_alpha", "to": "ombra_hub", "type": "class 1" },
-	{ "from": "ombra_hub", "to": "ombra_deep_outpost", "type": "class 1" },
-	{ "from": "ombra_hub", "to": "void_sentry", "type": "class 1" },
-	{ "from": "void_sentry", "to": "the_edge_bh", "type": "class 3" },
-	{ "from": "valhalla_south", "to": "maestia_gate", "type": "class 3" },
-	{ "from": "maestia_gate", "to": "maestia_prime", "type": "class 3" },
-	{ "from": "maestia_prime", "to": "aegis", "type": "class 2" },
-	{ "from": "aegis", "to": "crown_jewel", "type": "class 1" },
-	{ "from": "maestia_prime", "to": "titan_forge", "type": "class 1" },
-	{ "from": "titan_forge", "to": "valhalla_south", "type": "class 2" },
-	{ "from": "io", "to": "edge_sentinel", "type": "class 2" },
-	{ "from": "edge_sentinel", "to": "terminus", "type": "class 1" },
-	{ "from": "terminus", "to": "betria", "type": "class 1" },
-	{ "from": "betria", "to": "outer_haven", "type": "class 1" },
-	{ "from": "outer_haven", "to": "edge_outpost_9", "type": "class 1" },
-	{ "from": "edge_outpost_9", "to": "the_edge_bh", "type": "class 3" }
+	{
+		"from": "sol",
+		"to": "valhalla",
+		"type": "class 3"
+	},
+	{
+		"from": "valhalla",
+		"to": "sinistra",
+		"type": "class 3"
+	},
+	{
+		"from": "sinistra",
+		"to": "ghienna",
+		"type": "class 3"
+	},
+	{
+		"from": "ghienna",
+		"to": "capella",
+		"type": "class 2"
+	},
+	{
+		"from": "ghienna",
+		"to": "enif",
+		"type": "class 1"
+	},
+	{
+		"from": "ghienna",
+		"to": "aldhafera",
+		"type": "class 1"
+	},
+	{
+		"from": "valhalla",
+		"to": "vega",
+		"type": "class 1"
+	},
+	{
+		"from": "vega",
+		"to": "holborn",
+		"type": "class 1"
+	},
+	{
+		"from": "holborn",
+		"to": "kelsen",
+		"type": "class 1"
+	},
+	{
+		"from": "kelsen",
+		"to": "the_cradle",
+		"type": "class 1"
+	},
+	{
+		"from": "the_cradle",
+		"to": "vega",
+		"type": "class 1"
+	},
+	{
+		"from": "the_cradle",
+		"to": "holborn",
+		"type": "class 1"
+	},
+	{
+		"from": "the_cradle",
+		"to": "kelsen",
+		"type": "class 2"
+	},
+	{
+		"from": "the_cradle",
+		"to": "krane_daes",
+		"type": "class 2"
+	},
+	{
+		"from": "krane_daes",
+		"to": "io",
+		"type": "class 2"
+	},
+	{
+		"from": "io",
+		"to": "the_edge_bh",
+		"type": "class 3"
+	},
+	{
+		"from": "nair_al_saif",
+		"to": "sinistra",
+		"type": "class 3"
+	},
+	{
+		"from": "nair_al_saif",
+		"to": "aldhafera",
+		"type": "class 3"
+	},
+	{
+		"from": "nair_al_saif",
+		"to": "rana",
+		"type": "class 3"
+	},
+	{
+		"from": "nair_al_saif",
+		"to": "nashira",
+		"type": "class 3"
+	},
+	{
+		"from": "nair_al_saif",
+		"to": "adrianus",
+		"type": "class 3"
+	},
+	{
+		"from": "nair_al_saif",
+		"to": "the_edge_bh",
+		"type": "class 4"
+	},
+	{
+		"from": "nashira",
+		"to": "terebel",
+		"type": "class 2"
+	},
+	{
+		"from": "nashira",
+		"to": "zaniah",
+		"type": "class 1"
+	},
+	{
+		"from": "nashira",
+		"to": "adrianus",
+		"type": "class 1"
+	},
+	{
+		"from": "adrianus",
+		"to": "zaniah",
+		"type": "class 1"
+	},
+	{
+		"from": "adrianus",
+		"to": "tyl",
+		"type": "class 1"
+	},
+	{
+		"from": "the_edge_bh",
+		"to": "rana",
+		"type": "class 3"
+	},
+	{
+		"from": "the_edge_bh",
+		"to": "shaula",
+		"type": "class 3"
+	},
+	{
+		"from": "the_edge_bh",
+		"to": "betria",
+		"type": "class 3"
+	},
+	{
+		"from": "rana",
+		"to": "fornax",
+		"type": "class 2"
+	},
+	{
+		"from": "fornax",
+		"to": "kelsen",
+		"type": "class 1"
+	},
+	{
+		"from": "fornax",
+		"to": "meka",
+		"type": "class 1"
+	},
+	{
+		"from": "meka",
+		"to": "pictor",
+		"type": "class 1"
+	},
+	{
+		"from": "pictor",
+		"to": "enif",
+		"type": "class 1"
+	},
+	{
+		"from": "pictor",
+		"to": "minkar",
+		"type": "class 1"
+	},
+	{
+		"from": "pictor",
+		"to": "kastra",
+		"type": "class 1"
+	},
+	{
+		"from": "kastra",
+		"to": "aldhafera",
+		"type": "class 1"
+	},
+	{
+		"from": "kastra",
+		"to": "ghienna",
+		"type": "class 2"
+	},
+	{
+		"from": "shaula",
+		"to": "rana",
+		"type": "class 2"
+	},
+	{
+		"from": "valhalla",
+		"to": "valhalla_nexus",
+		"type": "class 2"
+	},
+	{
+		"from": "valhalla",
+		"to": "valhalla_south",
+		"type": "class 1"
+	},
+	{
+		"from": "sol",
+		"to": "vanguard_prime",
+		"type": "class 3"
+	},
+	{
+		"from": "vanguard_prime",
+		"to": "vanguard_alpha",
+		"type": "class 1"
+	},
+	{
+		"from": "vanguard_alpha",
+		"to": "vanguard_beta",
+		"type": "class 1"
+	},
+	{
+		"from": "vanguard_beta",
+		"to": "valhalla_south",
+		"type": "class 2"
+	},
+	{
+		"from": "sinistra",
+		"to": "sinistra_minor",
+		"type": "class 1"
+	},
+	{
+		"from": "sinistra_minor",
+		"to": "valhalla_nexus",
+		"type": "class 3"
+	},
+	{
+		"from": "capella",
+		"to": "capella_minor",
+		"type": "class 1"
+	},
+	{
+		"from": "nair_al_saif",
+		"to": "nair_gateway",
+		"type": "class 3"
+	},
+	{
+		"from": "nair_gateway",
+		"to": "sinistra",
+		"type": "class 3"
+	},
+	{
+		"from": "adrianus",
+		"to": "adrianus_outpost",
+		"type": "class 1"
+	},
+	{
+		"from": "terebel",
+		"to": "terebel_outpost",
+		"type": "class 1"
+	},
+	{
+		"from": "shaula",
+		"to": "ombra_outpost_alpha",
+		"type": "class 2"
+	},
+	{
+		"from": "ombra_outpost_alpha",
+		"to": "ombra_hub",
+		"type": "class 1"
+	},
+	{
+		"from": "ombra_hub",
+		"to": "ombra_deep_outpost",
+		"type": "class 1"
+	},
+	{
+		"from": "ombra_hub",
+		"to": "void_sentry",
+		"type": "class 1"
+	},
+	{
+		"from": "void_sentry",
+		"to": "the_edge_bh",
+		"type": "class 3"
+	},
+	{
+		"from": "valhalla_south",
+		"to": "maestia_gate",
+		"type": "class 3"
+	},
+	{
+		"from": "maestia_gate",
+		"to": "maestia_prime",
+		"type": "class 3"
+	},
+	{
+		"from": "maestia_prime",
+		"to": "aegis",
+		"type": "class 2"
+	},
+	{
+		"from": "aegis",
+		"to": "crown_jewel",
+		"type": "class 1"
+	},
+	{
+		"from": "maestia_prime",
+		"to": "titan_forge",
+		"type": "class 1"
+	},
+	{
+		"from": "titan_forge",
+		"to": "valhalla_south",
+		"type": "class 2"
+	},
+	{
+		"from": "io",
+		"to": "edge_sentinel",
+		"type": "class 2"
+	},
+	{
+		"from": "edge_sentinel",
+		"to": "terminus",
+		"type": "class 1"
+	},
+	{
+		"from": "terminus",
+		"to": "betria",
+		"type": "class 1"
+	},
+	{
+		"from": "betria",
+		"to": "outer_haven",
+		"type": "class 1"
+	},
+	{
+		"from": "outer_haven",
+		"to": "edge_outpost_9",
+		"type": "class 1"
+	},
+	{
+		"from": "edge_outpost_9",
+		"to": "the_edge_bh",
+		"type": "class 3"
+	},
+	{
+		"from": "new_system_1784029965102",
+		"to": "sinistra_minor",
+		"type": "class 1"
+	},
+	{
+		"from": "new_system_1784030266232",
+		"to": "titan_forge",
+		"type": "class 1"
+	}
 ]

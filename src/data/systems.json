@@ -30,8 +30,14 @@
 			}
 		],
 		"bases": [
-			{ "name": "Luna Station", "type": "Orbital Trade Port" },
-			{ "name": "Phobos Command", "type": "Fleet Headquarters" }
+			{
+				"name": "Luna Station",
+				"type": "Orbital Trade Port"
+			},
+			{
+				"name": "Phobos Command",
+				"type": "Fleet Headquarters"
+			}
 		],
 		"description": "The cradle of human civilization and historical capital of the Free Alliance."
 	},
@@ -49,7 +55,10 @@
 				"name": "Singularity Research Sentry",
 				"type": "Scientific Research Hub"
 			},
-			{ "name": "Valhalla Gate Array", "type": "Mega Jump-Gate Complex" }
+			{
+				"name": "Valhalla Gate Array",
+				"type": "Mega Jump-Gate Complex"
+			}
 		],
 		"description": "A massive supermassive black hole. The sheer gravity well requires ships to exit jumps far out, making it a critical choke-point and trade gateway."
 	},
@@ -58,12 +67,15 @@
 		"name": "Sinistra Black Hole",
 		"type": "black_hole",
 		"color": "#000000",
-		"x": 460,
-		"y": 200,
+		"x": 525,
+		"y": 116,
 		"faction": "federation",
 		"planets": [],
 		"bases": [
-			{ "name": "Sinistra Sentry Station", "type": "Defense Platform" }
+			{
+				"name": "Sinistra Sentry Station",
+				"type": "Defense Platform"
+			}
 		],
 		"description": "A quiet, dark singularity nestled on the edge of Federation Territory. Jump corridors from here link deep into Free Space."
 	},
@@ -77,8 +89,14 @@
 		"faction": "federation",
 		"planets": [],
 		"bases": [
-			{ "name": "Sovereign Citadel", "type": "Imperial Fortress" },
-			{ "name": "Nair Transit Rings", "type": "Refueling Ring Grid" }
+			{
+				"name": "Sovereign Citadel",
+				"type": "Imperial Fortress"
+			},
+			{
+				"name": "Nair Transit Rings",
+				"type": "Refueling Ring Grid"
+			}
 		],
 		"description": "The premier nexus of Federation Space, dominated by heavy orbital infrastructure and monumental fleet garrisons."
 	},
@@ -91,7 +109,12 @@
 		"y": 650,
 		"faction": "the_edge",
 		"planets": [],
-		"bases": [{ "name": "Borderwatch Keep", "type": "Military Outpost" }],
+		"bases": [
+			{
+				"name": "Borderwatch Keep",
+				"type": "Military Outpost"
+			}
+		],
 		"description": "Marking the physical boundary of the Edge territory. It connects Ombra Space to the Core through highly unstable jump streams."
 	},
 	{
@@ -99,9 +122,9 @@
 		"name": "The Cradle",
 		"type": "star",
 		"color": "#0000ff",
-		"x": 490,
-		"y": 485,
-		"faction": "the_core",
+		"x": 485,
+		"y": 484,
+		"faction": "federation",
 		"planets": [
 			{
 				"name": "Cradle Prime",
@@ -110,17 +133,20 @@
 			}
 		],
 		"bases": [
-			{ "name": "Apex Orbital Ring", "type": "Research & Fabrication Facility" }
+			{
+				"name": "Apex Orbital Ring",
+				"type": "Research & Fabrication Facility"
+			}
 		],
-		"description": "Considered the geometric and political center of the known galaxy. Renowned for its ancient hyper-tech ruins."
+		"description": "Considered the geometric and political center of the known galaxy. One of the founding systems of the Federation."
 	},
 	{
 		"id": "holborn",
 		"name": "Holborn",
 		"type": "star",
 		"color": "#28a745",
-		"x": 415,
-		"y": 400,
+		"x": 435,
+		"y": 397,
 		"faction": "the_core",
 		"planets": [
 			{
@@ -137,9 +163,9 @@
 		"name": "Vega",
 		"type": "star",
 		"color": "#ffc107",
-		"x": 380,
-		"y": 425,
-		"faction": "the_core",
+		"x": 397,
+		"y": 442,
+		"faction": "federation",
 		"planets": [
 			{
 				"name": "Vega Prime",
@@ -148,7 +174,10 @@
 			}
 		],
 		"bases": [
-			{ "name": "Vega Solar Refraction Array", "type": "Stellar Harvester" }
+			{
+				"name": "Vega Solar Refraction Array",
+				"type": "Stellar Harvester"
+			}
 		],
 		"description": "A blistering hot yellow star fueling massive production centers across the Core."
 	},
@@ -157,9 +186,9 @@
 		"name": "Kelsen",
 		"type": "star",
 		"color": "#28a745",
-		"x": 470,
-		"y": 425,
-		"faction": "the_core",
+		"x": 491,
+		"y": 422,
+		"faction": "federation",
 		"planets": [
 			{
 				"name": "Kelsen III",
@@ -175,8 +204,8 @@
 		"name": "Fornax",
 		"type": "star",
 		"color": "#ffc107",
-		"x": 575,
-		"y": 425,
+		"x": 569,
+		"y": 439,
 		"faction": "the_core",
 		"planets": [
 			{
@@ -185,7 +214,12 @@
 				"description": "Automated geothermal drill rigs tapping the mantle."
 			}
 		],
-		"bases": [{ "name": "Fornax Garrison", "type": "Peacekeeper Hub" }],
+		"bases": [
+			{
+				"name": "Fornax Garrison",
+				"type": "Peacekeeper Hub"
+			}
+		],
 		"description": "A military fallback outpost guarding the Core's eastern frontier from external incursions."
 	},
 	{
@@ -197,7 +231,12 @@
 		"y": 590,
 		"faction": "the_core",
 		"planets": [],
-		"bases": [{ "name": "Krane Array", "type": "Communications Relay" }],
+		"bases": [
+			{
+				"name": "Krane Array",
+				"type": "Communications Relay"
+			}
+		],
 		"description": "A dim white dwarf star acting as a key navigation beacon on the southern hyper-lanes."
 	},
 	{
@@ -215,7 +254,12 @@
 				"description": "Extremely cold silicate planet containing hidden pirate coves."
 			}
 		],
-		"bases": [{ "name": "Io Free Anchorage", "type": "Smuggler Depot" }],
+		"bases": [
+			{
+				"name": "Io Free Anchorage",
+				"type": "Smuggler Depot"
+			}
+		],
 		"description": "A lawless system on the border of the Edge, where independent freelancers trade outside Union laws."
 	},
 	{
@@ -241,8 +285,8 @@
 		"name": "Rana",
 		"type": "star",
 		"color": "#17a2b8",
-		"x": 655,
-		"y": 485,
+		"x": 647,
+		"y": 491,
 		"faction": "federation",
 		"planets": [
 			{
@@ -251,7 +295,12 @@
 				"description": "Home to deep-sea geothermal vents and scientific outposts."
 			}
 		],
-		"bases": [{ "name": "Rana Gate", "type": "Customs Checkpoint" }],
+		"bases": [
+			{
+				"name": "Rana Gate",
+				"type": "Customs Checkpoint"
+			}
+		],
 		"description": "A major customs and security gate leading into core Federation territory."
 	},
 	{
@@ -259,11 +308,16 @@
 		"name": "Shaula",
 		"type": "star",
 		"color": "#17a2b8",
-		"x": 765,
-		"y": 450,
+		"x": 745,
+		"y": 462,
 		"faction": "ombra",
 		"planets": [],
-		"bases": [{ "name": "Shaula Sentry Station", "type": "Patrol Station" }],
+		"bases": [
+			{
+				"name": "Shaula Sentry Station",
+				"type": "Patrol Station"
+			}
+		],
 		"description": "The northern shield of Ombra Space. Constant security patrols ward off marauders."
 	},
 	{
@@ -271,8 +325,8 @@
 		"name": "Ghienna",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 585,
-		"y": 305,
+		"x": 571,
+		"y": 301,
 		"faction": "the_core",
 		"planets": [
 			{
@@ -289,8 +343,8 @@
 		"name": "Aldhafera",
 		"type": "star",
 		"color": "#17a2b8",
-		"x": 615,
-		"y": 285,
+		"x": 619,
+		"y": 284,
 		"faction": "federation",
 		"planets": [],
 		"bases": [],
@@ -301,8 +355,8 @@
 		"name": "Kastra",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 605,
-		"y": 330,
+		"x": 616,
+		"y": 327,
 		"faction": "the_core",
 		"planets": [],
 		"bases": [],
@@ -313,8 +367,8 @@
 		"name": "Enif",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 565,
-		"y": 340,
+		"x": 540,
+		"y": 343,
 		"faction": "the_core",
 		"planets": [],
 		"bases": [],
@@ -325,8 +379,8 @@
 		"name": "Pictor",
 		"type": "star",
 		"color": "#ffc107",
-		"x": 605,
-		"y": 350,
+		"x": 586,
+		"y": 356,
 		"faction": "the_core",
 		"planets": [],
 		"bases": [],
@@ -337,8 +391,8 @@
 		"name": "Minkar",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 625,
-		"y": 380,
+		"x": 642,
+		"y": 375,
 		"faction": "the_core",
 		"planets": [],
 		"bases": [],
@@ -349,8 +403,8 @@
 		"name": "Meka",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 595,
-		"y": 395,
+		"x": 611,
+		"y": 405,
 		"faction": "the_core",
 		"planets": [],
 		"bases": [],
@@ -361,8 +415,8 @@
 		"name": "Capella",
 		"type": "star",
 		"color": "#ffc107",
-		"x": 585,
-		"y": 240,
+		"x": 575,
+		"y": 260,
 		"faction": "federation",
 		"planets": [
 			{
@@ -389,7 +443,12 @@
 				"description": "Massive residential structure circling the star."
 			}
 		],
-		"bases": [{ "name": "Nashira Fleet Hub", "type": "Military Base" }],
+		"bases": [
+			{
+				"name": "Nashira Fleet Hub",
+				"type": "Military Base"
+			}
+		],
 		"description": "The strategic command center of the upper Federation. Extremely high military presence."
 	},
 	{
@@ -455,7 +514,12 @@
 		"y": 430,
 		"faction": "alliance",
 		"planets": [],
-		"bases": [{ "name": "Nexus Sentry", "type": "Scanning Grid" }],
+		"bases": [
+			{
+				"name": "Nexus Sentry",
+				"type": "Scanning Grid"
+			}
+		],
 		"description": "An automated radar relay safeguarding the northern access to Valhalla's gravity well."
 	},
 	{
@@ -517,11 +581,16 @@
 		"name": "Nair Gateway",
 		"type": "star",
 		"color": "#17a2b8",
-		"x": 660,
-		"y": 190,
+		"x": 659,
+		"y": 166,
 		"faction": "federation",
 		"planets": [],
-		"bases": [{ "name": "Gateway Customs Platform", "type": "Sentry Post" }],
+		"bases": [
+			{
+				"name": "Gateway Customs Platform",
+				"type": "Sentry Post"
+			}
+		],
 		"description": "Customs inspection node screening vessels heading into the Nair Al Saif Black Hole hub."
 	},
 	{
@@ -529,8 +598,8 @@
 		"name": "Sinistra Minor",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 370,
-		"y": 150,
+		"x": 344,
+		"y": 110,
 		"faction": "federation",
 		"planets": [],
 		"bases": [],
@@ -541,8 +610,8 @@
 		"name": "Capella Minor",
 		"type": "star",
 		"color": "#dc3545",
-		"x": 520,
-		"y": 180,
+		"x": 540,
+		"y": 236,
 		"faction": "federation",
 		"planets": [],
 		"bases": [],
@@ -577,11 +646,16 @@
 		"name": "Ombra Outpost Alpha",
 		"type": "star",
 		"color": "#dc3545",
-		"x": 810,
-		"y": 490,
+		"x": 799,
+		"y": 505,
 		"faction": "ombra",
 		"planets": [],
-		"bases": [{ "name": "Shadow Lookout", "type": "Sentry Base" }],
+		"bases": [
+			{
+				"name": "Shadow Lookout",
+				"type": "Sentry Base"
+			}
+		],
 		"description": "First-contact border garrison monitoring deep hyperlane signals exiting Ombra Space."
 	},
 	{
@@ -589,11 +663,16 @@
 		"name": "Ombra Hub",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 870,
-		"y": 520,
+		"x": 851,
+		"y": 517,
 		"faction": "ombra",
 		"planets": [],
-		"bases": [{ "name": "Ebon Spire", "type": "Trade Port" }],
+		"bases": [
+			{
+				"name": "Ebon Spire",
+				"type": "Trade Port"
+			}
+		],
 		"description": "Central trade nexus of Ombra Space, dealing in high-value asteroid ores and salvage materials."
 	},
 	{
@@ -613,8 +692,8 @@
 		"name": "Ombra Deep Outpost",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 890,
-		"y": 450,
+		"x": 884,
+		"y": 462,
 		"faction": "ombra",
 		"planets": [],
 		"bases": [],
@@ -625,11 +704,16 @@
 		"name": "Maestia Gate",
 		"type": "star",
 		"color": "#17a2b8",
-		"x": 320,
-		"y": 680,
+		"x": 253,
+		"y": 681,
 		"faction": "maestia",
 		"planets": [],
-		"bases": [{ "name": "Imperial Gateway Keep", "type": "Garrison" }],
+		"bases": [
+			{
+				"name": "Imperial Gateway Keep",
+				"type": "Garrison"
+			}
+		],
 		"description": "Heavy planetary defensive fort guarding the main hyperlane into the Empire."
 	},
 	{
@@ -637,8 +721,8 @@
 		"name": "Maestia Prime",
 		"type": "star",
 		"color": "#ffc107",
-		"x": 280,
-		"y": 740,
+		"x": 265,
+		"y": 744,
 		"faction": "maestia",
 		"planets": [
 			{
@@ -655,8 +739,8 @@
 		"name": "Aegis",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 210,
-		"y": 720,
+		"x": 204,
+		"y": 711,
 		"faction": "maestia",
 		"planets": [],
 		"bases": [],
@@ -667,8 +751,8 @@
 		"name": "Crown Jewel",
 		"type": "star",
 		"color": "#dc3545",
-		"x": 180,
-		"y": 750,
+		"x": 171,
+		"y": 759,
 		"faction": "maestia",
 		"planets": [],
 		"bases": [],
@@ -683,7 +767,12 @@
 		"y": 760,
 		"faction": "maestia",
 		"planets": [],
-		"bases": [{ "name": "Royal Heavy Shipyards", "type": "Mega Forge" }],
+		"bases": [
+			{
+				"name": "Royal Heavy Shipyards",
+				"type": "Mega Forge"
+			}
+		],
 		"description": "Orbital macro-forges generating state-of-the-art battleships for the imperial fleet."
 	},
 	{
@@ -739,5 +828,29 @@
 		"planets": [],
 		"bases": [],
 		"description": "A rugged scout outstation tracking migration patterns of deep-space nomad caravans."
+	},
+	{
+		"id": "new_system_1784029965102",
+		"name": "Lerna",
+		"type": "star",
+		"color": "#f6d32d",
+		"x": 277,
+		"y": 115,
+		"faction": "alliance",
+		"planets": [],
+		"bases": [],
+		"description": ""
+	},
+	{
+		"id": "new_system_1784030266232",
+		"name": "Ethife",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 373,
+		"y": 689,
+		"faction": "alliance",
+		"planets": [],
+		"bases": [],
+		"description": "Home system of the Ethife. Has no habitable planets."
 	}
 ]

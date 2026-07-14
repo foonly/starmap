@@ -44,6 +44,10 @@ const props = defineProps({
 		type: Array,
 		default: null,
 	},
+	isEditMode: {
+		type: Boolean,
+		default: false,
+	},
 });
 
 const emit = defineEmits([
@@ -53,6 +57,8 @@ const emit = defineEmits([
 	"swap-route",
 	"clear-route",
 	"select-system",
+	"add-system",
+	"update-faction",
 ]);
 
 // Find actual system records for origin/destination
@@ -99,6 +105,107 @@ const routeStats = computed(() => {
 
 		<!-- Scrollable Control Content -->
 		<div class="flex-1 overflow-y-auto p-4 space-y-5 custom-scrollbar">
+			<!-- 0. Add System (Edit Mode Only) -->
+			<div v-if="isEditMode" class="pb-2">
+				<button
+					@click="emit('add-system')"
+					class="w-full py-2 px-3 bg-amber-500 hover:bg-amber-600 text-slate-900 rounded-lg text-xs font-mono font-bold flex items-center justify-center gap-2 transition-colors shadow-lg shadow-amber-500/20"
+				>
+					+ REGISTER NEW SYSTEM
+				</button>
+			</div>
+
+			<!-- Faction Editor (Edit Mode Only) -->
+			<div
+				v-if="isEditMode"
+				class="space-y-3 bg-slate-100/50 dark:bg-slate-950/30 p-3 rounded-lg border border-slate-200/50 dark:border-slate-800/40"
+			>
+				<label
+					class="text-[10px] font-mono tracking-widest text-slate-500 dark:text-slate-400 font-bold uppercase block"
+				>
+					Faction Labels Editor
+				</label>
+				<div class="space-y-4">
+					<div
+						v-for="fac in factions"
+						:key="fac.id"
+						class="space-y-2 pb-3 border-b border-slate-200 dark:border-slate-800 last:border-0 last:pb-0"
+					>
+						<div class="flex items-center justify-between">
+							<input
+								type="text"
+								:value="fac.name"
+								@input="
+									emit('update-faction', { ...fac, name: $event.target.value })
+								"
+								class="bg-transparent border-b border-slate-300 dark:border-slate-700 text-xs font-bold outline-none focus:border-blue-500 w-32"
+							/>
+							<span class="text-[9px] font-mono text-slate-500"
+								>ID: {{ fac.id }}</span
+							>
+						</div>
+						<div class="grid grid-cols-2 gap-2">
+							<div class="flex items-center gap-1">
+								<span class="text-[8px] font-mono text-slate-500">X:</span>
+								<input
+									type="number"
+									:value="fac.x"
+									@input="
+										emit('update-faction', {
+											...fac,
+											x: parseInt($event.target.value),
+										})
+									"
+									class="bg-slate-200 dark:bg-slate-900 text-[10px] rounded px-1 w-full outline-none"
+								/>
+							</div>
+							<div class="flex items-center gap-1">
+								<span class="text-[8px] font-mono text-slate-500">Y:</span>
+								<input
+									type="number"
+									:value="fac.y"
+									@input="
+										emit('update-faction', {
+											...fac,
+											y: parseInt($event.target.value),
+										})
+									"
+									class="bg-slate-200 dark:bg-slate-900 text-[10px] rounded px-1 w-full outline-none"
+								/>
+							</div>
+							<div class="flex items-center gap-1">
+								<span class="text-[8px] font-mono text-slate-500">S:</span>
+								<input
+									type="number"
+									:value="fac.fontSize"
+									@input="
+										emit('update-faction', {
+											...fac,
+											fontSize: parseInt($event.target.value),
+										})
+									"
+									class="bg-slate-200 dark:bg-slate-900 text-[10px] rounded px-1 w-full outline-none"
+								/>
+							</div>
+							<div class="flex items-center gap-1">
+								<span class="text-[8px] font-mono text-slate-500">R:</span>
+								<input
+									type="number"
+									:value="fac.rotate"
+									@input="
+										emit('update-faction', {
+											...fac,
+											rotate: parseInt($event.target.value),
+										})
+									"
+									class="bg-slate-200 dark:bg-slate-900 text-[10px] rounded px-1 w-full outline-none"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<!-- 1. Search Bar -->
 			<div class="space-y-1.5">
 				<label
@@ -140,6 +247,7 @@ const routeStats = computed(() => {
 					class="w-full text-slate-900 dark:text-slate-100 bg-white dark:bg-slate-950/60 text-sm py-2 px-2.5 border border-slate-200 dark:border-slate-800 rounded-lg outline-none focus:border-blue-500 transition-all font-sans cursor-pointer"
 				>
 					<option value="">-- ALL SECTORS --</option>
+					<option value="independent">-- INDEPENDENT --</option>
 					<option
 						v-for="faction in factions"
 						:key="faction.id"
