@@ -347,7 +347,6 @@ const getLaneColor = (type) => {
 								conn.type === 'class 3' ? undefined : getLaneColor(conn.type)
 							"
 							:stroke-width="isConnectionInRoute(conn) ? 3 : 1"
-							:stroke-dasharray="conn.type === 'class 2' ? '4,4' : 'none'"
 							:class="[
 								'transition-all duration-200 pointer-events-none',
 								conn.type === 'class 3'
@@ -540,6 +539,7 @@ const getLaneColor = (type) => {
 	}
 }
 .animate-spin-slow {
+	transform-box: fill-box;
 	transform-origin: center;
 	animation: spin 15s linear infinite;
 }
@@ -556,6 +556,7 @@ const getLaneColor = (type) => {
 	}
 }
 .animate-pulse-ring {
+	transform-box: fill-box;
 	transform-origin: center;
 	animation: pulseRing 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
