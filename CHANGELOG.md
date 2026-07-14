@@ -1,6 +1,12 @@
 # Changelog
 
-## 1.3.0 (2026-07-14)
+## 1.4.0 (2026-07-14)
+
+#### Features
+
+- components: add planet gravity and population support (df0608c)
+
+## v1.3.0 (2026-07-14)
 
 #### Features
 
