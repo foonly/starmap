@@ -6,7 +6,7 @@
 		"color": "#e0b034",
 		"x": 180,
 		"y": 500,
-		"faction": "alliance_of_free_worlds",
+		"faction": "alliance",
 		"planets": [
 			{
 				"name": "Mercury",
@@ -42,7 +42,7 @@
 		"color": "#000000",
 		"x": 280,
 		"y": 520,
-		"faction": "alliance_of_free_worlds",
+		"faction": "alliance",
 		"planets": [],
 		"bases": [
 			{
@@ -60,7 +60,7 @@
 		"color": "#000000",
 		"x": 460,
 		"y": 200,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [],
 		"bases": [
 			{ "name": "Sinistra Sentry Station", "type": "Defense Platform" }
@@ -74,7 +74,7 @@
 		"color": "#000000",
 		"x": 710,
 		"y": 270,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [],
 		"bases": [
 			{ "name": "Sovereign Citadel", "type": "Imperial Fortress" },
@@ -243,7 +243,7 @@
 		"color": "#17a2b8",
 		"x": 655,
 		"y": 485,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [
 			{
 				"name": "Rana Secundus",
@@ -261,7 +261,7 @@
 		"color": "#17a2b8",
 		"x": 765,
 		"y": 450,
-		"faction": "ombra_space",
+		"faction": "ombra",
 		"planets": [],
 		"bases": [{ "name": "Shaula Sentry Station", "type": "Patrol Station" }],
 		"description": "The northern shield of Ombra Space. Constant security patrols ward off marauders."
@@ -291,7 +291,7 @@
 		"color": "#17a2b8",
 		"x": 615,
 		"y": 285,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [],
 		"bases": [],
 		"description": "A bright cyan system heavily defended by standard Federation patrols."
@@ -363,7 +363,7 @@
 		"color": "#ffc107",
 		"x": 585,
 		"y": 240,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [
 			{
 				"name": "Capella Prime",
@@ -381,7 +381,7 @@
 		"color": "#0000ff",
 		"x": 740,
 		"y": 140,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [
 			{
 				"name": "Nashira Void Ring",
@@ -399,7 +399,7 @@
 		"color": "#ffffff",
 		"x": 780,
 		"y": 95,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [],
 		"bases": [],
 		"description": "A white system supporting cargo networks and high-frequency beacons."
@@ -411,7 +411,7 @@
 		"color": "#ffffff",
 		"x": 730,
 		"y": 70,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [],
 		"bases": [],
 		"description": "An outpost system at the northernmost sector of known star routes."
@@ -423,7 +423,7 @@
 		"color": "#28a745",
 		"x": 840,
 		"y": 145,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [
 			{
 				"name": "Adrianus IV",
@@ -441,7 +441,7 @@
 		"color": "#ffffff",
 		"x": 860,
 		"y": 125,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [],
 		"bases": [],
 		"description": "The eastern frontier sentinel of Federation Space."
@@ -453,7 +453,7 @@
 		"color": "#ffffff",
 		"x": 240,
 		"y": 430,
-		"faction": "alliance_of_free_worlds",
+		"faction": "alliance",
 		"planets": [],
 		"bases": [{ "name": "Nexus Sentry", "type": "Scanning Grid" }],
 		"description": "An automated radar relay safeguarding the northern access to Valhalla's gravity well."
@@ -465,7 +465,7 @@
 		"color": "#ffffff",
 		"x": 260,
 		"y": 610,
-		"faction": "alliance_of_free_worlds",
+		"faction": "alliance",
 		"planets": [],
 		"bases": [],
 		"description": "A calm, uncolonized yellow dwarf system serving as a core refueling pitstop on the southern jump routes."
@@ -477,7 +477,7 @@
 		"color": "#0000ff",
 		"x": 120,
 		"y": 580,
-		"faction": "alliance_of_free_worlds",
+		"faction": "alliance",
 		"planets": [
 			{
 				"name": "Vanguard Station Core",
@@ -495,7 +495,7 @@
 		"color": "#ffffff",
 		"x": 100,
 		"y": 640,
-		"faction": "alliance_of_free_worlds",
+		"faction": "alliance",
 		"planets": [],
 		"bases": [],
 		"description": "Unexplored system cataloged in the outer peripheral cloud of the Alliance sector."
@@ -507,7 +507,7 @@
 		"color": "#dc3545",
 		"x": 160,
 		"y": 660,
-		"faction": "alliance_of_free_worlds",
+		"faction": "alliance",
 		"planets": [],
 		"bases": [],
 		"description": "A dense asteroid belt system surrounding a small red dwarf."
@@ -519,7 +519,7 @@
 		"color": "#17a2b8",
 		"x": 660,
 		"y": 190,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [],
 		"bases": [{ "name": "Gateway Customs Platform", "type": "Sentry Post" }],
 		"description": "Customs inspection node screening vessels heading into the Nair Al Saif Black Hole hub."
@@ -531,7 +531,7 @@
 		"color": "#ffffff",
 		"x": 370,
 		"y": 150,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [],
 		"bases": [],
 		"description": "Peripheral sector beacon marking the extreme western border of Federation control."
@@ -543,7 +543,7 @@
 		"color": "#dc3545",
 		"x": 520,
 		"y": 180,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [],
 		"bases": [],
 		"description": "Lesser red dwarf system supporting regional communication relay dishes."
@@ -555,7 +555,7 @@
 		"color": "#dc3545",
 		"x": 880,
 		"y": 190,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [],
 		"bases": [],
 		"description": "Scientific outpost studying high-radiation emissions from the neighboring jump nexus."
@@ -567,7 +567,7 @@
 		"color": "#ffffff",
 		"x": 680,
 		"y": 110,
-		"faction": "federation_space",
+		"faction": "federation",
 		"planets": [],
 		"bases": [],
 		"description": "Cold, desolate sector containing only an automated navigation lighthouse."
@@ -579,7 +579,7 @@
 		"color": "#dc3545",
 		"x": 810,
 		"y": 490,
-		"faction": "ombra_space",
+		"faction": "ombra",
 		"planets": [],
 		"bases": [{ "name": "Shadow Lookout", "type": "Sentry Base" }],
 		"description": "First-contact border garrison monitoring deep hyperlane signals exiting Ombra Space."
@@ -591,7 +591,7 @@
 		"color": "#ffffff",
 		"x": 870,
 		"y": 520,
-		"faction": "ombra_space",
+		"faction": "ombra",
 		"planets": [],
 		"bases": [{ "name": "Ebon Spire", "type": "Trade Port" }],
 		"description": "Central trade nexus of Ombra Space, dealing in high-value asteroid ores and salvage materials."
@@ -603,7 +603,7 @@
 		"color": "#ffffff",
 		"x": 840,
 		"y": 590,
-		"faction": "ombra_space",
+		"faction": "ombra",
 		"planets": [],
 		"bases": [],
 		"description": "Uncolonized beacon system marking the gateway into deep unregulated void lanes."
@@ -615,7 +615,7 @@
 		"color": "#ffffff",
 		"x": 890,
 		"y": 450,
-		"faction": "ombra_space",
+		"faction": "ombra",
 		"planets": [],
 		"bases": [],
 		"description": "A remote orbital research lab positioned on the dangerous outer fringes of the eastern sector."
@@ -627,7 +627,7 @@
 		"color": "#17a2b8",
 		"x": 320,
 		"y": 680,
-		"faction": "empire_of_maestia",
+		"faction": "maestia",
 		"planets": [],
 		"bases": [{ "name": "Imperial Gateway Keep", "type": "Garrison" }],
 		"description": "Heavy planetary defensive fort guarding the main hyperlane into the Empire."
@@ -639,7 +639,7 @@
 		"color": "#ffc107",
 		"x": 280,
 		"y": 740,
-		"faction": "empire_of_maestia",
+		"faction": "maestia",
 		"planets": [
 			{
 				"name": "Crown World",
@@ -657,7 +657,7 @@
 		"color": "#ffffff",
 		"x": 210,
 		"y": 720,
-		"faction": "empire_of_maestia",
+		"faction": "maestia",
 		"planets": [],
 		"bases": [],
 		"description": "Shield system hosting massive kinetic deflection grids protecting imperial sectors."
@@ -669,7 +669,7 @@
 		"color": "#dc3545",
 		"x": 180,
 		"y": 750,
-		"faction": "empire_of_maestia",
+		"faction": "maestia",
 		"planets": [],
 		"bases": [],
 		"description": "Rich gemstone miner system, containing massive refinery platforms."
@@ -681,7 +681,7 @@
 		"color": "#28a745",
 		"x": 350,
 		"y": 760,
-		"faction": "empire_of_maestia",
+		"faction": "maestia",
 		"planets": [],
 		"bases": [{ "name": "Royal Heavy Shipyards", "type": "Mega Forge" }],
 		"description": "Orbital macro-forges generating state-of-the-art battleships for the imperial fleet."
