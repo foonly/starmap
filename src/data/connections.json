@@ -7,7 +7,7 @@
 	{
 		"from": "valhalla",
 		"to": "sinistra",
-		"type": "class 3"
+		"type": "class 4"
 	},
 	{
 		"from": "sinistra",
@@ -32,7 +32,7 @@
 	{
 		"from": "valhalla",
 		"to": "vega",
-		"type": "class 1"
+		"type": "class 3"
 	},
 	{
 		"from": "vega",
@@ -45,11 +45,6 @@
 		"type": "class 1"
 	},
 	{
-		"from": "kelsen",
-		"to": "the_cradle",
-		"type": "class 1"
-	},
-	{
 		"from": "the_cradle",
 		"to": "vega",
 		"type": "class 1"
@@ -58,11 +53,6 @@
 		"from": "the_cradle",
 		"to": "holborn",
 		"type": "class 1"
-	},
-	{
-		"from": "the_cradle",
-		"to": "kelsen",
-		"type": "class 2"
 	},
 	{
 		"from": "the_cradle",
@@ -82,7 +72,7 @@
 	{
 		"from": "nair_al_saif",
 		"to": "sinistra",
-		"type": "class 3"
+		"type": "class 4"
 	},
 	{
 		"from": "nair_al_saif",
@@ -202,12 +192,12 @@
 	{
 		"from": "valhalla",
 		"to": "valhalla_nexus",
-		"type": "class 2"
+		"type": "class 3"
 	},
 	{
 		"from": "valhalla",
 		"to": "valhalla_south",
-		"type": "class 1"
+		"type": "class 3"
 	},
 	{
 		"from": "sol",
@@ -232,12 +222,12 @@
 	{
 		"from": "sinistra",
 		"to": "sinistra_minor",
-		"type": "class 1"
+		"type": "class 3"
 	},
 	{
 		"from": "sinistra_minor",
 		"to": "valhalla_nexus",
-		"type": "class 3"
+		"type": "class 2"
 	},
 	{
 		"from": "capella",
@@ -350,13 +340,43 @@
 		"type": "class 3"
 	},
 	{
-		"from": "new_system_1784029965102",
+		"from": "lerna",
 		"to": "sinistra_minor",
 		"type": "class 1"
 	},
 	{
-		"from": "new_system_1784030266232",
+		"from": "ethife",
 		"to": "titan_forge",
+		"type": "class 1"
+	},
+	{
+		"from": "kelsen",
+		"to": "the_cradle",
+		"type": "class 1"
+	},
+	{
+		"from": "aerith",
+		"to": "ghienna",
+		"type": "class 1"
+	},
+	{
+		"from": "aerith",
+		"to": "hairi",
+		"type": "class 1"
+	},
+	{
+		"from": "aerith",
+		"to": "noriah",
+		"type": "class 1"
+	},
+	{
+		"from": "noriah",
+		"to": "shengong",
+		"type": "class 1"
+	},
+	{
+		"from": "noriah",
+		"to": "kalausi",
 		"type": "class 1"
 	}
 ]

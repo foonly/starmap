@@ -478,6 +478,37 @@ const removeItem = (index, listName) => {
 									rows="2"
 									class="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-xs focus:border-blue-500 outline-none resize-none"
 								></textarea>
+
+								<div class="grid grid-cols-2 gap-2">
+									<input
+										type="text"
+										:value="planet.gravity"
+										@input="
+											handleNestedInputChange(
+												idx,
+												'gravity',
+												$event.target.value,
+												'planets',
+											)
+										"
+										placeholder="Gravity (e.g. 1.0g)"
+										class="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-[10px] focus:border-blue-500 outline-none"
+									/>
+									<input
+										type="text"
+										:value="planet.population"
+										@input="
+											handleNestedInputChange(
+												idx,
+												'population',
+												$event.target.value,
+												'planets',
+											)
+										"
+										placeholder="Population"
+										class="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-[10px] focus:border-blue-500 outline-none"
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -667,9 +698,30 @@ const removeItem = (index, listName) => {
 										{{ planet.type }}
 									</span>
 								</div>
-								<p class="text-xs text-slate-400 leading-normal">
+								<p class="text-xs text-slate-400 leading-normal mb-2">
 									{{ planet.description }}
 								</p>
+								<div
+									v-if="planet.gravity || planet.population"
+									class="flex gap-3 border-t border-slate-800/50 pt-2"
+								>
+									<div v-if="planet.gravity">
+										<span class="text-[9px] font-mono text-slate-500 block"
+											>GRAVITY</span
+										>
+										<span class="text-[10px] font-bold text-slate-300">{{
+											planet.gravity
+										}}</span>
+									</div>
+									<div v-if="planet.population">
+										<span class="text-[9px] font-mono text-slate-500 block"
+											>POPULATION</span
+										>
+										<span class="text-[10px] font-bold text-slate-300">{{
+											planet.population
+										}}</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

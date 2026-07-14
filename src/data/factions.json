@@ -9,20 +9,11 @@
 		"rotate": 0
 	},
 	{
-		"id": "the_core",
-		"name": "THE CORE",
-		"color": "rgba(100, 100, 100, 0.15)",
-		"x": 495,
-		"y": 365,
-		"fontSize": 24,
-		"rotate": 0
-	},
-	{
 		"id": "federation",
 		"name": "The Federation",
 		"color": "rgba(100, 100, 100, 0.15)",
-		"x": 680,
-		"y": 180,
+		"x": 580,
+		"y": 380,
 		"fontSize": 22,
 		"rotate": 0
 	},
@@ -36,8 +27,8 @@
 		"rotate": 0
 	},
 	{
-		"id": "the_edge",
-		"name": "THE EDGE",
+		"id": "edge",
+		"name": "The Edge",
 		"color": "rgba(100, 100, 100, 0.15)",
 		"x": 710,
 		"y": 720,
