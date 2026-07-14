@@ -48,6 +48,10 @@ const props = defineProps({
 		type: Boolean,
 		default: false,
 	},
+	version: {
+		type: String,
+		default: "1.0.0",
+	},
 });
 
 const emit = defineEmits([
@@ -501,7 +505,7 @@ const routeStats = computed(() => {
 			<div
 				class="text-[9px] font-mono tracking-widest text-slate-400 uppercase"
 			>
-				STARMAP V1.0.0
+				STARMAP V{{ version }}
 			</div>
 		</div>
 	</div>

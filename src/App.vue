@@ -10,7 +10,10 @@ import systemsDataRaw from "./data/systems.json";
 import connectionsDataRaw from "./data/connections.json";
 import factionsDataRaw from "./data/factions.json";
 
+import pkg from "../package.json";
+
 // Reactive State
+const version = pkg.version;
 const systemsData = ref(JSON.parse(JSON.stringify(systemsDataRaw)));
 const connectionsData = ref(JSON.parse(JSON.stringify(connectionsDataRaw)));
 const factionsData = ref(JSON.parse(JSON.stringify(factionsDataRaw)));
@@ -338,7 +341,7 @@ onMounted(() => {
 							@click="toggleEditMode"
 							class="cursor-default select-none text-blue-500 text-xs font-bold font-mono px-1.5 py-0.5 bg-blue-500/10 rounded-md border border-blue-500/20 hover:bg-blue-500/20 transition-colors"
 							title="System Version"
-							>V1.0</span
+							>V{{ version }}</span
 						>
 					</h1>
 				</div>
@@ -417,6 +420,7 @@ onMounted(() => {
 				:destination-id="destinationId"
 				:shortest-path="shortestPath"
 				:is-edit-mode="isEditMode"
+				:version="version"
 				@toggle-lane="toggleLaneType"
 				@swap-route="swapRoutePoints"
 				@clear-route="clearRouteSelection"
