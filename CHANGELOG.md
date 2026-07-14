@@ -1,6 +1,12 @@
 # Changelog
 
-## 1.1.0
+## 1.2.0 (2026-07-14)
+
+#### Features
+
+- app: add map edit mode functionality (7802283)
+
+## v1.1.0 (2026-07-14)
 
 #### Features
 
