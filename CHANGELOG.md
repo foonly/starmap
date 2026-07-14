@@ -1,6 +1,12 @@
 # Changelog
 
-## 1.2.0 (2026-07-14)
+## 1.3.0 (2026-07-14)
+
+#### Features
+
+- app: sync starmap version with package.json (d3abdac)
+
+## v1.2.0 (2026-07-14)
 
 #### Features
 
