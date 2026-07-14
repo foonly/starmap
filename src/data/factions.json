@@ -1,0 +1,56 @@
+[
+  {
+    "id": "alliance_of_free_worlds",
+    "name": "THE ALLIANCE OF FREE WORLDS",
+    "color": "rgba(100, 100, 100, 0.15)",
+    "x": 220,
+    "y": 450,
+    "fontSize": 26,
+    "rotate": 0
+  },
+  {
+    "id": "the_core",
+    "name": "THE CORE",
+    "color": "rgba(100, 100, 100, 0.15)",
+    "x": 495,
+    "y": 465,
+    "fontSize": 24,
+    "rotate": 0
+  },
+  {
+    "id": "federation_space",
+    "name": "FEDERATION SPACE",
+    "color": "rgba(100, 100, 100, 0.15)",
+    "x": 680,
+    "y": 180,
+    "fontSize": 26,
+    "rotate": 0
+  },
+  {
+    "id": "ombra_space",
+    "name": "OMBRA SPACE",
+    "color": "rgba(100, 100, 100, 0.15)",
+    "x": 820,
+    "y": 580,
+    "fontSize": 24,
+    "rotate": 0
+  },
+  {
+    "id": "the_edge",
+    "name": "THE EDGE",
+    "color": "rgba(100, 100, 100, 0.15)",
+    "x": 710,
+    "y": 720,
+    "fontSize": 24,
+    "rotate": 0
+  },
+  {
+    "id": "empire_of_maestia",
+    "name": "EMPIRE OF MAESTIA",
+    "color": "rgba(100, 100, 100, 0.15)",
+    "x": 380,
+    "y": 920,
+    "fontSize": 26,
+    "rotate": 0
+  }
+]

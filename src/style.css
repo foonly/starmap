@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Custom Sci-fi Glowing Filters */
+  .glow-green {
+    filter: drop-shadow(0 0 6px rgba(40, 167, 69, 0.8)) drop-shadow(0 0 2px rgba(40, 167, 69, 0.4));
+  }
+  .glow-red {
+    filter: drop-shadow(0 0 6px rgba(220, 53, 69, 0.8)) drop-shadow(0 0 2px rgba(220, 53, 69, 0.4));
+  }
+  .glow-blue {
+    filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.8)) drop-shadow(0 0 3px rgba(37, 99, 235, 0.4));
+  }
+  .glow-purple {
+    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.8)) drop-shadow(0 0 3px rgba(139, 92, 246, 0.4));
+  }
+  .glow-yellow {
+    filter: drop-shadow(0 0 6px rgba(234, 179, 8, 0.8)) drop-shadow(0 0 2px rgba(234, 179, 8, 0.4));
+  }
+  .glow-white {
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.4));
+  }
+  .glow-cyan {
+    filter: drop-shadow(0 0 6px rgba(6, 182, 212, 0.8)) drop-shadow(0 0 2px rgba(6, 182, 212, 0.4));
+  }
+}
+
+html, body, #app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
