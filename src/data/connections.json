@@ -378,5 +378,11 @@
 		"from": "noriah",
 		"to": "kalausi",
 		"type": "class 1"
-	}
+	},
+	{ "from": "valhalla_nexus", "to": "artemis", "type": "class 2" },
+	{ "from": "artemis", "to": "hyperion", "type": "class 2" },
+	{ "from": "hyperion", "to": "selene", "type": "class 1" },
+	{ "from": "selene", "to": "lerna", "type": "class 1" },
+	{ "from": "hyperion", "to": "sinistra_minor", "type": "class 2" },
+	{ "from": "artemis", "to": "sol", "type": "class 2" }
 ]

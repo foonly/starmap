@@ -169,14 +169,14 @@
 		"planets": [
 			{
 				"name": "Estinte",
-				"type": "Oceanic / Tropical",
+				"type": "Oceanic (Tropical)",
 				"gravity": "0.9",
 				"population": "600 million",
 				"description": "Estinte is a largely Oceanic planet. It's climate is hot, but kept livable by the cooling effect of the ocean."
 			},
 			{
 				"name": "Santa Madre",
-				"type": "Temperate / Thundra",
+				"type": "Terrestrial (Thundra)",
 				"gravity": "1.2",
 				"population": "125 million",
 				"description": "Santa madre is a smaller and denser planet, further away and cooler than Estinte."
@@ -866,6 +866,110 @@
 		"planets": [],
 		"bases": [],
 		"description": ""
+	},
+	{
+		"id": "hyperion",
+		"name": "Hyperion",
+		"type": "star",
+		"color": "#f6d32d",
+		"x": 230,
+		"y": 250,
+		"faction": "alliance",
+		"planets": [
+			{
+				"name": "Hyperion I",
+				"type": "Molten",
+				"description": "Tidally locked rock orbiting dangerously close to the star."
+			},
+			{
+				"name": "Hyperion Prime",
+				"type": "Terrestrial (Garden)",
+				"gravity": "1.02g",
+				"population": "2.4 Billion",
+				"description": "The jewel of the northern reach. Known for its massive vertical forests and orbital grain elevators."
+			},
+			{
+				"name": "Theia",
+				"type": "Frozen Moon",
+				"description": "A silicate moon with high-albedo ice sheets."
+			},
+			{
+				"name": "Cronus",
+				"type": "Gas Giant",
+				"description": "A pale gold gas giant with a vast ring system."
+			}
+		],
+		"bases": [{ "name": "Hyperion Gateway", "type": "Trading Hub" }],
+		"description": "A vital agricultural and trade hub connecting the northern frontier to the Alliance core."
+	},
+	{
+		"id": "selene",
+		"name": "Selene",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 280,
+		"y": 220,
+		"faction": "alliance",
+		"planets": [
+			{
+				"name": "Lunar Prime",
+				"type": "Airless Rock",
+				"gravity": "0.16g",
+				"population": "120,000",
+				"description": "Heavily cratered world with extensive underground tunnel networks."
+			},
+			{
+				"name": "Selene Beta",
+				"type": "Terrestrial (Arid)",
+				"gravity": "0.85g",
+				"population": "450 Million",
+				"description": "Dusty world known for its high-altitude lithium mining operations."
+			},
+			{
+				"name": "Endymion",
+				"type": "Ice Giant",
+				"description": "Distant blue giant with methane storms."
+			}
+		],
+		"bases": [{ "name": "Silver Reach Station", "type": "Mining Outpost" }],
+		"description": "A quiet mining system on the edge of the Valhalla influence zone."
+	},
+	{
+		"id": "artemis",
+		"name": "Artemis",
+		"type": "star",
+		"color": "#17a2b8",
+		"x": 220,
+		"y": 380,
+		"faction": "alliance",
+		"planets": [
+			{
+				"name": "Cynthia",
+				"type": "Oceanic",
+				"gravity": "1.1g",
+				"population": "800 Million",
+				"description": "World covered entirely by deep water and sprawling floating cities."
+			},
+			{
+				"name": "Delos",
+				"type": "Terrestrial (Tundra)",
+				"gravity": "0.92g",
+				"population": "1.2 Billion",
+				"description": "Cold world used as a primary research and data storage vault for the Alliance."
+			},
+			{
+				"name": "Leto",
+				"type": "Gas Giant",
+				"description": "Greenish gas giant with a volatile atmosphere."
+			},
+			{
+				"name": "Ortygia",
+				"type": "Dwarf Planet",
+				"description": "Small, distant rock serving as a long-range scanning array."
+			}
+		],
+		"bases": [{ "name": "Huntress Watch", "type": "Naval Sentry" }],
+		"description": "A strategic junction system guarding the hyperlanes between Sol and the northern territories."
 	},
 	{
 		"id": "ethife",
