@@ -48,7 +48,6 @@
 	{ "from": "sinistra", "to": "sinistra_minor", "type": "class 1" },
 	{ "from": "sinistra_minor", "to": "valhalla_nexus", "type": "class 3" },
 	{ "from": "capella", "to": "capella_minor", "type": "class 1" },
-	{ "from": "capella_minor", "to": "valhalla_nexus", "type": "class 2" },
 	{ "from": "nair_al_saif", "to": "nair_gateway", "type": "class 3" },
 	{ "from": "nair_gateway", "to": "sinistra", "type": "class 3" },
 	{ "from": "adrianus", "to": "adrianus_outpost", "type": "class 1" },
