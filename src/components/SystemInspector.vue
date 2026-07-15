@@ -87,7 +87,8 @@ const adjacentLanes = computed(() => {
 				color: getLaneColor(c.type),
 			};
 		})
-		.filter((item) => item.system !== undefined);
+		.filter((item) => item.system !== undefined)
+		.sort((a, b) => a.system.name.localeCompare(b.system.name));
 });
 
 const isOrigin = computed(
@@ -132,6 +133,17 @@ const removeItem = (index, listName) => {
 		[listName]: newList,
 	});
 };
+
+const availableSystemsToConnect = computed(() => {
+	if (!props.system) return [];
+	return props.systems
+		.filter(
+			(s) =>
+				s.id !== props.system.id &&
+				!adjacentLanes.value.some((l) => l.system.id === s.id),
+		)
+		.sort((a, b) => a.name.localeCompare(b.name));
+});
 </script>
 
 <template>
@@ -394,11 +406,7 @@ const removeItem = (index, listName) => {
 								>
 									<option value="">+ CONNECT TO SYSTEM...</option>
 									<option
-										v-for="s in systems.filter(
-											(s) =>
-												s.id !== system.id &&
-												!adjacentLanes.some((l) => l.system.id === s.id),
-										)"
+										v-for="s in availableSystemsToConnect"
 										:key="s.id"
 										:value="s.id"
 									>

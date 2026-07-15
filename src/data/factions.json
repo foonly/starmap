@@ -21,8 +21,8 @@
 		"id": "ombra",
 		"name": "The Ombra",
 		"color": "rgba(100, 100, 100, 0.15)",
-		"x": 820,
-		"y": 580,
+		"x": 646,
+		"y": 749,
 		"fontSize": 24,
 		"rotate": 0
 	},
@@ -30,8 +30,8 @@
 		"id": "edge",
 		"name": "The Edge",
 		"color": "rgba(100, 100, 100, 0.15)",
-		"x": 710,
-		"y": 720,
+		"x": 1008,
+		"y": 529,
 		"fontSize": 24,
 		"rotate": 0
 	},
@@ -39,9 +39,18 @@
 		"id": "maestia",
 		"name": "Empire of Maestia",
 		"color": "rgba(100, 100, 100, 0.15)",
-		"x": 380,
-		"y": 820,
+		"x": 277,
+		"y": 731,
 		"fontSize": 26,
+		"rotate": 0
+	},
+	{
+		"id": "ethife",
+		"name": "The Ethife",
+		"color": "rgba(100, 100, 100, 0.15)",
+		"x": 359,
+		"y": 569,
+		"fontSize": 10,
 		"rotate": 0
 	}
 ]

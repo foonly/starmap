@@ -4,8 +4,8 @@
 		"name": "Sol",
 		"type": "star",
 		"color": "#e0b034",
-		"x": 180,
-		"y": 500,
+		"x": 73,
+		"y": 520,
 		"faction": "alliance",
 		"planets": [
 			{
@@ -21,12 +21,15 @@
 			{
 				"name": "Earth",
 				"type": "Terrestrial (Garden)",
-				"description": "Capital of the Alliance of Free Worlds."
+				"description": "Capital of the Alliance of Free Worlds.",
+				"gravity": "1.0g",
+				"population": "1.2 Billion"
 			},
 			{
 				"name": "Mars",
 				"type": "Terraformed Desert",
-				"description": "Heavy planetary defense grids and shipyards."
+				"description": "Heavy planetary defense grids and shipyards.",
+				"population": "28 Million"
 			}
 		],
 		"bases": [
@@ -39,15 +42,15 @@
 				"type": "Fleet Headquarters"
 			}
 		],
-		"description": "The cradle of human civilization and historical capital of the Free Alliance."
+		"description": "The cradle of human civilization."
 	},
 	{
 		"id": "valhalla",
 		"name": "Valhalla Black Hole",
 		"type": "black_hole",
 		"color": "#000000",
-		"x": 280,
-		"y": 520,
+		"x": 235,
+		"y": 510,
 		"faction": "alliance",
 		"planets": [],
 		"bases": [
@@ -98,15 +101,15 @@
 				"type": "Refueling Ring Grid"
 			}
 		],
-		"description": "The premier nexus of Federation Space, dominated by heavy orbital infrastructure and monumental fleet garrisons."
+		"description": ""
 	},
 	{
 		"id": "the_edge_bh",
 		"name": "The Edge Black Hole",
 		"type": "black_hole",
 		"color": "#000000",
-		"x": 655,
-		"y": 650,
+		"x": 825,
+		"y": 493,
 		"faction": "",
 		"planets": [],
 		"bases": [
@@ -264,8 +267,8 @@
 		"name": "Io",
 		"type": "star",
 		"color": "#17a2b8",
-		"x": 590,
-		"y": 635,
+		"x": 941,
+		"y": 573,
 		"faction": "",
 		"planets": [
 			{
@@ -287,8 +290,8 @@
 		"name": "Betria",
 		"type": "star",
 		"color": "#dc3545",
-		"x": 665,
-		"y": 775,
+		"x": 1041,
+		"y": 484,
 		"faction": "",
 		"planets": [
 			{
@@ -306,7 +309,7 @@
 		"type": "star",
 		"color": "#17a2b8",
 		"x": 647,
-		"y": 491,
+		"y": 461,
 		"faction": "federation",
 		"planets": [
 			{
@@ -328,17 +331,25 @@
 		"name": "Shaula",
 		"type": "star",
 		"color": "#17a2b8",
-		"x": 745,
-		"y": 462,
+		"x": 648,
+		"y": 620,
 		"faction": "ombra",
-		"planets": [],
-		"bases": [
+		"planets": [
 			{
-				"name": "Shaula Sentry Station",
-				"type": "Patrol Station"
+				"name": "Shaula Prime",
+				"type": "Terrestrial",
+				"gravity": "1.05g",
+				"population": "1.2 Billion (Enslaved)",
+				"description": "A former colony world now under the absolute control of the Ombra fleet. The population lives in labor camps, overseen by the orbital fortress Vexilla-IV."
 			}
 		],
-		"description": "The northern shield of Ombra Space. Constant security patrols ward off marauders."
+		"bases": [
+			{
+				"name": "Vexilla-IV Fortress",
+				"type": "Orbital Suppression Hub"
+			}
+		],
+		"description": "One of the first systems conquered by the Primus Vexillarius. The Ombra rule from their ancient colony ships, maintaining a strict military blockade."
 	},
 	{
 		"id": "ghienna",
@@ -455,14 +466,8 @@
 		"color": "#0000ff",
 		"x": 740,
 		"y": 140,
-		"faction": "",
-		"planets": [
-			{
-				"name": "Nashira Void Ring",
-				"type": "Mega Ringworld",
-				"description": "Massive residential structure circling the star."
-			}
-		],
+		"faction": "federation",
+		"planets": [],
 		"bases": [
 			{
 				"name": "Nashira Fleet Hub",
@@ -495,7 +500,9 @@
 			{
 				"name": "Terebel III",
 				"type": "Barren",
-				"description": "Terebel III used to be a lush terrestrial planet, but was destroyed by a doomsday bomb. It still has a small group of people inhabiting it."
+				"description": "Terebel III used to be a lush terrestrial planet, but was destroyed by a doomsday bomb. It still has a small group of people inhabiting it.",
+				"gravity": "0.95g",
+				"population": "15 thousand"
 			}
 		],
 		"bases": [],
@@ -506,8 +513,8 @@
 		"name": "Adrianus",
 		"type": "star",
 		"color": "#28a745",
-		"x": 840,
-		"y": 145,
+		"x": 843,
+		"y": 144,
 		"faction": "",
 		"planets": [
 			{
@@ -536,8 +543,8 @@
 		"name": "Valhalla Nexus",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 240,
-		"y": 430,
+		"x": 291,
+		"y": 388,
 		"faction": "alliance",
 		"planets": [],
 		"bases": [
@@ -553,8 +560,8 @@
 		"name": "Valhalla South",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 260,
-		"y": 610,
+		"x": 236,
+		"y": 606,
 		"faction": "alliance",
 		"planets": [],
 		"bases": [],
@@ -565,8 +572,8 @@
 		"name": "Vanguard Prime",
 		"type": "star",
 		"color": "#0000ff",
-		"x": 120,
-		"y": 580,
+		"x": 30,
+		"y": 585,
 		"faction": "alliance",
 		"planets": [
 			{
@@ -583,8 +590,8 @@
 		"name": "Vanguard Alpha",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 100,
-		"y": 640,
+		"x": 93,
+		"y": 607,
 		"faction": "alliance",
 		"planets": [],
 		"bases": [],
@@ -595,8 +602,8 @@
 		"name": "Vanguard Beta",
 		"type": "star",
 		"color": "#dc3545",
-		"x": 160,
-		"y": 660,
+		"x": 100,
+		"y": 675,
 		"faction": "alliance",
 		"planets": [],
 		"bases": [],
@@ -617,15 +624,15 @@
 				"type": "Sentry Post"
 			}
 		],
-		"description": "Customs inspection node screening vessels heading into the Nair Al Saif Black Hole hub."
+		"description": ""
 	},
 	{
 		"id": "sinistra_minor",
 		"name": "Sinistra Minor",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 344,
-		"y": 110,
+		"x": 346,
+		"y": 111,
 		"faction": "federation",
 		"planets": [],
 		"bases": [],
@@ -660,8 +667,8 @@
 		"name": "Terebel Outpost",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 680,
-		"y": 109,
+		"x": 674,
+		"y": 96,
 		"faction": "",
 		"planets": [],
 		"bases": [],
@@ -672,58 +679,94 @@
 		"name": "Ombra Outpost Alpha",
 		"type": "star",
 		"color": "#dc3545",
-		"x": 799,
-		"y": 505,
+		"x": 643,
+		"y": 693,
 		"faction": "ombra",
-		"planets": [],
+		"planets": [
+			{
+				"name": "Alpha-1",
+				"type": "Barren Rock",
+				"description": "A desolate planetoid housing deep-surface cloning facilities."
+			}
+		],
 		"bases": [
 			{
 				"name": "Shadow Lookout",
 				"type": "Sentry Base"
 			}
 		],
-		"description": "First-contact border garrison monitoring deep hyperlane signals exiting Ombra Space."
+		"description": "A tactical monitoring system. The Ombra maintain a permanent fleet presence here to scan for incoming threats."
 	},
 	{
 		"id": "ombra_hub",
-		"name": "Ombra Hub",
+		"name": "The Vexillarius Core",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 851,
-		"y": 517,
+		"x": 703,
+		"y": 725,
 		"faction": "ombra",
-		"planets": [],
+		"planets": [
+			{
+				"name": "Core-Prime",
+				"type": "Terrestrial",
+				"gravity": "0.98g",
+				"population": "4.5 Billion (Enslaved)",
+				"description": "The site of the Ombra's first arrival. The planet's resources are strip-mined to maintain the orbital fleet."
+			}
+		],
 		"bases": [
 			{
 				"name": "Ebon Spire",
-				"type": "Trade Port"
+				"type": "Fleet Command Hub"
 			}
 		],
-		"description": "Central trade nexus of Ombra Space, dealing in high-value asteroid ores and salvage materials."
+		"description": "The administrative heart of Ombra space. The massive ancient ships of the Primus Vexillarius fleet form a permanent artificial ring around Core-Prime."
 	},
 	{
 		"id": "void_sentry",
 		"name": "Void Sentry",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 840,
-		"y": 590,
+		"x": 822,
+		"y": 688,
 		"faction": "ombra",
-		"planets": [],
-		"bases": [],
-		"description": "Uncolonized beacon system marking the gateway into deep unregulated void lanes."
+		"planets": [
+			{
+				"name": "Sentry's End",
+				"type": "Gas Giant",
+				"description": "A swirling grey giant used for fuel harvesting by the Ombra fleet."
+			}
+		],
+		"bases": [
+			{
+				"name": "Refueling Array Zeta",
+				"type": "Orbital Siphon"
+			}
+		],
+		"description": "A strategic refueling station for Ombra long-range patrols."
 	},
 	{
 		"id": "ombra_deep_outpost",
 		"name": "Ombra Deep Outpost",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 884,
-		"y": 462,
+		"x": 704,
+		"y": 818,
 		"faction": "ombra",
-		"planets": [],
-		"bases": [],
-		"description": "A remote orbital research lab positioned on the dangerous outer fringes of the eastern sector."
+		"planets": [
+			{
+				"name": "Deep Research-1",
+				"type": "Ice World",
+				"description": "A frozen world where the Ombra conduct experiments in cryo-stasis and cloning."
+			}
+		],
+		"bases": [
+			{
+				"name": "Cryo-Laboratory",
+				"type": "Research Station"
+			}
+		],
+		"description": "A remote orbital research lab positioned on the dangerous outer fringes, isolated from the rest of the fleet."
 	},
 	{
 		"id": "maestia_gate",
@@ -754,7 +797,9 @@
 			{
 				"name": "Crown World",
 				"type": "Elysium-class Garden",
-				"description": "Lush paradise and administrative heart of the Maestia Dynasty."
+				"description": "Lush paradise and administrative heart of the Maestia Dynasty.",
+				"gravity": "1.03g",
+				"population": "4 Billion"
 			}
 		],
 		"bases": [],
@@ -765,23 +810,36 @@
 		"name": "Aegis",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 204,
-		"y": 711,
+		"x": 165,
+		"y": 725,
 		"faction": "maestia",
 		"planets": [],
 		"bases": [],
-		"description": "Shield system hosting massive kinetic deflection grids protecting imperial sectors."
+		"description": ""
 	},
 	{
 		"id": "crown_jewel",
-		"name": "Crown Jewel",
+		"name": "Corona",
 		"type": "star",
 		"color": "#dc3545",
-		"x": 171,
-		"y": 759,
+		"x": 173,
+		"y": 775,
 		"faction": "maestia",
-		"planets": [],
-		"bases": [],
+		"planets": [
+			{
+				"name": "Gemma",
+				"type": "Terrestrial (Desert)",
+				"description": "A planet very rich in different useful and pretty jewels, and other minerals.",
+				"gravity": "0.8g",
+				"population": "780 Million"
+			}
+		],
+		"bases": [
+			{
+				"name": "Orbital Refinery",
+				"type": "Orbital Port"
+			}
+		],
 		"description": "Rich gemstone miner system, containing massive refinery platforms."
 	},
 	{
@@ -799,15 +857,15 @@
 				"type": "Mega Forge"
 			}
 		],
-		"description": "Orbital macro-forges generating state-of-the-art battleships for the imperial fleet."
+		"description": "Orbital macro-forges generating state-of-the-art warships for the imperial fleet."
 	},
 	{
 		"id": "edge_sentinel",
 		"name": "Edge Sentinel",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 580,
-		"y": 710,
+		"x": 955,
+		"y": 446,
 		"faction": "",
 		"planets": [],
 		"bases": [],
@@ -818,8 +876,8 @@
 		"name": "Terminus",
 		"type": "star",
 		"color": "#dc3545",
-		"x": 610,
-		"y": 760,
+		"x": 1050,
+		"y": 394,
 		"faction": "",
 		"planets": [],
 		"bases": [],
@@ -830,8 +888,8 @@
 		"name": "Outer Haven",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 710,
-		"y": 740,
+		"x": 1119,
+		"y": 463,
 		"faction": "",
 		"planets": [
 			{
@@ -848,12 +906,12 @@
 		"name": "Edge Outpost 9",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 740,
-		"y": 690,
+		"x": 1174,
+		"y": 564,
 		"faction": "",
 		"planets": [],
 		"bases": [],
-		"description": "A rugged scout outstation tracking migration patterns of deep-space nomad caravans."
+		"description": ""
 	},
 	{
 		"id": "lerna",
@@ -899,7 +957,12 @@
 				"description": "A pale gold gas giant with a vast ring system."
 			}
 		],
-		"bases": [{ "name": "Hyperion Gateway", "type": "Trading Hub" }],
+		"bases": [
+			{
+				"name": "Hyperion Gateway",
+				"type": "Trading Hub"
+			}
+		],
 		"description": "A vital agricultural and trade hub connecting the northern frontier to the Alliance core."
 	},
 	{
@@ -931,7 +994,12 @@
 				"description": "Distant blue giant with methane storms."
 			}
 		],
-		"bases": [{ "name": "Silver Reach Station", "type": "Mining Outpost" }],
+		"bases": [
+			{
+				"name": "Silver Reach Station",
+				"type": "Mining Outpost"
+			}
+		],
 		"description": "A quiet mining system on the edge of the Valhalla influence zone."
 	},
 	{
@@ -939,8 +1007,8 @@
 		"name": "Artemis",
 		"type": "star",
 		"color": "#17a2b8",
-		"x": 220,
-		"y": 380,
+		"x": 188,
+		"y": 390,
 		"faction": "alliance",
 		"planets": [
 			{
@@ -968,7 +1036,12 @@
 				"description": "Small, distant rock serving as a long-range scanning array."
 			}
 		],
-		"bases": [{ "name": "Huntress Watch", "type": "Naval Sentry" }],
+		"bases": [
+			{
+				"name": "Huntress Watch",
+				"type": "Naval Sentry"
+			}
+		],
 		"description": "A strategic junction system guarding the hyperlanes between Sol and the northern territories."
 	},
 	{
@@ -976,9 +1049,9 @@
 		"name": "Ethife",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 373,
-		"y": 689,
-		"faction": "alliance",
+		"x": 355,
+		"y": 599,
+		"faction": "ethife",
 		"planets": [],
 		"bases": [],
 		"description": "Home system of the Ethife. Has no habitable planets."
@@ -989,58 +1062,800 @@
 		"type": "star",
 		"color": "#ffffff",
 		"x": 516,
-		"y": 290,
+		"y": 294,
 		"faction": "federation",
-		"planets": [],
-		"bases": [],
-		"description": "Newly discovered star system."
+		"planets": [
+			{
+				"name": "Aerith I",
+				"type": "Terrestrial",
+				"gravity": "0.9g",
+				"population": "1.2 Billion",
+				"description": "A world of endless plains and massive Federation grain silos."
+			},
+			{
+				"name": "Aerith II",
+				"type": "Gas Giant",
+				"description": "A swirling blue giant with helium-rich clouds."
+			},
+			{
+				"name": "Cloud Reach",
+				"type": "Ice Moon",
+				"description": "A frozen moon serving as a long-range communications relay."
+			}
+		],
+		"bases": [
+			{
+				"name": "Aerith Watch",
+				"type": "Sentry Post"
+			}
+		],
+		"description": "A system known for its massive agricultural output. Joined the federation recently, still has a fairly strong opposition."
 	},
 	{
 		"id": "hairi",
 		"name": "Hairi",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 475,
-		"y": 261,
+		"x": 501,
+		"y": 245,
 		"faction": "",
-		"planets": [],
-		"bases": [],
-		"description": "Newly discovered star system."
+		"planets": [
+			{
+				"name": "Hairi Prime",
+				"type": "Terrestrial (Oceanic)",
+				"gravity": "1.1g",
+				"population": "850 Million",
+				"description": "An independent water world famous for its deep-sea bioluminescent coral reefs."
+			},
+			{
+				"name": "Mistral",
+				"type": "Terrestrial (Arid)",
+				"gravity": "0.7g",
+				"population": "45,000",
+				"description": "A windswept rock home to independent mining cooperatives."
+			}
+		],
+		"bases": [
+			{
+				"name": "Free Port Hairi",
+				"type": "Trading Hub"
+			}
+		],
+		"description": "A bustling independent system that serves as a neutral ground for traders from all factions."
 	},
 	{
 		"id": "noriah",
-		"name": "Moriah",
+		"name": "Noriah",
 		"type": "star",
 		"color": "#ffffff",
 		"x": 449,
 		"y": 297,
 		"faction": "",
-		"planets": [],
+		"planets": [
+			{
+				"name": "Noriah I",
+				"type": "Molten",
+				"description": "A blistering rock orbiting dangerously close to the star."
+			},
+			{
+				"name": "Noriah Alpha",
+				"type": "Terrestrial (Garden)",
+				"gravity": "1.0g",
+				"population": "3.1 Billion",
+				"description": "A lush, green world with diverse ecosystems and massive city-states."
+			},
+			{
+				"name": "Silt",
+				"type": "Terrestrial (Desert)",
+				"gravity": "0.9g",
+				"population": "120 Million",
+				"description": "A harsh desert world with rich spice and mineral deposits."
+			}
+		],
 		"bases": [],
-		"description": "Newly discovered star system."
+		"description": "A highly populated independent system known for its ancient ruins and thriving culture."
 	},
 	{
 		"id": "shengong",
 		"name": "Shengong",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 414,
-		"y": 338,
+		"x": 393,
+		"y": 333,
 		"faction": "",
-		"planets": [],
-		"bases": [],
-		"description": "Newly discovered star system."
+		"planets": [
+			{
+				"name": "Shen I",
+				"type": "Terrestrial (Rock)",
+				"description": "A barren world with high-gravity peaks."
+			},
+			{
+				"name": "Gong Beta",
+				"type": "Gas Giant",
+				"description": "A purple-hued gas giant with a volatile ring system."
+			}
+		],
+		"bases": [
+			{
+				"name": "Monastery of Stars",
+				"type": "Research Outpost"
+			}
+		],
+		"description": "A quiet, spiritual system home to various independent philosophical orders."
 	},
 	{
 		"id": "kalausi",
 		"name": "Kalausi",
 		"type": "star",
 		"color": "#ffffff",
-		"x": 396,
-		"y": 256,
+		"x": 402,
+		"y": 255,
 		"faction": "",
+		"planets": [
+			{
+				"name": "Kal I",
+				"type": "Terrestrial (Frozen)",
+				"description": "A world covered in perpetual snow and ice."
+			},
+			{
+				"name": "Kalausi Prime",
+				"type": "Terrestrial (Temperate)",
+				"gravity": "1.05g",
+				"population": "1.8 Billion",
+				"description": "The heart of the system, featuring vast oceans and bustling coastal cities."
+			},
+			{
+				"name": "Usi",
+				"type": "Gas Giant",
+				"description": "A small gas giant with a moon rich in exotic gases."
+			}
+		],
+		"bases": [
+			{
+				"name": "Kalausi Gateway",
+				"type": "Orbital Station"
+			}
+		],
+		"description": "A wealthy independent system thriving on maritime trade and high-tech industries."
+	},
+	{
+		"id": "poerava",
+		"name": "Poerava",
+		"type": "star",
+		"color": "#e66100",
+		"x": 563,
+		"y": 495,
+		"faction": "federation",
+		"planets": [
+			{
+				"name": "Poerava I",
+				"type": "Terrestrial (Volcanic)",
+				"description": "A tectonically active world used for geothermal power generation."
+			},
+			{
+				"name": "Poerava II",
+				"type": "Terrestrial (Jungle)",
+				"gravity": "1.2g",
+				"population": "950 Million",
+				"description": "A dense rainforest world teeming with exotic flora and fauna."
+			}
+		],
+		"bases": [
+			{
+				"name": "Southern Command",
+				"type": "Military Base"
+			}
+		],
+		"description": "A strategic Federation frontier system guarding the southern hyperlanes."
+	},
+	{
+		"id": "shakh",
+		"name": "Shakh",
+		"type": "star",
+		"color": "#f9f06b",
+		"x": 472,
+		"y": 547,
+		"faction": "federation",
+		"planets": [
+			{
+				"name": "Shakh Prime",
+				"type": "Terrestrial (Arid)",
+				"gravity": "0.8g",
+				"population": "2.4 Billion",
+				"description": "A world of vast mesas and deep canyons, home to the Federation's finest pilots."
+			},
+			{
+				"name": "Dust Cloud",
+				"type": "Dwarf Planet",
+				"description": "A rocky fragment surrounded by a permanent dust storm."
+			}
+		],
+		"bases": [
+			{
+				"name": "Shakh Academy",
+				"type": "Flight School"
+			}
+		],
+		"description": "Famous for its military academy, Shakh is the cradle of Federation space superiority."
+	},
+	{
+		"id": "bosona",
+		"name": "Bosona",
+		"type": "star",
+		"color": "#c061cb",
+		"x": 561,
+		"y": 538,
+		"faction": "federation",
+		"planets": [
+			{
+				"name": "Bosona I",
+				"type": "Terrestrial (Swamp)",
+				"gravity": "1.1g",
+				"population": "300 Million",
+				"description": "A misty world of marshes and bioluminescent fungi."
+			},
+			{
+				"name": "Gemstone",
+				"type": "Ice Giant",
+				"description": "A beautiful ice giant with crystalline rings."
+			}
+		],
+		"bases": [],
+		"description": "A peripheral Federation system known for its unique biological exports."
+	},
+	{
+		"id": "stribor",
+		"name": "Stribor",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 254,
+		"y": 799,
+		"faction": "",
+		"planets": [
+			{
+				"name": "Stribor I",
+				"type": "Terrestrial (Tundra)",
+				"gravity": "0.9g",
+				"population": "150 Million",
+				"description": "A cold world with massive glacier formations."
+			},
+			{
+				"name": "Zephyr",
+				"type": "Gas Giant",
+				"description": "A giant with extremely fast wind speeds in its upper atmosphere."
+			}
+		],
+		"bases": [
+			{
+				"name": "Cloud City",
+				"type": "Refining Platform"
+			}
+		],
+		"description": "An independent system focusing on atmospheric mining and research."
+	},
+	{
+		"id": "veritate",
+		"name": "Veritate",
+		"type": "star",
+		"color": "#62a0ea",
+		"x": 436,
+		"y": 202,
+		"faction": "federation",
+		"planets": [
+			{
+				"name": "Veritate Prime",
+				"type": "Terrestrial (Jungle)",
+				"gravity": "1.3g",
+				"population": "16 Million",
+				"description": "A very hostile planet with flora and fauna that tries to kill you. It's incredibly rich in rare minerals used in high tech production."
+			},
+			{
+				"name": "Echo",
+				"type": "Terrestrial (Rock)",
+				"description": "A silent world with massive canyons that amplify sound.",
+				"gravity": "0.65",
+				"population": "30 Thousand"
+			}
+		],
+		"bases": [
+			{
+				"name": "Libertas",
+				"type": "Asteroid belt mining complex"
+			}
+		],
+		"description": "A fairly isolated system with a tradition of warriors. Have recently been occupied by the federation, to a large part because of it's natural resources."
+	},
+	{
+		"id": "krios",
+		"name": "Krios",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 157,
+		"y": 203,
+		"faction": "alliance",
+		"planets": [
+			{
+				"name": "Krios I",
+				"type": "Terrestrial (Scrubland)",
+				"gravity": "0.95g",
+				"population": "400 Million",
+				"description": "A hardy world on the Alliance frontier with resilient ecosystems."
+			},
+			{
+				"name": "Titan's Rest",
+				"type": "Gas Giant",
+				"description": "A massive brown giant with a calm, thick atmosphere."
+			}
+		],
+		"bases": [
+			{
+				"name": "Fortress Krios",
+				"type": "Border Outpost"
+			}
+		],
+		"description": "A heavily fortified Alliance system guarding the western approaches."
+	},
+	{
+		"id": "oceanus",
+		"name": "Oceanus",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 351,
+		"y": 187,
+		"faction": "alliance",
+		"planets": [
+			{
+				"name": "Oceanus Prime",
+				"type": "Terrestrial (Oceanic)",
+				"gravity": "1.0g",
+				"population": "1.5 Billion",
+				"description": "A world of archipelagos and vast, shallow seas."
+			},
+			{
+				"name": "Tidal",
+				"type": "Ice Moon",
+				"description": "A moon with high volcanic activity beneath its icy crust."
+			}
+		],
+		"bases": [
+			{
+				"name": "Oceanus Marina",
+				"type": "Naval Yard"
+			}
+		],
+		"description": "The Alliance's primary maritime research and ship-building hub."
+	},
+	{
+		"id": "tethys",
+		"name": "Tethys",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 286,
+		"y": 270,
+		"faction": "alliance",
+		"planets": [
+			{
+				"name": "Tethys I",
+				"type": "Terrestrial (Frozen)",
+				"description": "A barren, cold world with rich silicate deposits."
+			},
+			{
+				"name": "Deep Blue",
+				"type": "Gas Giant",
+				"description": "A magnificent blue giant with a complex system of 14 moons."
+			}
+		],
+		"bases": [
+			{
+				"name": "Deep Sea Array",
+				"type": "Scanning Grid"
+			}
+		],
+		"description": "A quiet peripheral system used for long-range early warning scans."
+	},
+	{
+		"id": "iapetus",
+		"name": "Iapetus",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 338,
+		"y": 233,
+		"faction": "alliance",
+		"planets": [
+			{
+				"name": "Iapetus Prime",
+				"type": "Terrestrial (Temperate)",
+				"gravity": "1.0g",
+				"population": "2.2 Billion",
+				"description": "A highly developed world with diverse biomes and massive industrial zones."
+			},
+			{
+				"name": "Cloud Top",
+				"type": "Gas Giant",
+				"description": "A giant with permanent electrical storms in its high atmosphere."
+			}
+		],
+		"bases": [
+			{
+				"name": "Iapetus Spire",
+				"type": "Trading Hub"
+			}
+		],
+		"description": "A key industrial center for the Alliance of Free Worlds."
+	},
+	{
+		"id": "mnemosyne",
+		"name": "Mnemosyne",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 132,
+		"y": 108,
+		"faction": "alliance",
+		"planets": [
+			{
+				"name": "Mnemo I",
+				"type": "Terrestrial (Arid)",
+				"gravity": "0.8g",
+				"population": "80 Million",
+				"description": "A quiet world home to the Alliance's primary archival vaults."
+			},
+			{
+				"name": "Memory",
+				"type": "Ice Moon",
+				"description": "A crystalline moon that reflects the star's light brilliantly."
+			}
+		],
+		"bases": [
+			{
+				"name": "The Archive",
+				"type": "Data Vault"
+			}
+		],
+		"description": "The cultural and historical heart of the Alliance's northern reach."
+	},
+	{
+		"id": "phoebe",
+		"name": "Phoebe",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 346,
+		"y": 296,
+		"faction": "",
+		"planets": [
+			{
+				"name": "Phoebe Prime",
+				"type": "Terrestrial (Garden)",
+				"gravity": "1.0g",
+				"population": "1.1 Billion",
+				"description": "A beautiful world with mild climates and extensive botanical gardens."
+			},
+			{
+				"name": "Anulus Mundi",
+				"type": "Gas Giant",
+				"description": "A giant with the most spectacular ring system in the quadrant."
+			}
+		],
+		"bases": [],
+		"description": "A peaceful residential and recreational system."
+	},
+	{
+		"id": "coeus",
+		"name": "Coeus",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 198,
+		"y": 162,
+		"faction": "alliance",
+		"planets": [
+			{
+				"name": "Coeus I",
+				"type": "Terrestrial (Mountainous)",
+				"gravity": "1.2g",
+				"population": "200 Million",
+				"description": "A world of high peaks and thin atmosphere, used for advanced weapons testing."
+			},
+			{
+				"name": "Storm's Eye",
+				"type": "Gas Giant",
+				"description": "A dark, stormy giant with massive methane cyclones."
+			}
+		],
+		"bases": [
+			{
+				"name": "Coeus Testing Range",
+				"type": "Military Facility"
+			}
+		],
+		"description": "A remote system dedicated to advanced military research and development."
+	},
+	{
+		"id": "rhea",
+		"name": "Rhea",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 180,
+		"y": 287,
+		"faction": "alliance",
+		"planets": [
+			{
+				"name": "Rhea Prime",
+				"type": "Terrestrial (Tropical)",
+				"gravity": "0.9g",
+				"population": "750 Million",
+				"description": "A world of tropical islands and coral reefs, a popular destination for travelers."
+			},
+			{
+				"name": "Harvest",
+				"type": "Gas Giant",
+				"description": "A giant with several moons used for intensive hydro-farming."
+			}
+		],
+		"bases": [
+			{
+				"name": "Rhea Resort",
+				"type": "Tourism Hub"
+			}
+		],
+		"description": "The premier leisure and agricultural system in the western Alliance space."
+	},
+	{
+		"id": "castrum_vexilla",
+		"name": "Castrum Vexilla",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 630,
+		"y": 750,
+		"faction": "ombra",
+		"planets": [
+			{
+				"name": "Vexilla-1",
+				"type": "Terrestrial",
+				"gravity": "1.0g",
+				"population": "800 Million (Enslaved)",
+				"description": "A heavy industrial world producing cloning vats and ship components."
+			},
+			{
+				"name": "Vexilla-2",
+				"type": "Gas Giant",
+				"description": "A source of atmospheric gases for the fleet."
+			}
+		],
+		"bases": [
+			{
+				"name": "Orbital Garrison Prime",
+				"type": "Fortress Station"
+			}
+		],
+		"description": "A massive fortress system where the Ombra consolidate their military power."
+	},
+	{
+		"id": "primus_station",
+		"name": "Primus Station",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 589,
+		"y": 718,
+		"faction": "ombra",
+		"planets": [
+			{
+				"name": "Primus-Alpha",
+				"type": "Terrestrial",
+				"gravity": "1.1g",
+				"population": "1.5 Billion (Enslaved)",
+				"description": "The primary agricultural world for the Ombra fleet, heavily monitored from orbit."
+			}
+		],
+		"bases": [
+			{
+				"name": "Vanguard Reach",
+				"type": "Orbital Command"
+			}
+		],
+		"description": "The staging ground for Ombra incursions into neighboring sectors."
+	},
+	{
+		"id": "vexilla_secundus",
+		"name": "Vexilla Secundus",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 740,
+		"y": 644,
+		"faction": "ombra",
+		"planets": [
+			{
+				"name": "Secundus-A",
+				"type": "Barren",
+				"description": "A rocky world used for live-fire military exercises."
+			}
+		],
+		"bases": [
+			{
+				"name": "Observation Post IV",
+				"type": "Sentry Station"
+			}
+		],
+		"description": "A training system for Ombra warriors, where clone batches are battle-hardened."
+	},
+	{
+		"id": "praetoria",
+		"name": "Praetoria",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 775,
+		"y": 750,
+		"faction": "ombra",
+		"planets": [
+			{
+				"name": "Praetoria-1",
+				"type": "Terrestrial",
+				"gravity": "1.02g",
+				"population": "2.1 Billion (Enslaved)",
+				"description": "A world dedicated to the production of high-tech weaponry for the fleet."
+			}
+		],
+		"bases": [
+			{
+				"name": "The Praetorian Shield",
+				"type": "Orbital Fortress"
+			}
+		],
+		"description": "Home to the elite guard of the Primus Vexillarius fleet."
+	},
+	{
+		"id": "ocularis",
+		"name": "Ocularis",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 536,
+		"y": 685,
+		"faction": "ombra",
+		"planets": [
+			{
+				"name": "Ocularis-Eye",
+				"type": "Ice Giant",
+				"description": "A cold giant whose moons house massive sensor arrays."
+			}
+		],
+		"bases": [
+			{
+				"name": "Deep Space Array",
+				"type": "Intelligence Hub"
+			}
+		],
+		"description": "The eyes and ears of the Ombra fleet, monitoring hyperlane traffic for light years."
+	},
+	{
+		"id": "golgotha",
+		"name": "Golgotha",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 574,
+		"y": 785,
+		"faction": "ombra",
+		"planets": [
+			{
+				"name": "Golgotha Prime",
+				"type": "Terrestrial",
+				"gravity": "1.2g",
+				"population": "3.5 Billion (Enslaved)",
+				"description": "A harsh world of mines and factories, under constant orbital bombardment if quotas aren't met."
+			}
+		],
+		"bases": [
+			{
+				"name": "Executioner's Watch",
+				"type": "Orbital Sentry"
+			}
+		],
+		"description": "A system synonymous with the Ombra's brutality and absolute rule."
+	},
+	{
+		"id": "subjugatio",
+		"name": "Subjugatio",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 586,
+		"y": 648,
+		"faction": "ombra",
+		"planets": [
+			{
+				"name": "Sub-1",
+				"type": "Terrestrial",
+				"gravity": "0.95g",
+				"population": "500 Million (Enslaved)",
+				"description": "A newly conquered world currently being integrated into the Ombra labor machine."
+			}
+		],
+		"bases": [
+			{
+				"name": "Conversion Platform Alpha",
+				"type": "Re-education Hub"
+			}
+		],
+		"description": "A system where the Ombra break the will of newly conquered populations."
+	},
+	{
+		"id": "fronteira",
+		"name": "Fronteira",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 462,
+		"y": 786,
+		"faction": "ombra",
+		"planets": [
+			{
+				"name": "Front-A",
+				"type": "Gas Giant",
+				"description": "A resource-rich giant on the edge of Ombra control."
+			}
+		],
+		"bases": [
+			{
+				"name": "Border Watch",
+				"type": "Fleet Anchorage"
+			}
+		],
+		"description": "The westernmost reach of the Ombra fleet, guarding the boundary of their expansion."
+	},
+	{
+		"id": "clonus_hub",
+		"name": "Clonus Hub",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 532,
+		"y": 728,
+		"faction": "ombra",
+		"planets": [
+			{
+				"name": "Clonus-Prime",
+				"type": "Terrestrial",
+				"gravity": "1.0g",
+				"population": "Clone Batches 01-99",
+				"description": "The planetary surface is restricted entirely to cloning facilities and warrior growth chambers."
+			}
+		],
+		"bases": [
+			{
+				"name": "The Great Vat",
+				"type": "Orbital Cloning Center"
+			}
+		],
+		"description": "The biological heart of the Ombra, where the aging warrior pool is renewed through advanced technology."
+	},
+	{
+		"id": "tangra",
+		"name": "Tangra",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 396,
+		"y": 622,
+		"faction": "ethife",
 		"planets": [],
 		"bases": [],
-		"description": "Newly discovered star system."
+		"description": "Has no habitable planets."
+	},
+	{
+		"id": "sansuna",
+		"name": "Sansuna",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 376,
+		"y": 551,
+		"faction": "ethife",
+		"planets": [],
+		"bases": [],
+		"description": "Has no habitable planets."
+	},
+	{
+		"id": "merope",
+		"name": "Merope",
+		"type": "star",
+		"color": "#ffffff",
+		"x": 314,
+		"y": 595,
+		"faction": "ethife",
+		"planets": [],
+		"bases": [],
+		"description": "Has no habitable planets."
 	}
 ]

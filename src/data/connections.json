@@ -5,11 +5,6 @@
 		"type": "class 3"
 	},
 	{
-		"from": "valhalla",
-		"to": "sinistra",
-		"type": "class 4"
-	},
-	{
 		"from": "sinistra",
 		"to": "ghienna",
 		"type": "class 3"
@@ -57,11 +52,6 @@
 	{
 		"from": "the_cradle",
 		"to": "krane_daes",
-		"type": "class 2"
-	},
-	{
-		"from": "krane_daes",
-		"to": "io",
 		"type": "class 2"
 	},
 	{
@@ -202,7 +192,7 @@
 	{
 		"from": "sol",
 		"to": "vanguard_prime",
-		"type": "class 3"
+		"type": "class 2"
 	},
 	{
 		"from": "vanguard_prime",
@@ -223,11 +213,6 @@
 		"from": "sinistra",
 		"to": "sinistra_minor",
 		"type": "class 3"
-	},
-	{
-		"from": "sinistra_minor",
-		"to": "valhalla_nexus",
-		"type": "class 2"
 	},
 	{
 		"from": "capella",
@@ -267,7 +252,7 @@
 	{
 		"from": "ombra_hub",
 		"to": "ombra_deep_outpost",
-		"type": "class 1"
+		"type": "class 2"
 	},
 	{
 		"from": "ombra_hub",
@@ -282,7 +267,7 @@
 	{
 		"from": "valhalla_south",
 		"to": "maestia_gate",
-		"type": "class 3"
+		"type": "class 2"
 	},
 	{
 		"from": "maestia_gate",
@@ -303,11 +288,6 @@
 		"from": "maestia_prime",
 		"to": "titan_forge",
 		"type": "class 1"
-	},
-	{
-		"from": "titan_forge",
-		"to": "valhalla_south",
-		"type": "class 2"
 	},
 	{
 		"from": "io",
@@ -332,7 +312,7 @@
 	{
 		"from": "outer_haven",
 		"to": "edge_outpost_9",
-		"type": "class 1"
+		"type": "class 2"
 	},
 	{
 		"from": "edge_outpost_9",
@@ -347,7 +327,7 @@
 	{
 		"from": "ethife",
 		"to": "titan_forge",
-		"type": "class 1"
+		"type": "class 2"
 	},
 	{
 		"from": "kelsen",
@@ -379,10 +359,259 @@
 		"to": "kalausi",
 		"type": "class 1"
 	},
-	{ "from": "valhalla_nexus", "to": "artemis", "type": "class 2" },
-	{ "from": "artemis", "to": "hyperion", "type": "class 2" },
-	{ "from": "hyperion", "to": "selene", "type": "class 1" },
-	{ "from": "selene", "to": "lerna", "type": "class 1" },
-	{ "from": "hyperion", "to": "sinistra_minor", "type": "class 2" },
-	{ "from": "artemis", "to": "sol", "type": "class 2" }
+	{
+		"from": "valhalla_nexus",
+		"to": "artemis",
+		"type": "class 2"
+	},
+	{
+		"from": "artemis",
+		"to": "hyperion",
+		"type": "class 2"
+	},
+	{
+		"from": "hyperion",
+		"to": "selene",
+		"type": "class 1"
+	},
+	{
+		"from": "selene",
+		"to": "lerna",
+		"type": "class 1"
+	},
+	{
+		"from": "hyperion",
+		"to": "sinistra_minor",
+		"type": "class 2"
+	},
+	{
+		"from": "artemis",
+		"to": "sol",
+		"type": "class 2"
+	},
+	{
+		"from": "maestia_gate",
+		"to": "aegis",
+		"type": "class 2"
+	},
+	{
+		"from": "edge_sentinel",
+		"to": "betria",
+		"type": "class 1"
+	},
+	{
+		"from": "terebel_outpost",
+		"to": "sinistra",
+		"type": "class 3"
+	},
+	{
+		"from": "aegis",
+		"to": "vanguard_beta",
+		"type": "class 1"
+	},
+	{
+		"from": "bosona",
+		"to": "krane_daes",
+		"type": "class 1"
+	},
+	{
+		"from": "poerava",
+		"to": "bosona",
+		"type": "class 1"
+	},
+	{
+		"from": "shakh",
+		"to": "the_cradle",
+		"type": "class 1"
+	},
+	{
+		"from": "shakh",
+		"to": "bosona",
+		"type": "class 2"
+	},
+	{
+		"from": "valhalla_nexus",
+		"to": "shengong",
+		"type": "class 2"
+	},
+	{
+		"from": "valhalla_nexus",
+		"to": "hyperion",
+		"type": "class 2"
+	},
+	{
+		"from": "veritate",
+		"to": "aerith",
+		"type": "class 2"
+	},
+	{
+		"from": "phoebe",
+		"to": "shengong",
+		"type": "class 1"
+	},
+	{
+		"from": "phoebe",
+		"to": "kalausi",
+		"type": "class 1"
+	},
+	{
+		"from": "phoebe",
+		"to": "tethys",
+		"type": "class 1"
+	},
+	{
+		"from": "tethys",
+		"to": "selene",
+		"type": "class 1"
+	},
+	{
+		"from": "tethys",
+		"to": "iapetus",
+		"type": "class 1"
+	},
+	{
+		"from": "iapetus",
+		"to": "oceanus",
+		"type": "class 1"
+	},
+	{
+		"from": "hyperion",
+		"to": "coeus",
+		"type": "class 2"
+	},
+	{
+		"from": "hyperion",
+		"to": "krios",
+		"type": "class 2"
+	},
+	{
+		"from": "hyperion",
+		"to": "rhea",
+		"type": "class 1"
+	},
+	{
+		"from": "mnemosyne",
+		"to": "lerna",
+		"type": "class 2"
+	},
+	{
+		"from": "mnemosyne",
+		"to": "coeus",
+		"type": "class 2"
+	},
+	{
+		"from": "stribor",
+		"to": "maestia_prime",
+		"type": "class 1"
+	},
+	{
+		"from": "krane_daes",
+		"to": "shaula",
+		"type": "class 2"
+	},
+	{
+		"from": "subjugatio",
+		"to": "shaula",
+		"type": "class 1"
+	},
+	{
+		"from": "subjugatio",
+		"to": "ombra_outpost_alpha",
+		"type": "class 1"
+	},
+	{
+		"from": "clonus_hub",
+		"to": "fronteira",
+		"type": "class 2"
+	},
+	{
+		"from": "clonus_hub",
+		"to": "ocularis",
+		"type": "class 1"
+	},
+	{
+		"from": "ocularis",
+		"to": "subjugatio",
+		"type": "class 1"
+	},
+	{
+		"from": "ocularis",
+		"to": "ombra_outpost_alpha",
+		"type": "class 1"
+	},
+	{
+		"from": "ombra_outpost_alpha",
+		"to": "primus_station",
+		"type": "class 1"
+	},
+	{
+		"from": "primus_station",
+		"to": "castrum_vexilla",
+		"type": "class 1"
+	},
+	{
+		"from": "castrum_vexilla",
+		"to": "ombra_hub",
+		"type": "class 1"
+	},
+	{
+		"from": "castrum_vexilla",
+		"to": "golgotha",
+		"type": "class 1"
+	},
+	{
+		"from": "ombra_hub",
+		"to": "praetoria",
+		"type": "class 1"
+	},
+	{
+		"from": "praetoria",
+		"to": "ombra_deep_outpost",
+		"type": "class 2"
+	},
+	{
+		"from": "vexilla_secundus",
+		"to": "void_sentry",
+		"type": "class 1"
+	},
+	{
+		"from": "vexilla_secundus",
+		"to": "praetoria",
+		"type": "class 1"
+	},
+	{
+		"from": "ethife",
+		"to": "valhalla",
+		"type": "class 3"
+	},
+	{
+		"from": "fronteira",
+		"to": "titan_forge",
+		"type": "class 2"
+	},
+	{
+		"from": "clonus_hub",
+		"to": "primus_station",
+		"type": "class 1"
+	},
+	{
+		"from": "ethife",
+		"to": "merope",
+		"type": "class 1"
+	},
+	{
+		"from": "ethife",
+		"to": "tangra",
+		"type": "class 1"
+	},
+	{
+		"from": "ethife",
+		"to": "sansuna",
+		"type": "class 1"
+	},
+	{
+		"from": "ethife",
+		"to": "the_cradle",
+		"type": "class 2"
+	}
 ]
