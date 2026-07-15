@@ -40,6 +40,10 @@
 			{
 				"name": "Phobos Command",
 				"type": "Fleet Headquarters"
+			},
+			{
+				"name": "Ethife Enclave Alpha",
+				"type": "Industrial Trade Hub"
 			}
 		],
 		"description": "The cradle of human civilization."
@@ -61,6 +65,10 @@
 			{
 				"name": "Valhalla Gate Array",
 				"type": "Mega Jump-Gate Complex"
+			},
+			{
+				"name": "Ethife Trade Enclave",
+				"type": "Industrial Exchange"
 			}
 		],
 		"description": "A massive supermassive black hole. The sheer gravity well requires ships to exit jumps far out, making it a critical choke-point and trade gateway."
@@ -78,6 +86,10 @@
 			{
 				"name": "Sinistra Sentry Station",
 				"type": "Defense Platform"
+			},
+			{
+				"name": "Ethife Singularity Buoy",
+				"type": "Deep-Space Sensor"
 			}
 		],
 		"description": "A quiet, dark singularity nestled on the edge of Federation Territory. Jump corridors from here link deep into Free Space."
@@ -99,6 +111,10 @@
 			{
 				"name": "Nair Transit Rings",
 				"type": "Refueling Ring Grid"
+			},
+			{
+				"name": "Ethife Resource Siphon",
+				"type": "Independent Fuel Collector"
 			}
 		],
 		"description": ""
@@ -139,6 +155,10 @@
 			{
 				"name": "Apex Orbital Ring",
 				"type": "Research & Fabrication Facility"
+			},
+			{
+				"name": "Ethife Fabrication Yard",
+				"type": "Independent Production Site"
 			}
 		],
 		"description": "Considered the geometric and political center of the known galaxy. One of the founding systems of the Federation."
@@ -193,6 +213,10 @@
 			{
 				"name": "Federation Naval HQ",
 				"type": "Shipyard"
+			},
+			{
+				"name": "Ethife Mobile Refinery 'Hephaestus'",
+				"type": "Heavy Processing Ship"
 			}
 		],
 		"description": "The Vega system is one of the rare systems with two earthlike planets. It's one of the founding systems of the federation."
@@ -241,6 +265,10 @@
 			{
 				"name": "Fornax Garrison",
 				"type": "Peacekeeper Hub"
+			},
+			{
+				"name": "Ethife Frontier Beacon",
+				"type": "Navigation Relay"
 			}
 		],
 		"description": "A military fallback outpost guarding the Core's eastern frontier from external incursions."
@@ -249,7 +277,7 @@
 		"id": "krane_daes",
 		"name": "Krane Daes",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#f6d32d",
 		"x": 555,
 		"y": 590,
 		"faction": "federation",
@@ -355,7 +383,7 @@
 		"id": "ghienna",
 		"name": "Ghienna",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#3b82f6",
 		"x": 570,
 		"y": 301,
 		"faction": "federation",
@@ -366,7 +394,12 @@
 				"description": "Agricultural planet supplying central systems."
 			}
 		],
-		"bases": [],
+		"bases": [
+			{
+				"name": "Ethife Agricultural Sentry",
+				"type": "Orbital Bio-Lab"
+			}
+		],
 		"description": "A vital Breadbasket star system, linking the Core with outer Federation borders."
 	},
 	{
@@ -385,7 +418,7 @@
 		"id": "kastra",
 		"name": "Kastra",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#62a0ea",
 		"x": 616,
 		"y": 327,
 		"faction": "federation",
@@ -397,7 +430,7 @@
 		"id": "enif",
 		"name": "Enif",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#62a0ea",
 		"x": 540,
 		"y": 343,
 		"faction": "federation",
@@ -421,7 +454,7 @@
 		"id": "minkar",
 		"name": "Minkar",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#a0c4ff",
 		"x": 642,
 		"y": 375,
 		"faction": "federation",
@@ -433,7 +466,7 @@
 		"id": "meka",
 		"name": "Meka",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#62a0ea",
 		"x": 611,
 		"y": 405,
 		"faction": "federation",
@@ -472,6 +505,10 @@
 			{
 				"name": "Nashira Fleet Hub",
 				"type": "Military Base"
+			},
+			{
+				"name": "Ethife Industrial Platform",
+				"type": "Heavy Fabrication Site"
 			}
 		],
 		"description": "The strategic command center of the upper Federation. Extremely high military presence."
@@ -485,14 +522,19 @@
 		"y": 95,
 		"faction": "",
 		"planets": [],
-		"bases": [],
-		"description": "A white system supporting cargo networks and high-frequency beacons."
+		"bases": [
+			{
+				"name": "Ethife Cargo Relay",
+				"type": "Automated Logistics Node"
+			}
+		],
+		"description": "A white system supporting cargo networks and high-frequency beacons. The Ethife operate an automated relay here to assist with galactic freight management."
 	},
 	{
 		"id": "terebel",
 		"name": "Terebel",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#f9f06b",
 		"x": 730,
 		"y": 70,
 		"faction": "",
@@ -530,7 +572,7 @@
 		"id": "tyl",
 		"name": "Tyl",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#62a0ea",
 		"x": 860,
 		"y": 102,
 		"faction": "",
@@ -542,7 +584,7 @@
 		"id": "valhalla_nexus",
 		"name": "Valhalla Nexus",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#ffbe6f",
 		"x": 291,
 		"y": 388,
 		"faction": "alliance",
@@ -551,6 +593,10 @@
 			{
 				"name": "Nexus Sentry",
 				"type": "Scanning Grid"
+			},
+			{
+				"name": "Ethife Traffic Monitor",
+				"type": "Logistics Sentry"
 			}
 		],
 		"description": "An automated radar relay safeguarding the northern access to Valhalla's gravity well."
@@ -589,7 +635,7 @@
 		"id": "vanguard_alpha",
 		"name": "Vanguard Alpha",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#c061cb",
 		"x": 93,
 		"y": 607,
 		"faction": "alliance",
@@ -630,7 +676,7 @@
 		"id": "sinistra_minor",
 		"name": "Sinistra Minor",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#ffc107",
 		"x": 346,
 		"y": 111,
 		"faction": "federation",
@@ -666,7 +712,7 @@
 		"id": "terebel_outpost",
 		"name": "Terebel Outpost",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#3b82f6",
 		"x": 674,
 		"y": 96,
 		"faction": "",
@@ -701,7 +747,7 @@
 		"id": "ombra_hub",
 		"name": "The Vexillarius Core",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#f9f06b",
 		"x": 703,
 		"y": 725,
 		"faction": "ombra",
@@ -726,7 +772,7 @@
 		"id": "void_sentry",
 		"name": "Void Sentry",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#f9f06b",
 		"x": 822,
 		"y": 688,
 		"faction": "ombra",
@@ -809,7 +855,7 @@
 		"id": "aegis",
 		"name": "Aegis",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#c061cb",
 		"x": 165,
 		"y": 725,
 		"faction": "maestia",
@@ -863,7 +909,7 @@
 		"id": "edge_sentinel",
 		"name": "Edge Sentinel",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#f6d32d",
 		"x": 955,
 		"y": 446,
 		"faction": "",
@@ -887,7 +933,7 @@
 		"id": "outer_haven",
 		"name": "Outer Haven",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#a0c4ff",
 		"x": 1119,
 		"y": 463,
 		"faction": "",
@@ -905,7 +951,7 @@
 		"id": "edge_outpost_9",
 		"name": "Edge Outpost 9",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#3b82f6",
 		"x": 1174,
 		"y": 564,
 		"faction": "",
@@ -922,8 +968,13 @@
 		"y": 115,
 		"faction": "alliance",
 		"planets": [],
-		"bases": [],
-		"description": ""
+		"bases": [
+			{
+				"name": "Ethife Prospecting Array",
+				"type": "Resource Scanner"
+			}
+		],
+		"description": "An Alliance frontier system. The Ethife maintain a presence here to scan for valuable asteroid deposits in the outer cloud."
 	},
 	{
 		"id": "hyperion",
@@ -961,6 +1012,10 @@
 			{
 				"name": "Hyperion Gateway",
 				"type": "Trading Hub"
+			},
+			{
+				"name": "Ethife Grain Elevator",
+				"type": "Orbital Silo"
 			}
 		],
 		"description": "A vital agricultural and trade hub connecting the northern frontier to the Alliance core."
@@ -1040,27 +1095,56 @@
 			{
 				"name": "Huntress Watch",
 				"type": "Naval Sentry"
+			},
+			{
+				"name": "Ethife Data Vault",
+				"type": "Archival Station"
 			}
 		],
 		"description": "A strategic junction system guarding the hyperlanes between Sol and the northern territories."
 	},
 	{
 		"id": "ethife",
-		"name": "Ethife",
+		"name": "Ethife Prime",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#fdfbd3",
 		"x": 355,
 		"y": 599,
 		"faction": "ethife",
-		"planets": [],
-		"bases": [],
-		"description": "Home system of the Ethife. Has no habitable planets."
+		"planets": [
+			{
+				"name": "The Shattered Cradle",
+				"type": "Doomsday Wreckage",
+				"gravity": "Unstable",
+				"population": "None (Hazardous)",
+				"description": "Once a thriving industrial world, it was destroyed by a doomsday bomb during the Great War. The planet is now a broken, irradiated shell that is nearly impossible to land on."
+			}
+		],
+		"bases": [
+			{
+				"name": "Belt Command Hub",
+				"type": "Central Administration"
+			},
+			{
+				"name": "Mobile Harvest-Alpha",
+				"type": "Agriculture Array"
+			},
+			{
+				"name": "Mobile Harvest-Beta",
+				"type": "Agriculture Array"
+			},
+			{
+				"name": "The Obsidian Forge",
+				"type": "Mega-Refinery"
+			}
+		],
+		"description": "The home system of the Ethife. After their world was bombed, the survivors adapted to life in the asteroid belt. They are masters of low-gravity engineering and production. Having no interest in planetary territory, they maintain peaceful pacts with most of the galaxy, with the notable exception of the Ombra."
 	},
 	{
 		"id": "aerith",
 		"name": "Aerith",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#f9f06b",
 		"x": 516,
 		"y": 294,
 		"faction": "federation",
@@ -1119,6 +1203,10 @@
 			{
 				"name": "Free Port Hairi",
 				"type": "Trading Hub"
+			},
+			{
+				"name": "Ethife Free-Market Dock",
+				"type": "Independent Berth"
 			}
 		],
 		"description": "A bustling independent system that serves as a neutral ground for traders from all factions."
@@ -1127,7 +1215,7 @@
 		"id": "noriah",
 		"name": "Noriah",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#62a0ea",
 		"x": 449,
 		"y": 297,
 		"faction": "",
@@ -1152,7 +1240,12 @@
 				"description": "A harsh desert world with rich spice and mineral deposits."
 			}
 		],
-		"bases": [],
+		"bases": [
+			{
+				"name": "Ethife Deep-Core Drill",
+				"type": "Sub-Surface Mining Array"
+			}
+		],
 		"description": "A highly populated independent system known for its ancient ruins and thriving culture."
 	},
 	{
@@ -1187,7 +1280,7 @@
 		"id": "kalausi",
 		"name": "Kalausi",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#ffbe6f",
 		"x": 402,
 		"y": 255,
 		"faction": "",
@@ -1214,6 +1307,10 @@
 			{
 				"name": "Kalausi Gateway",
 				"type": "Orbital Station"
+			},
+			{
+				"name": "Ethife Assembly Array",
+				"type": "Automated Factory"
 			}
 		],
 		"description": "A wealthy independent system thriving on maritime trade and high-tech industries."
@@ -1307,7 +1404,7 @@
 		"id": "stribor",
 		"name": "Stribor",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#62a0ea",
 		"x": 254,
 		"y": 799,
 		"faction": "",
@@ -1329,6 +1426,10 @@
 			{
 				"name": "Cloud City",
 				"type": "Refining Platform"
+			},
+			{
+				"name": "Ethife Atmospheric Collector",
+				"type": "Gas Refining Ship"
 			}
 		],
 		"description": "An independent system focusing on atmospheric mining and research."
@@ -1399,7 +1500,7 @@
 		"id": "oceanus",
 		"name": "Oceanus",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#f6d32d",
 		"x": 351,
 		"y": 187,
 		"faction": "alliance",
@@ -1457,7 +1558,7 @@
 		"id": "iapetus",
 		"name": "Iapetus",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#dc3545",
 		"x": 338,
 		"y": 233,
 		"faction": "alliance",
@@ -1517,7 +1618,7 @@
 		"id": "phoebe",
 		"name": "Phoebe",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#c061cb",
 		"x": 346,
 		"y": 296,
 		"faction": "",
@@ -1542,7 +1643,7 @@
 		"id": "coeus",
 		"name": "Coeus",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#f6d32d",
 		"x": 198,
 		"y": 162,
 		"faction": "alliance",
@@ -1572,7 +1673,7 @@
 		"id": "rhea",
 		"name": "Rhea",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#dc3545",
 		"x": 180,
 		"y": 287,
 		"faction": "alliance",
@@ -1602,7 +1703,7 @@
 		"id": "castrum_vexilla",
 		"name": "Castrum Vexilla",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#a0c4ff",
 		"x": 630,
 		"y": 750,
 		"faction": "ombra",
@@ -1632,7 +1733,7 @@
 		"id": "primus_station",
 		"name": "Primus Station",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#3b82f6",
 		"x": 589,
 		"y": 718,
 		"faction": "ombra",
@@ -1657,7 +1758,7 @@
 		"id": "vexilla_secundus",
 		"name": "Vexilla Secundus",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#a0c4ff",
 		"x": 740,
 		"y": 644,
 		"faction": "ombra",
@@ -1680,7 +1781,7 @@
 		"id": "praetoria",
 		"name": "Praetoria",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#e66100",
 		"x": 775,
 		"y": 750,
 		"faction": "ombra",
@@ -1705,7 +1806,7 @@
 		"id": "ocularis",
 		"name": "Ocularis",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#3b82f6",
 		"x": 536,
 		"y": 685,
 		"faction": "ombra",
@@ -1728,7 +1829,7 @@
 		"id": "golgotha",
 		"name": "Golgotha",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#dc3545",
 		"x": 574,
 		"y": 785,
 		"faction": "ombra",
@@ -1753,7 +1854,7 @@
 		"id": "subjugatio",
 		"name": "Subjugatio",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#ffbe6f",
 		"x": 586,
 		"y": 648,
 		"faction": "ombra",
@@ -1778,7 +1879,7 @@
 		"id": "fronteira",
 		"name": "Fronteira",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#dc3545",
 		"x": 462,
 		"y": 786,
 		"faction": "ombra",
@@ -1801,7 +1902,7 @@
 		"id": "clonus_hub",
 		"name": "Clonus Hub",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#a0c4ff",
 		"x": 532,
 		"y": 728,
 		"faction": "ombra",
@@ -1826,13 +1927,30 @@
 		"id": "tangra",
 		"name": "Tangra",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#ffc107",
 		"x": 396,
 		"y": 622,
 		"faction": "ethife",
-		"planets": [],
-		"bases": [],
-		"description": "Has no habitable planets."
+		"planets": [
+			{
+				"name": "Tangra-I",
+				"type": "Metallic Rock",
+				"gravity": "0.12g",
+				"population": "Mining Colony",
+				"description": "A resource-rich but desolate rock, heavily strip-mined for its high-grade iron and titanium deposits."
+			}
+		],
+		"bases": [
+			{
+				"name": "Iron Reach",
+				"type": "Deep Mining Hub"
+			},
+			{
+				"name": "Tangra Processing Core",
+				"type": "Refining Station"
+			}
+		],
+		"description": "A key industrial system for the Ethife. It provides the raw materials required for their massive production capacity."
 	},
 	{
 		"id": "sansuna",
@@ -1842,20 +1960,58 @@
 		"x": 376,
 		"y": 551,
 		"faction": "ethife",
-		"planets": [],
-		"bases": [],
-		"description": "Has no habitable planets."
+		"planets": [
+			{
+				"name": "Sansuna-Gas",
+				"type": "Gas Giant",
+				"gravity": "2.4g",
+				"population": "Orbital Only",
+				"description": "A massive violet giant used for harvesting volatiles and hydrogen fuel through orbital siphons."
+			}
+		],
+		"bases": [
+			{
+				"name": "Siphon Station 7",
+				"type": "Atmospheric Harvester"
+			},
+			{
+				"name": "Mobile Harvest-Gamma",
+				"type": "Agriculture Array"
+			},
+			{
+				"name": "Sansuna Fuel Depot",
+				"type": "Refueling Hub"
+			}
+		],
+		"description": "A desolate system vital for energy resources. The Ethife maintain complex mobile agricultural arrays in the system's goldilocks zone."
 	},
 	{
 		"id": "merope",
 		"name": "Merope",
 		"type": "star",
-		"color": "#ffffff",
+		"color": "#f9f06b",
 		"x": 314,
 		"y": 595,
 		"faction": "ethife",
-		"planets": [],
-		"bases": [],
-		"description": "Has no habitable planets."
+		"planets": [
+			{
+				"name": "Merope-Ice",
+				"type": "Frozen Waste",
+				"gravity": "0.38g",
+				"population": "Research Outpost",
+				"description": "A cold, methane-ice world containing rare isotopes trapped within deep glaciers."
+			}
+		],
+		"bases": [
+			{
+				"name": "Glacial Drill-Alpha",
+				"type": "Isotope Extraction Site"
+			},
+			{
+				"name": "Merope Scientific Vault",
+				"type": "Research Hub"
+			}
+		],
+		"description": "A cold and isolated system dedicated to scientific inquiry and isotope research, preserved since the system was cut off during the Great War."
 	}
 ]
