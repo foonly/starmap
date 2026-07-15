@@ -26,6 +26,7 @@ const originId = ref(null);
 const destinationId = ref(null);
 const theme = ref("dark");
 const isEditMode = ref(false);
+const jumpCoreLevel = ref(4);
 
 // Hyperlane toggles
 const activeLanes = ref({
@@ -99,6 +100,10 @@ const findShortestPath = (startId, endId) => {
 	});
 
 	activeConnections.value.forEach((conn) => {
+		// Filter by jump core level
+		const laneLevel = parseInt(conn.type.split(" ")[1]);
+		if (laneLevel > jumpCoreLevel.value) return;
+
 		const fromSys = systemsData.value.find((s) => s.id === conn.from);
 		const toSys = systemsData.value.find((s) => s.id === conn.to);
 
@@ -421,6 +426,7 @@ onMounted(() => {
 				:shortest-path="shortestPath"
 				:is-edit-mode="isEditMode"
 				:version="version"
+				v-model:jumpCoreLevel="jumpCoreLevel"
 				@toggle-lane="toggleLaneType"
 				@swap-route="swapRoutePoints"
 				@clear-route="clearRouteSelection"

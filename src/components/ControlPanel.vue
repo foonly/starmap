@@ -52,11 +52,16 @@ const props = defineProps({
 		type: String,
 		default: "1.0.0",
 	},
+	jumpCoreLevel: {
+		type: Number,
+		default: 4,
+	},
 });
 
 const emit = defineEmits([
 	"update:searchQuery",
 	"update:selectedFactionId",
+	"update:jumpCoreLevel",
 	"toggle-lane",
 	"swap-route",
 	"clear-route",
@@ -310,6 +315,33 @@ const routeStats = computed(() => {
 				>
 					<Route class="w-3.5 h-3.5" /> Jump Route Planner
 				</label>
+
+				<!-- Jump Core Level Selector -->
+				<div class="space-y-1.5">
+					<div class="flex items-center justify-between">
+						<label class="text-[9px] font-mono text-slate-500 uppercase"
+							>Jump Core Class</label
+						>
+						<span class="text-[9px] font-mono font-bold text-blue-500"
+							>LVL {{ jumpCoreLevel }}</span
+						>
+					</div>
+					<input
+						type="range"
+						min="1"
+						max="4"
+						step="1"
+						:value="jumpCoreLevel"
+						@input="emit('update:jumpCoreLevel', parseInt($event.target.value))"
+						class="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
+					/>
+					<div class="flex justify-between px-0.5">
+						<span class="text-[8px] font-mono text-slate-500">1</span>
+						<span class="text-[8px] font-mono text-slate-500">2</span>
+						<span class="text-[8px] font-mono text-slate-500">3</span>
+						<span class="text-[8px] font-mono text-slate-500">4</span>
+					</div>
+				</div>
 
 				<!-- Unsolved Route Selection Blocks -->
 				<div class="space-y-2">
