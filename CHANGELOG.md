@@ -1,6 +1,12 @@
 # Changelog
 
-## 1.5.0 (2026-07-15)
+## 1.6.0 (2026-07-15)
+
+#### Features
+
+- app: add jump core level filter to route planning (3cbdfd5)
+
+## v1.5.0 (2026-07-15)
 
 #### Features
 
