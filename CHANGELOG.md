@@ -1,6 +1,16 @@
 # Changelog
 
-## 1.6.0 (2026-07-15)
+## 1.7.0 (2026-07-26)
+
+#### Features
+
+- data: add celestial bodies and bases to systems (2eb7ea9)
+
+#### Documentation
+
+- root: add project README and bump version to 1.6.0 (aaed7cd)
+
+## v1.6.0 (2026-07-15)
 
 #### Features
 
