@@ -1401,7 +1401,14 @@
 			{
 				"name": "Sinter",
 				"type": "Terrestrial (Scorched Basalt)",
-				"description": "An airless, heavily cratered hot silicate planet tidally locked to the primary star, rich in raw copper and iron."
+				"description": "An airless, heavily cratered hot silicate planet tidally locked to the primary star, rich in raw copper and iron.",
+				"moons": [
+					{
+						"name": "Cinder",
+						"type": "Barren Rock",
+						"description": "A tiny silicate chunk bathed in intense solar heat."
+					}
+				]
 			},
 			{
 				"name": "Aerith II",
@@ -1414,12 +1421,31 @@
 						"name": "Whisper Peak Camp",
 						"description": "Insurgent Safehouse"
 					}
+				],
+				"moons": [
+					{
+						"name": "Aurelia",
+						"type": "Habitable Outpost",
+						"description": "A tidally locked silicate moon hosting automated agro-drones."
+					},
+					{
+						"name": "Vesper",
+						"type": "Crystalline Asteroid",
+						"description": "A captured carbonaceous asteroid reflecting brilliant starlight."
+					}
 				]
 			},
 			{
 				"name": "Aerith III",
 				"type": "Gas Giant",
-				"description": "A swirling blue giant with helium-rich clouds."
+				"description": "A swirling blue giant with helium-rich clouds.",
+				"moons": [
+					{
+						"name": "Gale",
+						"type": "Stormy Moon",
+						"description": "A small, high-gravity moon with a dense, nitrogen-rich atmosphere."
+					}
+				]
 			},
 			{
 				"name": "Aeolus",
@@ -1462,26 +1488,59 @@
 			{
 				"name": "Barathrum",
 				"type": "Terrestrial (Super-rotation Acidic)",
-				"description": "A blisteringly hot greenhouse planet covered in thick, toxic sulfur-dioxide clouds and subject to corrosive acid rain."
+				"description": "A blisteringly hot greenhouse planet covered in thick, toxic sulfur-dioxide clouds and subject to corrosive acid rain.",
+				"moons": [
+					{
+						"name": "Phlegethon",
+						"type": "Volcanic Moon",
+						"description": "An active, volcanic moon heavily affected by tidal heating."
+					}
+				]
 			},
 			{
 				"name": "Hairi Prime",
 				"type": "Terrestrial (Oceanic)",
 				"gravity": "1.1g",
 				"population": "850 Million",
-				"description": "An independent water world famous for bioluminescent coral reefs, hosting sprawling floating trade platforms and underwater luxury zones."
+				"description": "An independent water world famous for bioluminescent coral reefs, hosting sprawling floating trade platforms and underwater luxury zones.",
+				"moons": [
+					{
+						"name": "Tide",
+						"type": "Subglacial Ocean",
+						"description": "A water-rich moon with a thick icy crust, exerting powerful tidal forces on Hairi Prime."
+					},
+					{
+						"name": "Marina",
+						"type": "Coral Asteroid",
+						"description": "A tiny silicate moon with unique bioluminescent surface minerals."
+					}
+				]
 			},
 			{
 				"name": "Mistral",
 				"type": "Terrestrial (Arid)",
 				"gravity": "0.7g",
 				"population": "45,000",
-				"description": "A windswept rock home to independent mining cooperatives and off-shore financial vaults."
+				"description": "A windswept rock home to independent mining cooperatives and off-shore financial vaults.",
+				"moons": [
+					{
+						"name": "Sirocco",
+						"type": "Barren Dustball",
+						"description": "A heavily wind-blasted dust moon with fine silica sands."
+					}
+				]
 			},
 			{
 				"name": "Zephyr",
 				"type": "Terrestrial (Frozen Methane)",
-				"description": "A tiny frozen world on the extreme periphery of the system, covered in sheets of nitrogen ice and solid carbon monoxide."
+				"description": "A tiny frozen world on the extreme periphery of the system, covered in sheets of nitrogen ice and solid carbon monoxide.",
+				"moons": [
+					{
+						"name": "Boreas",
+						"type": "Frozen Nitrogen",
+						"description": "A cold, reflective moon with methane geysers."
+					}
+				]
 			}
 		],
 		"bases": [
@@ -1520,31 +1579,76 @@
 			{
 				"name": "Noriah I",
 				"type": "Molten",
-				"description": "A blistering rock orbiting dangerously close to the star."
+				"description": "A blistering rock orbiting dangerously close to the star.",
+				"moons": [
+					{
+						"name": "Ignis",
+						"type": "Scorched Fragment",
+						"description": "A tiny, iron-rich body being slowly torn apart by the primary star's gravity."
+					}
+				]
 			},
 			{
 				"name": "Silt",
 				"type": "Terrestrial (Desert)",
 				"gravity": "0.9g",
 				"population": "120 Million",
-				"description": "A harsh desert world with rich spice and mineral deposits, and popular cultural heritage sites."
+				"description": "A harsh desert world with rich spice and mineral deposits, and popular cultural heritage sites.",
+				"moons": [
+					{
+						"name": "Dune",
+						"type": "Barren Dustball",
+						"description": "A tiny, dusty moon that orbits quickly through Silt's upper sky."
+					}
+				]
 			},
 			{
 				"name": "Noriah Alpha",
 				"type": "Terrestrial (Garden)",
 				"gravity": "1.0g",
 				"population": "3.1 Billion",
-				"description": "A magnificent world of ancient archives, massive neoclassical city-states, and museums preserving pre-war art and history."
+				"description": "A magnificent world of ancient archives, massive neoclassical city-states, and museums preserving pre-war art and history.",
+				"moons": [
+					{
+						"name": "Athena",
+						"type": "Terrestrial Moon",
+						"description": "A highly populated, beautiful moon hosting neoclassical research academies and libraries."
+					},
+					{
+						"name": "Sophia",
+						"type": "Crystalline Asteroid",
+						"description": "A shiny, carbonaceous asteroid acting as an orbital sanctuary."
+					}
+				]
 			},
 			{
 				"name": "Noriah Ring",
 				"type": "Gas Giant (Turbulent)",
-				"description": "A high-gravity gas giant with swirling bands of crimson and cobalt clouds, featuring a prominent dust-ring system."
+				"description": "A high-gravity gas giant with swirling bands of crimson and cobalt clouds, featuring a prominent dust-ring system.",
+				"moons": [
+					{
+						"name": "Chroma",
+						"type": "Ice Moon",
+						"description": "A colorful icy moon that collects dust from the gas giant's rings."
+					},
+					{
+						"name": "Vapor",
+						"type": "Low-Density Moon",
+						"description": "A porous rock moon enveloped in a faint cloud of ammonia gas."
+					}
+				]
 			},
 			{
 				"name": "Thule",
 				"type": "Terrestrial (Cryo-Frozen Rock)",
-				"description": "A freezing, airless dwarf planet containing ancient ice fields and pristine silicate crusts on the outer edge of Noriah."
+				"description": "A freezing, airless dwarf planet containing ancient ice fields and pristine silicate crusts on the outer edge of Noriah.",
+				"moons": [
+					{
+						"name": "Ymir",
+						"type": "Frozen Giant Rock",
+						"description": "A dark, icy moon with ancient impact craters covered in cryo-frost."
+					}
+				]
 			}
 		],
 		"bases": [
@@ -1765,7 +1869,14 @@
 			{
 				"name": "Avernus",
 				"type": "Terrestrial (Scorched Iron)",
-				"description": "A black, airless iron rock with extreme surface temperature variations and fields of razor-sharp obsidian shards."
+				"description": "A black, airless iron rock with extreme surface temperature variations and fields of razor-sharp obsidian shards.",
+				"moons": [
+					{
+						"name": "Tartarus",
+						"type": "Metallic Shard",
+						"description": "A high-density iron moonlet orbiting extremely close to Avernus."
+					}
+				]
 			},
 			{
 				"name": "Veritate Prime",
@@ -1782,6 +1893,18 @@
 						"name": "Freetown Colony",
 						"description": "Federation Surface Enclave"
 					}
+				],
+				"moons": [
+					{
+						"name": "Romulus",
+						"type": "Forest Moon",
+						"description": "A gorgeous, densely wooded moon with a thin breathable atmosphere, housing hidden rebel outposts."
+					},
+					{
+						"name": "Remus",
+						"type": "Barren Slate",
+						"description": "A dry, grey slate moon reflecting Veritate's light, containing inactive defense silos."
+					}
 				]
 			},
 			{
@@ -1789,12 +1912,31 @@
 				"type": "Terrestrial (Rock)",
 				"description": "A desolate rocky world containing automated corporate refineries and processing plants subsidized heavily by the Federation.",
 				"gravity": "0.65g",
-				"population": "30 Thousand"
+				"population": "30 Thousand",
+				"moons": [
+					{
+						"name": "Reverb",
+						"type": "Hollow Asteroid",
+						"description": "A heavily excavated asteroid used for storing refined metals."
+					}
+				]
 			},
 			{
 				"name": "Boreas",
 				"type": "Ice Giant (Stormy)",
-				"description": "A freezing gas giant of deep indigo blue, whipped by supersonic methane winds and massive orbital storms."
+				"description": "A freezing gas giant of deep indigo blue, whipped by supersonic methane winds and massive orbital storms.",
+				"moons": [
+					{
+						"name": "Anemone",
+						"type": "Cryo-Volcanic Moon",
+						"description": "A spectacular icy moon with cryo-geysers erupting liquid nitrogen."
+					},
+					{
+						"name": "Chione",
+						"type": "Glacial Rock",
+						"description": "A cold glacial moon completely coated in compressed ammonia snow."
+					}
+				]
 			}
 		],
 		"bases": [
