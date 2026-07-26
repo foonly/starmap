@@ -410,8 +410,24 @@
 		"x": 628,
 		"y": 280,
 		"faction": "federation",
-		"planets": [],
-		"bases": [],
+		"planets": [
+			{
+				"name": "Aldhafera Prime",
+				"type": "Gas Giant (Turbulent)",
+				"description": "A massive, deep-orange gas giant swept by high-velocity wind storms and banded ammonia clouds."
+			},
+			{
+				"name": "Singe",
+				"type": "Terrestrial (Molten)",
+				"description": "An airless, tidally-locked silicate rock orbiting in the star's extreme corona, with seas of liquid magma."
+			}
+		],
+		"bases": [
+			{
+				"name": "Solas-Corp Gas Siphon",
+				"type": "Corporate Fueling Platform"
+			}
+		],
 		"description": "A bright cyan system heavily defended by standard Federation patrols."
 	},
 	{
@@ -422,8 +438,19 @@
 		"x": 616,
 		"y": 327,
 		"faction": "federation",
-		"planets": [],
-		"bases": [],
+		"planets": [
+			{
+				"name": "Kastra I",
+				"type": "Terrestrial (Super-rotation Acidic)",
+				"description": "A scorching greenhouse world covered in thick yellow sulfuric acid clouds, experiencing intense atmospheric friction and high pressure."
+			}
+		],
+		"bases": [
+			{
+				"name": "Vanguard Logistics Depot",
+				"type": "Corporate Transit Hub"
+			}
+		],
 		"description": "A transit point with an automated hyper-beacons guiding commercial shipping lanes."
 	},
 	{
@@ -434,8 +461,19 @@
 		"x": 540,
 		"y": 343,
 		"faction": "federation",
-		"planets": [],
-		"bases": [],
+		"planets": [
+			{
+				"name": "Enif Minor",
+				"type": "Terrestrial (Cratered Ice)",
+				"description": "A dark, airless ball of silicate rock and water-ice, heavily pitted by millennia of asteroid bombardment."
+			}
+		],
+		"bases": [
+			{
+				"name": "Hyperion Deep Space Depot",
+				"type": "Corporate Warehouse Sentry"
+			}
+		],
 		"description": "A small white star on the core periphery."
 	},
 	{
@@ -446,8 +484,19 @@
 		"x": 586,
 		"y": 356,
 		"faction": "federation",
-		"planets": [],
-		"bases": [],
+		"planets": [
+			{
+				"name": "Pictor Dust",
+				"type": "Terrestrial (Arid Rust-World)",
+				"description": "A desert planet rich in iron deposits, characterized by endless dust storms and dry, rust-colored canyons."
+			}
+		],
+		"bases": [
+			{
+				"name": "Apex Asteroid Dredge",
+				"type": "Corporate Heavy Refinery"
+			}
+		],
 		"description": "Mining operations are scattered around this hot yellow dwarf's asteroid belt."
 	},
 	{
@@ -458,8 +507,19 @@
 		"x": 642,
 		"y": 375,
 		"faction": "federation",
-		"planets": [],
-		"bases": [],
+		"planets": [
+			{
+				"name": "Minkar Giant",
+				"type": "Gas Giant (Ringed)",
+				"description": "A beautiful cyan Jovian planet adorned with a broad, reflective ice-and-dust ring system."
+			}
+		],
+		"bases": [
+			{
+				"name": "Nova-Corp Ring Station",
+				"type": "Corporate Logistics Outpost"
+			}
+		],
 		"description": "A quiet peripheral system."
 	},
 	{
@@ -470,8 +530,19 @@
 		"x": 611,
 		"y": 405,
 		"faction": "federation",
-		"planets": [],
-		"bases": [],
+		"planets": [
+			{
+				"name": "Meka Outlier",
+				"type": "Terrestrial (Frozen Methane)",
+				"description": "An extremely cold dwarf planet covered in layers of glittering nitrogen and methane glaciers."
+			}
+		],
+		"bases": [
+			{
+				"name": "Meka Quantum Sentry",
+				"type": "Corporate Research Anchor"
+			}
+		],
 		"description": "Known for hosting minor scientific arrays researching quantum mechanics."
 	},
 	{
@@ -500,7 +571,18 @@
 		"x": 740,
 		"y": 140,
 		"faction": "federation",
-		"planets": [],
+		"planets": [
+			{
+				"name": "Nashira Giant",
+				"type": "Gas Giant (Super-Jovian)",
+				"description": "A massive Jovian world of high gravity and swirling slate-blue bands, surrounded by a dense web of defense satellites."
+			},
+			{
+				"name": "Cinders",
+				"type": "Terrestrial (Scorched Iron)",
+				"description": "A blistered rock covered in cooled basalt plains and active volcanic fissures rich in heavy silicate elements."
+			}
+		],
 		"bases": [
 			{
 				"name": "Nashira Fleet Hub",
@@ -509,6 +591,10 @@
 			{
 				"name": "Ethife Industrial Platform",
 				"type": "Heavy Fabrication Site"
+			},
+			{
+				"name": "Aegis Logistics Dock",
+				"type": "Corporate Fleet Support"
 			}
 		],
 		"description": "The strategic command center of the upper Federation. Extremely high military presence."
@@ -521,11 +607,21 @@
 		"x": 780,
 		"y": 95,
 		"faction": "",
-		"planets": [],
+		"planets": [
+			{
+				"name": "Zaniah Cold-Rock",
+				"type": "Terrestrial (Ice-Choked Dwarf)",
+				"description": "A quiet frozen world on the rim covered in layered water-ice and solidified nitrogen glaciers."
+			}
+		],
 		"bases": [
 			{
 				"name": "Ethife Cargo Relay",
 				"type": "Automated Logistics Node"
+			},
+			{
+				"name": "Starlight Freight Berth",
+				"type": "Corporate Transport Anchor"
 			}
 		],
 		"description": "A white system supporting cargo networks and high-frequency beacons. The Ethife operate an automated relay here to assist with galactic freight management."
@@ -576,8 +672,19 @@
 		"x": 860,
 		"y": 102,
 		"faction": "",
-		"planets": [],
-		"bases": [],
+		"planets": [
+			{
+				"name": "Tyl Acidic",
+				"type": "Terrestrial (Corrosive Sulfuric)",
+				"description": "An opaque, hot greenhouse planet with a crushing atmospheric pressure and sulfuric acid vapor fields."
+			}
+		],
+		"bases": [
+			{
+				"name": "Nova-Corp Deep Drill",
+				"type": "Corporate Mining Outpost"
+			}
+		],
 		"description": "The eastern frontier sentinel of Federation Space."
 	},
 	{
@@ -588,7 +695,13 @@
 		"x": 291,
 		"y": 388,
 		"faction": "alliance",
-		"planets": [],
+		"planets": [
+			{
+				"name": "Nexus Barren",
+				"type": "Terrestrial (Silicate Dust)",
+				"description": "A heavily-cratered dry rock covered in fine grey dust and mineral deposits."
+			}
+		],
 		"bases": [
 			{
 				"name": "Nexus Sentry",
@@ -597,6 +710,10 @@
 			{
 				"name": "Ethife Traffic Monitor",
 				"type": "Logistics Sentry"
+			},
+			{
+				"name": "Starlight Engineering Drydock",
+				"type": "Corporate Ship Maintenance"
 			}
 		],
 		"description": "An automated radar relay safeguarding the northern access to Valhalla's gravity well."
@@ -609,8 +726,19 @@
 		"x": 236,
 		"y": 606,
 		"faction": "alliance",
-		"planets": [],
-		"bases": [],
+		"planets": [
+			{
+				"name": "Siphon Giant",
+				"type": "Gas Giant (Swirling Ammonia)",
+				"description": "A high-gravity gas giant with vibrant teal storm-bands, used heavily by transport ships as a fuel-scooping site."
+			}
+		],
+		"bases": [
+			{
+				"name": "Solas Fuel Siphon",
+				"type": "Corporate Hydrogen Farm"
+			}
+		],
 		"description": "A calm, uncolonized yellow dwarf system serving as a core refueling pitstop on the southern jump routes."
 	},
 	{
@@ -639,8 +767,19 @@
 		"x": 93,
 		"y": 607,
 		"faction": "alliance",
-		"planets": [],
-		"bases": [],
+		"planets": [
+			{
+				"name": "Vanguard Toxicus",
+				"type": "Terrestrial (Toxic Greenhouse)",
+				"description": "An extreme high-heat greenhouse planet with constant lightning discharges in a thick carbon dioxide shroud."
+			}
+		],
+		"bases": [
+			{
+				"name": "Apex Outer Survey Buoy",
+				"type": "Corporate Explorer Platform"
+			}
+		],
 		"description": "Unexplored system cataloged in the outer peripheral cloud of the Alliance sector."
 	},
 	{
@@ -651,8 +790,19 @@
 		"x": 100,
 		"y": 675,
 		"faction": "alliance",
-		"planets": [],
-		"bases": [],
+		"planets": [
+			{
+				"name": "Vanguard Fragment",
+				"type": "Terrestrial (Airless Silicate)",
+				"description": "A small, heavily fractured rocky sphere that was shattered by historic asteroid impacts."
+			}
+		],
+		"bases": [
+			{
+				"name": "Belt-Dredge Foundry Beta",
+				"type": "Corporate Mining Ring"
+			}
+		],
 		"description": "A dense asteroid belt system surrounding a small red dwarf."
 	},
 	{
@@ -822,11 +972,21 @@
 		"x": 253,
 		"y": 681,
 		"faction": "maestia",
-		"planets": [],
+		"planets": [
+			{
+				"name": "Gate Dust",
+				"type": "Terrestrial (Arid Ferrous)",
+				"description": "A dry, cold desert planet covered in iron-oxide dust, used as a backup weapon-storage and logistics ground by the garrison."
+			}
+		],
 		"bases": [
 			{
 				"name": "Imperial Gateway Keep",
 				"type": "Garrison"
+			},
+			{
+				"name": "Aegis Munitions Vault",
+				"type": "Corporate Fuel & Arms Supplier"
 			}
 		],
 		"description": "Heavy planetary defensive fort guarding the main hyperlane into the Empire."
@@ -859,9 +1019,20 @@
 		"x": 165,
 		"y": 725,
 		"faction": "maestia",
-		"planets": [],
-		"bases": [],
-		"description": ""
+		"planets": [
+			{
+				"name": "Aegis Volcanus",
+				"type": "Terrestrial (Highly Volcanic)",
+				"description": "A violent, seismically unstable planet with massive mountain eruptions and sulphur vents, boasting heavy deposits of hyper-dense metals."
+			}
+		],
+		"bases": [
+			{
+				"name": "Apex Armor Foundry",
+				"type": "Corporate Orbital Forge"
+			}
+		],
+		"description": "A high-security industrial sector supporting royal weapon fabrication for the Empire."
 	},
 	{
 		"id": "crown_jewel",
@@ -896,11 +1067,21 @@
 		"x": 350,
 		"y": 760,
 		"faction": "maestia",
-		"planets": [],
+		"planets": [
+			{
+				"name": "Titan Giant",
+				"type": "Gas Giant (Turbulent Jovian)",
+				"description": "A colossal dark-green gas giant whose high-pressure hydrogen mantle provides fuel isotopes directly to the orbital mega-shipyards."
+			}
+		],
 		"bases": [
 			{
 				"name": "Royal Heavy Shipyards",
 				"type": "Mega Forge"
+			},
+			{
+				"name": "Nova-Corp Isotope Siphon",
+				"type": "Corporate Refinery platform"
 			}
 		],
 		"description": "Orbital macro-forges generating state-of-the-art warships for the imperial fleet."
@@ -913,8 +1094,19 @@
 		"x": 955,
 		"y": 446,
 		"faction": "",
-		"planets": [],
-		"bases": [],
+		"planets": [
+			{
+				"name": "Glacies-Sentinel",
+				"type": "Terrestrial (Frozen Methane)",
+				"description": "A tiny, blue-tinted dwarf planet on the rim of the sector, completely locked in crystalline methane ice."
+			}
+		],
+		"bases": [
+			{
+				"name": "Starlight Sensor array",
+				"type": "Corporate Telemetry Outpost"
+			}
+		],
 		"description": "A monitoring node charting unpredictable gravitational pulses in the local dark-matter stream."
 	},
 	{
@@ -925,8 +1117,19 @@
 		"x": 1050,
 		"y": 394,
 		"faction": "",
-		"planets": [],
-		"bases": [],
+		"planets": [
+			{
+				"name": "Terminus Frozen",
+				"type": "Terrestrial (Cryo-Frozen Rock)",
+				"description": "A lifeless, pitch-black rock wrapped in nitrogen frost, drifting silent on the extreme edge of interstellar space."
+			}
+		],
+		"bases": [
+			{
+				"name": "Edge Logistics Station",
+				"type": "Corporate Trade Platform"
+			}
+		],
 		"description": "The absolute southern terminus of official navigation charts. Beacons beyond this point are silent."
 	},
 	{
@@ -955,9 +1158,20 @@
 		"x": 1174,
 		"y": 564,
 		"faction": "",
-		"planets": [],
-		"bases": [],
-		"description": ""
+		"planets": [
+			{
+				"name": "Outpost-Dwarf",
+				"type": "Terrestrial (Airless Metallic)",
+				"description": "A dense metallic sphere stripped of all atmosphere, loaded with high-purity platinum-group minerals."
+			}
+		],
+		"bases": [
+			{
+				"name": "Hyperion Deep Space Anchor",
+				"type": "Corporate Communication Array"
+			}
+		],
+		"description": "A remote peripheral system serving as a listening post on the rim."
 	},
 	{
 		"id": "lerna",
@@ -1154,7 +1368,12 @@
 				"type": "Terrestrial",
 				"gravity": "0.9g",
 				"population": "1.2 Billion",
-				"description": "A world of endless plains and massive Federation grain silos."
+				"description": "A fertile world of endless golden plains and massive Federation grain silos. Under the installed loyalist regime, its state-subsidized farms feed neighboring systems."
+			},
+			{
+				"name": "Sinter",
+				"type": "Terrestrial (Scorched Basalt)",
+				"description": "An airless, heavily cratered hot silicate planet tidally locked to the primary star, rich in raw copper and iron."
 			},
 			{
 				"name": "Aerith II",
@@ -1162,18 +1381,35 @@
 				"description": "A swirling blue giant with helium-rich clouds."
 			},
 			{
+				"name": "Aeolus",
+				"type": "Gas Giant (Ringed)",
+				"description": "A majestic, pale-gold gas giant with a vast ring system of pulverised ice and silica, featuring swirling bands of heavy ammonia."
+			},
+			{
 				"name": "Cloud Reach",
 				"type": "Ice Moon",
-				"description": "A frozen moon serving as a long-range communications relay."
+				"description": "A frozen moon serving as a long-range communications relay and monitoring platform."
 			}
 		],
 		"bases": [
 			{
 				"name": "Aerith Watch",
 				"type": "Sentry Post"
+			},
+			{
+				"name": "Aerith Vanguard Academy",
+				"type": "Federation Military Academy"
+			},
+			{
+				"name": "Whisper Peak Camp",
+				"type": "Insurgent Safehouse"
+			},
+			{
+				"name": "Solas-Corp Agri-Transit",
+				"type": "Corporate Silo Platform"
 			}
 		],
-		"description": "A system known for its massive agricultural output. Joined the federation recently, still has a fairly strong opposition."
+		"description": "A prosperous agricultural system conquered by the Federation 10 years ago. Although some underground freedom fighters persist, the Federation installed a puppet regime that officially integrated the system, and the native population largely supports the Union due to economic growth."
 	},
 	{
 		"id": "hairi",
@@ -1189,14 +1425,24 @@
 				"type": "Terrestrial (Oceanic)",
 				"gravity": "1.1g",
 				"population": "850 Million",
-				"description": "An independent water world famous for its deep-sea bioluminescent coral reefs."
+				"description": "An independent water world famous for bioluminescent coral reefs, hosting sprawling floating trade platforms and underwater luxury zones."
+			},
+			{
+				"name": "Barathrum",
+				"type": "Terrestrial (Super-rotation Acidic)",
+				"description": "A blisteringly hot greenhouse planet covered in thick, toxic sulfur-dioxide clouds and subject to corrosive acid rain."
 			},
 			{
 				"name": "Mistral",
 				"type": "Terrestrial (Arid)",
 				"gravity": "0.7g",
 				"population": "45,000",
-				"description": "A windswept rock home to independent mining cooperatives."
+				"description": "A windswept rock home to independent mining cooperatives and off-shore financial vaults."
+			},
+			{
+				"name": "Zephyr",
+				"type": "Terrestrial (Frozen Methane)",
+				"description": "A tiny frozen world on the extreme periphery of the system, covered in sheets of nitrogen ice and solid carbon monoxide."
 			}
 		],
 		"bases": [
@@ -1207,9 +1453,21 @@
 			{
 				"name": "Ethife Free-Market Dock",
 				"type": "Independent Berth"
+			},
+			{
+				"name": "Aegis Trade Sentry",
+				"type": "Private Commercial Customs"
+			},
+			{
+				"name": "Offshore Haven Terminal",
+				"type": "Corporate Tax Shelter"
+			},
+			{
+				"name": "Nova-Corp Financial Node",
+				"type": "Corporate Secure Server Station"
 			}
 		],
-		"description": "A bustling independent system that serves as a neutral ground for traders from all factions."
+		"description": "A neutral, highly specialized trade system located slightly off-the-beaten-path. Operating under strictly enforced neutral laws, Hairi is a tax haven for massive multi-faction corporations conducting high-value, niche trades."
 	},
 	{
 		"id": "noriah",
@@ -1226,27 +1484,49 @@
 				"description": "A blistering rock orbiting dangerously close to the star."
 			},
 			{
-				"name": "Noriah Alpha",
-				"type": "Terrestrial (Garden)",
-				"gravity": "1.0g",
-				"population": "3.1 Billion",
-				"description": "A lush, green world with diverse ecosystems and massive city-states."
-			},
-			{
 				"name": "Silt",
 				"type": "Terrestrial (Desert)",
 				"gravity": "0.9g",
 				"population": "120 Million",
-				"description": "A harsh desert world with rich spice and mineral deposits."
+				"description": "A harsh desert world with rich spice and mineral deposits, and popular cultural heritage sites."
+			},
+			{
+				"name": "Noriah Alpha",
+				"type": "Terrestrial (Garden)",
+				"gravity": "1.0g",
+				"population": "3.1 Billion",
+				"description": "A magnificent world of ancient archives, massive neoclassical city-states, and museums preserving pre-war art and history."
+			},
+			{
+				"name": "Noriah Ring",
+				"type": "Gas Giant (Turbulent)",
+				"description": "A high-gravity gas giant with swirling bands of crimson and cobalt clouds, featuring a prominent dust-ring system."
+			},
+			{
+				"name": "Thule",
+				"type": "Terrestrial (Cryo-Frozen Rock)",
+				"description": "A freezing, airless dwarf planet containing ancient ice fields and pristine silicate crusts on the outer edge of Noriah."
 			}
 		],
 		"bases": [
 			{
 				"name": "Ethife Deep-Core Drill",
 				"type": "Sub-Surface Mining Array"
+			},
+			{
+				"name": "Noriah Naval Academy",
+				"type": "Independent Officer Training"
+			},
+			{
+				"name": "The Great Pre-War Archive",
+				"type": "Interstellar Cultural Sanctuary"
+			},
+			{
+				"name": "Starlight Tourism Hub",
+				"type": "Corporate Leisure Platform"
 			}
 		],
-		"description": "A highly populated independent system known for its ancient ruins and thriving culture."
+		"description": "A fiercely independent sovereign system with massive cultural prestige. Famous as a tourist destination, especially among Federation citizens, Noriah has preserved pre-Great War art, history, and languages. It boasts a strong independent fleet and a renowned naval academy that trains elite Alliance officers."
 	},
 	{
 		"id": "shengong",
@@ -1448,23 +1728,49 @@
 				"type": "Terrestrial (Jungle)",
 				"gravity": "1.3g",
 				"population": "16 Million",
-				"description": "A very hostile planet with flora and fauna that tries to kill you. It's incredibly rich in rare minerals used in high tech production."
+				"description": "A lush, hilly garden world covered in dense jungles and deep oceans. While the Federation controls the orbit, a handful of rare mineral mines, and the town of Freetown, the Roman-inspired resistance holds the deep wilderness."
+			},
+			{
+				"name": "Avernus",
+				"type": "Terrestrial (Scorched Iron)",
+				"description": "A black, airless iron rock with extreme surface temperature variations and fields of razor-sharp obsidian shards."
 			},
 			{
 				"name": "Echo",
 				"type": "Terrestrial (Rock)",
-				"description": "A silent world with massive canyons that amplify sound.",
-				"gravity": "0.65",
+				"description": "A desolate rocky world containing automated corporate refineries and processing plants subsidized heavily by the Federation.",
+				"gravity": "0.65g",
 				"population": "30 Thousand"
+			},
+			{
+				"name": "Boreas",
+				"type": "Ice Giant (Stormy)",
+				"description": "A freezing gas giant of deep indigo blue, whipped by supersonic methane winds and massive orbital storms."
 			}
 		],
 		"bases": [
 			{
-				"name": "Libertas",
-				"type": "Asteroid belt mining complex"
+				"name": "Libertas Hub",
+				"type": "Subsidized Corporate Refinery"
+			},
+			{
+				"name": "Castrum Decima",
+				"type": "Resistance Mountain Stronghold"
+			},
+			{
+				"name": "Freetown Colony",
+				"type": "Federation Surface Enclave"
+			},
+			{
+				"name": "Vesta Orbital Station",
+				"type": "Federation Patrol Platform"
+			},
+			{
+				"name": "Aegis Industrial Siphon",
+				"type": "Corporate Resource Extractor"
 			}
 		],
-		"description": "A fairly isolated system with a tradition of warriors. Have recently been occupied by the federation, to a large part because of it's natural resources."
+		"description": "Conquered 10 years ago by the Federation after a 3-month siege, Veritate is under de-facto martial law. While Federation-backed private corporations run the space lanes and subsidized mining, the Roman-inspired native resistance coordinates strikes from hidden mountain bunkers and the deep jungle."
 	},
 	{
 		"id": "krios",
