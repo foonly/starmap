@@ -1724,16 +1724,16 @@
 		"faction": "federation",
 		"planets": [
 			{
+				"name": "Avernus",
+				"type": "Terrestrial (Scorched Iron)",
+				"description": "A black, airless iron rock with extreme surface temperature variations and fields of razor-sharp obsidian shards."
+			},
+			{
 				"name": "Veritate Prime",
 				"type": "Terrestrial (Jungle)",
 				"gravity": "1.3g",
 				"population": "16 Million",
 				"description": "A lush, hilly garden world covered in dense jungles and deep oceans. While the Federation controls the orbit, a handful of rare mineral mines, and the town of Freetown, the Roman-inspired resistance holds the deep wilderness."
-			},
-			{
-				"name": "Avernus",
-				"type": "Terrestrial (Scorched Iron)",
-				"description": "A black, airless iron rock with extreme surface temperature variations and fields of razor-sharp obsidian shards."
 			},
 			{
 				"name": "Echo",
