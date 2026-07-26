@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import {
 	X,
 	MapPin,
@@ -9,6 +9,8 @@ import {
 	ArrowRight,
 	Star,
 	Disc,
+	ChevronDown,
+	ChevronUp,
 } from "lucide-vue-next";
 
 const props = defineProps({
@@ -98,6 +100,17 @@ const isDestination = computed(
 	() => props.system && props.destinationId === props.system.id,
 );
 
+const expandedMoons = ref({});
+const expandedPOIs = ref({});
+
+const toggleMoons = (planetName) => {
+	expandedMoons.value[planetName] = !expandedMoons.value[planetName];
+};
+
+const togglePOIs = (planetName) => {
+	expandedPOIs.value[planetName] = !expandedPOIs.value[planetName];
+};
+
 const handleInputChange = (field, value) => {
 	emit("update-system", {
 		...props.system,
@@ -111,6 +124,53 @@ const handleNestedInputChange = (index, field, value, listName) => {
 	emit("update-system", {
 		...props.system,
 		[listName]: newList,
+	});
+};
+
+const handleSubNestedInputChange = (
+	planetIdx,
+	subIdx,
+	subListName,
+	field,
+	value,
+) => {
+	const newPlanets = [...props.system.planets];
+	const planet = { ...newPlanets[planetIdx] };
+	const subList = [...(planet[subListName] || [])];
+	subList[subIdx] = { ...subList[subIdx], [field]: value };
+	planet[subListName] = subList;
+	newPlanets[planetIdx] = planet;
+	emit("update-system", {
+		...props.system,
+		planets: newPlanets,
+	});
+};
+
+const addSubNestedItem = (planetIdx, subListName) => {
+	const newPlanets = [...props.system.planets];
+	const planet = { ...newPlanets[planetIdx] };
+	const newItem =
+		subListName === "moons"
+			? { name: "New Moon", type: "Natural Satellite", description: "" }
+			: { name: "New POI", description: "" };
+	planet[subListName] = [...(planet[subListName] || []), newItem];
+	newPlanets[planetIdx] = planet;
+	emit("update-system", {
+		...props.system,
+		planets: newPlanets,
+	});
+};
+
+const removeSubNestedItem = (planetIdx, subIdx, subListName) => {
+	const newPlanets = [...props.system.planets];
+	const planet = { ...newPlanets[planetIdx] };
+	const subList = [...(planet[subListName] || [])];
+	subList.splice(subIdx, 1);
+	planet[subListName] = subList;
+	newPlanets[planetIdx] = planet;
+	emit("update-system", {
+		...props.system,
+		planets: newPlanets,
 	});
 };
 
@@ -517,6 +577,160 @@ const availableSystemsToConnect = computed(() => {
 										class="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-[10px] focus:border-blue-500 outline-none"
 									/>
 								</div>
+
+								<!-- Moons Edit Section -->
+								<div class="mt-3 pt-3 border-t border-slate-800/80 space-y-2">
+									<div class="flex items-center justify-between">
+										<span
+											class="text-[9px] font-mono text-indigo-400 font-bold uppercase tracking-wider"
+											>Moons ({{ (planet.moons || []).length }})</span
+										>
+										<button
+											type="button"
+											@click="addSubNestedItem(idx, 'moons')"
+											class="text-[9px] font-mono bg-indigo-500/10 text-indigo-400 px-1.5 py-0.5 rounded border border-indigo-500/20 hover:bg-indigo-500/20 transition-colors"
+										>
+											+ ADD MOON
+										</button>
+									</div>
+									<div
+										v-if="planet.moons && planet.moons.length > 0"
+										class="space-y-2 pl-2 border-l border-indigo-500/20"
+									>
+										<div
+											v-for="(moon, mIdx) in planet.moons"
+											:key="mIdx"
+											class="space-y-1.5 relative bg-slate-900/30 p-2 rounded border border-slate-800/60"
+										>
+											<button
+												type="button"
+												@click="removeSubNestedItem(idx, mIdx, 'moons')"
+												class="absolute top-1.5 right-1.5 text-slate-500 hover:text-red-400 transition-colors"
+											>
+												<X class="w-3 h-3" />
+											</button>
+											<input
+												type="text"
+												:value="moon.name"
+												@input="
+													handleSubNestedInputChange(
+														idx,
+														mIdx,
+														'moons',
+														'name',
+														$event.target.value,
+													)
+												"
+												placeholder="Moon Name"
+												class="w-[calc(100%-16px)] bg-slate-950 border border-slate-800 rounded p-1 text-[10px] focus:border-indigo-500 outline-none"
+											/>
+											<div class="grid grid-cols-2 gap-1.5">
+												<input
+													type="text"
+													:value="moon.type"
+													@input="
+														handleSubNestedInputChange(
+															idx,
+															mIdx,
+															'moons',
+															'type',
+															$event.target.value,
+														)
+													"
+													placeholder="Moon Type"
+													class="w-full bg-slate-950 border border-slate-800 rounded p-1 text-[10px] focus:border-indigo-500 outline-none"
+												/>
+												<input
+													type="text"
+													:value="moon.description"
+													@input="
+														handleSubNestedInputChange(
+															idx,
+															mIdx,
+															'moons',
+															'description',
+															$event.target.value,
+														)
+													"
+													placeholder="Moon Description"
+													class="w-full bg-slate-950 border border-slate-800 rounded p-1 text-[10px] focus:border-indigo-500 outline-none"
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- POIs Edit Section -->
+								<div class="mt-3 pt-3 border-t border-slate-800/80 space-y-2">
+									<div class="flex items-center justify-between">
+										<span
+											class="text-[9px] font-mono text-amber-500 font-bold uppercase tracking-wider"
+											>Points of Interest ({{
+												(planet.points_of_interest || []).length
+											}})</span
+										>
+										<button
+											type="button"
+											@click="addSubNestedItem(idx, 'points_of_interest')"
+											class="text-[9px] font-mono bg-amber-500/10 text-amber-400 px-1.5 py-0.5 rounded border border-amber-500/20 hover:bg-amber-500/20 transition-colors"
+										>
+											+ ADD POI
+										</button>
+									</div>
+									<div
+										v-if="
+											planet.points_of_interest &&
+											planet.points_of_interest.length > 0
+										"
+										class="space-y-2 pl-2 border-l border-amber-500/20"
+									>
+										<div
+											v-for="(poi, pIdx) in planet.points_of_interest"
+											:key="pIdx"
+											class="space-y-1.5 relative bg-slate-900/30 p-2 rounded border border-slate-800/60"
+										>
+											<button
+												type="button"
+												@click="
+													removeSubNestedItem(idx, pIdx, 'points_of_interest')
+												"
+												class="absolute top-1.5 right-1.5 text-slate-500 hover:text-red-400 transition-colors"
+											>
+												<X class="w-3 h-3" />
+											</button>
+											<input
+												type="text"
+												:value="poi.name"
+												@input="
+													handleSubNestedInputChange(
+														idx,
+														pIdx,
+														'points_of_interest',
+														'name',
+														$event.target.value,
+													)
+												"
+												placeholder="POI Name"
+												class="w-[calc(100%-16px)] bg-slate-950 border border-slate-800 rounded p-1 text-[10px] focus:border-amber-500 outline-none"
+											/>
+											<input
+												type="text"
+												:value="poi.description"
+												@input="
+													handleSubNestedInputChange(
+														idx,
+														pIdx,
+														'points_of_interest',
+														'description',
+														$event.target.value,
+													)
+												"
+												placeholder="POI Description"
+												class="w-full bg-slate-950 border border-slate-800 rounded p-1 text-[10px] focus:border-amber-500 outline-none"
+											/>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -728,6 +942,103 @@ const availableSystemsToConnect = computed(() => {
 										<span class="text-[10px] font-bold text-slate-300">{{
 											planet.population
 										}}</span>
+									</div>
+								</div>
+
+								<!-- Moons & POIs Expandable Buttons Section -->
+								<div
+									v-if="
+										(planet.moons && planet.moons.length > 0) ||
+										(planet.points_of_interest &&
+											planet.points_of_interest.length > 0)
+									"
+									class="flex flex-wrap gap-2 mt-2 pt-2 border-t border-slate-800/30 text-[10px] font-mono"
+								>
+									<button
+										v-if="planet.moons && planet.moons.length > 0"
+										@click="toggleMoons(planet.name)"
+										class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-slate-800/40 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors"
+									>
+										<Orbit class="w-3 h-3 text-indigo-400 shrink-0" />
+										Moons ({{ planet.moons.length }})
+										<ChevronDown
+											v-if="!expandedMoons[planet.name]"
+											class="w-3 h-3 text-slate-500"
+										/>
+										<ChevronUp v-else class="w-3 h-3 text-slate-500" />
+									</button>
+									<button
+										v-if="
+											planet.points_of_interest &&
+											planet.points_of_interest.length > 0
+										"
+										@click="togglePOIs(planet.name)"
+										class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-slate-800/40 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors"
+									>
+										<MapPin class="w-3 h-3 text-amber-400 shrink-0" />
+										Points of Interest ({{ planet.points_of_interest.length }})
+										<ChevronDown
+											v-if="!expandedPOIs[planet.name]"
+											class="w-3 h-3 text-slate-500"
+										/>
+										<ChevronUp v-else class="w-3 h-3 text-slate-500" />
+									</button>
+								</div>
+
+								<!-- Expanded Moons List -->
+								<div
+									v-if="
+										planet.moons &&
+										planet.moons.length > 0 &&
+										expandedMoons[planet.name]
+									"
+									class="mt-2 pl-3 border-l-2 border-indigo-500/30 space-y-2 bg-slate-950/20 p-2 rounded-r-lg"
+								>
+									<div
+										v-for="moon in planet.moons"
+										:key="moon.name"
+										class="text-xs"
+									>
+										<div class="flex items-center justify-between">
+											<span class="font-semibold text-slate-200">{{
+												moon.name
+											}}</span>
+											<span
+												v-if="moon.type"
+												class="text-[9px] font-mono text-indigo-400 bg-indigo-950/40 px-1.5 py-0.5 rounded"
+											>
+												{{ moon.type }}
+											</span>
+										</div>
+										<p
+											v-if="moon.description"
+											class="text-[11px] text-slate-400 mt-0.5 leading-normal"
+										>
+											{{ moon.description }}
+										</p>
+									</div>
+								</div>
+
+								<!-- Expanded POIs List -->
+								<div
+									v-if="
+										planet.points_of_interest &&
+										planet.points_of_interest.length > 0 &&
+										expandedPOIs[planet.name]
+									"
+									class="mt-2 pl-3 border-l-2 border-amber-500/30 space-y-2 bg-slate-950/20 p-2 rounded-r-lg"
+								>
+									<div
+										v-for="poi in planet.points_of_interest"
+										:key="poi.name"
+										class="text-xs"
+									>
+										<span class="font-semibold text-slate-200 block">{{
+											poi.name
+										}}</span>
+										<p class="text-[11px] text-slate-400 mt-0.5 leading-normal">
+											{{ poi.description }}
+										</p>
 									</div>
 								</div>
 							</div>

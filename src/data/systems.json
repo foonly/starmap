@@ -23,13 +23,48 @@
 				"type": "Terrestrial (Garden)",
 				"description": "Capital of the Alliance of Free Worlds.",
 				"gravity": "1.0g",
-				"population": "1.2 Billion"
+				"population": "1.2 Billion",
+				"moons": [
+					{
+						"name": "Luna",
+						"type": "Terrestrial Moon",
+						"description": "Earth's only natural satellite, heavily urbanized with dome cities and research facilities."
+					}
+				],
+				"points_of_interest": [
+					{
+						"name": "Geneva",
+						"description": "Seat of the Alliance Senate and supreme administration."
+					},
+					{
+						"name": "Neo Tokyo",
+						"description": "Massive technological and financial megalopolis."
+					}
+				]
 			},
 			{
 				"name": "Mars",
 				"type": "Terraformed Desert",
 				"description": "Heavy planetary defense grids and shipyards.",
-				"population": "28 Million"
+				"population": "28 Million",
+				"moons": [
+					{
+						"name": "Phobos",
+						"type": "Iron-Nickel Asteroid",
+						"description": "Hosting Phobos Command and extensive defense batteries."
+					},
+					{
+						"name": "Deimos",
+						"type": "Silicate Asteroid",
+						"description": "Automated sensor array station and communication array."
+					}
+				],
+				"points_of_interest": [
+					{
+						"name": "Olympus Mons Shipyards",
+						"description": "The largest planetary orbital shipyards in the system, constructing capital ships."
+					}
+				]
 			}
 		],
 		"bases": [
@@ -1369,26 +1404,34 @@
 				"description": "An airless, heavily cratered hot silicate planet tidally locked to the primary star, rich in raw copper and iron."
 			},
 			{
-				"name": "Aerith I",
+				"name": "Aerith II",
 				"type": "Terrestrial",
 				"gravity": "0.9g",
 				"population": "1.2 Billion",
-				"description": "A fertile world of endless golden plains and massive Federation grain silos. Under the installed loyalist regime, its state-subsidized farms feed neighboring systems."
+				"description": "A fertile world of endless golden plains and massive Federation grain silos. Under the installed loyalist regime, its state-subsidized farms feed neighboring systems.",
+				"points_of_interest": [
+					{
+						"name": "Whisper Peak Camp",
+						"description": "Insurgent Safehouse"
+					}
+				]
 			},
 			{
-				"name": "Aerith II",
+				"name": "Aerith III",
 				"type": "Gas Giant",
 				"description": "A swirling blue giant with helium-rich clouds."
 			},
 			{
 				"name": "Aeolus",
 				"type": "Gas Giant (Ringed)",
-				"description": "A majestic, pale-gold gas giant with a vast ring system of pulverised ice and silica, featuring swirling bands of heavy ammonia."
-			},
-			{
-				"name": "Cloud Reach",
-				"type": "Ice Moon",
-				"description": "A frozen moon serving as a long-range communications relay and monitoring platform."
+				"description": "A majestic, pale-gold gas giant with a vast ring system of pulverised ice and silica, featuring swirling bands of heavy ammonia.",
+				"moons": [
+					{
+						"name": "Cloud Reach",
+						"type": "Ice Moon",
+						"description": "A frozen moon serving as a long-range communications relay and monitoring platform."
+					}
+				]
 			}
 		],
 		"bases": [
@@ -1399,10 +1442,6 @@
 			{
 				"name": "Aerith Vanguard Academy",
 				"type": "Federation Military Academy"
-			},
-			{
-				"name": "Whisper Peak Camp",
-				"type": "Insurgent Safehouse"
 			},
 			{
 				"name": "Solas-Corp Agri-Transit",
@@ -1733,7 +1772,17 @@
 				"type": "Terrestrial (Jungle)",
 				"gravity": "1.3g",
 				"population": "16 Million",
-				"description": "A lush, hilly garden world covered in dense jungles and deep oceans. While the Federation controls the orbit, a handful of rare mineral mines, and the town of Freetown, the Roman-inspired resistance holds the deep wilderness."
+				"description": "A lush, hilly garden world covered in dense jungles and deep oceans. While the Federation controls the orbit, a handful of rare mineral mines, and the town of Freetown, the Roman-inspired resistance holds the deep wilderness.",
+				"points_of_interest": [
+					{
+						"name": "Castrum Decima",
+						"description": "Resistance Mountain Stronghold"
+					},
+					{
+						"name": "Freetown Colony",
+						"description": "Federation Surface Enclave"
+					}
+				]
 			},
 			{
 				"name": "Echo",
@@ -1752,14 +1801,6 @@
 			{
 				"name": "Libertas Hub",
 				"type": "Subsidized Corporate Refinery"
-			},
-			{
-				"name": "Castrum Decima",
-				"type": "Resistance Mountain Stronghold"
-			},
-			{
-				"name": "Freetown Colony",
-				"type": "Federation Surface Enclave"
 			},
 			{
 				"name": "Vesta Orbital Station",
