@@ -1,6 +1,22 @@
 # Changelog
 
-## 1.7.0 (2026-07-26)
+## 1.8.0 (2026-07-26)
+
+#### Features
+
+- system: add support for managing moons and POIs (9d5e97e)
+
+#### Bug Fixes
+
+- data: update Romulus moon classification and description (ce93ec6)
+- data: reorder planet entries in systems.json (112beb4)
+
+#### Maintenance
+
+- seed: add random moons to Veritate, Aerith, Noriah, and Hairi systems (aeba379)
+- data: reorder planet entries in systems list (ea837d3)
+
+## v1.7.0 (2026-07-26)
 
 #### Features
 
