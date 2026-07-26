@@ -1364,16 +1364,16 @@
 		"faction": "federation",
 		"planets": [
 			{
+				"name": "Sinter",
+				"type": "Terrestrial (Scorched Basalt)",
+				"description": "An airless, heavily cratered hot silicate planet tidally locked to the primary star, rich in raw copper and iron."
+			},
+			{
 				"name": "Aerith I",
 				"type": "Terrestrial",
 				"gravity": "0.9g",
 				"population": "1.2 Billion",
 				"description": "A fertile world of endless golden plains and massive Federation grain silos. Under the installed loyalist regime, its state-subsidized farms feed neighboring systems."
-			},
-			{
-				"name": "Sinter",
-				"type": "Terrestrial (Scorched Basalt)",
-				"description": "An airless, heavily cratered hot silicate planet tidally locked to the primary star, rich in raw copper and iron."
 			},
 			{
 				"name": "Aerith II",
@@ -1421,16 +1421,16 @@
 		"faction": "",
 		"planets": [
 			{
+				"name": "Barathrum",
+				"type": "Terrestrial (Super-rotation Acidic)",
+				"description": "A blisteringly hot greenhouse planet covered in thick, toxic sulfur-dioxide clouds and subject to corrosive acid rain."
+			},
+			{
 				"name": "Hairi Prime",
 				"type": "Terrestrial (Oceanic)",
 				"gravity": "1.1g",
 				"population": "850 Million",
 				"description": "An independent water world famous for bioluminescent coral reefs, hosting sprawling floating trade platforms and underwater luxury zones."
-			},
-			{
-				"name": "Barathrum",
-				"type": "Terrestrial (Super-rotation Acidic)",
-				"description": "A blisteringly hot greenhouse planet covered in thick, toxic sulfur-dioxide clouds and subject to corrosive acid rain."
 			},
 			{
 				"name": "Mistral",
