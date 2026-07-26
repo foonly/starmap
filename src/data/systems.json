@@ -1897,8 +1897,8 @@
 				"moons": [
 					{
 						"name": "Romulus",
-						"type": "Forest Moon",
-						"description": "A gorgeous, densely wooded moon with a thin breathable atmosphere, housing hidden rebel outposts."
+						"type": "Barren Rock",
+						"description": "A small rock moon obiting low across the sky. It's only a twelth of the mass of Remus, but orbits much lower, so it looks about half the size."
 					},
 					{
 						"name": "Remus",
