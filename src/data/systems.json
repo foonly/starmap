@@ -424,9 +424,24 @@
 		"faction": "federation",
 		"planets": [
 			{
+				"name": "Ghienna I",
+				"type": "Terrestrial (Scorched Basalt)",
+				"description": "Tidal locked planet orbiting close to the sun. The dark side is used as a supply depot for the Federation fleet in the sector.",
+				"gravity": "0.3g"
+			},
+			{
 				"name": "Ghienna Prime",
-				"type": "Scrublands",
-				"description": "Agricultural planet supplying central systems."
+				"type": "Terrestrial (Scrublands)",
+				"description": "Agricultural planet supplying central systems. The planet is quite dry, and the equator is a big desert. But the poles are quite fertile thanks to a cycle of freezing and melting polar ice caps.",
+				"gravity": "0.83g",
+				"population": "2.1 Billion"
+			},
+			{
+				"name": "Ghienna III",
+				"type": "Terrestrial (Ice)",
+				"description": "Ghienna III has a thick atmosphere and is completely covered in water ice. The poles are extremely cold, and even the equator rarely goes above 0 degrees.",
+				"gravity": "1.23g",
+				"population": "12 Thousand"
 			}
 		],
 		"bases": [
