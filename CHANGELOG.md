@@ -1,6 +1,12 @@
 # Changelog
 
-## 1.9.0 (2026-07-28)
+## 1.10.0 (2026-07-28)
+
+#### Features
+
+- data: add planets to Ghienna system (4f0eed6)
+
+## v1.9.0 (2026-07-28)
 
 #### Features
 
