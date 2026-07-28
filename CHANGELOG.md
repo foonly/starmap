@@ -1,6 +1,12 @@
 # Changelog
 
-## 1.8.0 (2026-07-26)
+## 1.9.0 (2026-07-28)
+
+#### Features
+
+- data: update system records and project version (971f871)
+
+## v1.8.0 (2026-07-26)
 
 #### Features
 
