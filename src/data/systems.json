@@ -1418,6 +1418,14 @@
 				"description": "A fertile world of endless golden plains and massive Federation grain silos. Under the installed loyalist regime, its state-subsidized farms feed neighboring systems.",
 				"points_of_interest": [
 					{
+						"name": "Veldros",
+						"description": "The Captial of Aerith"
+					},
+					{
+						"name": "Aerith Vanguard Academy",
+						"description": "Federation Military Academy"
+					},
+					{
 						"name": "Whisper Peak Camp",
 						"description": "Insurgent Safehouse"
 					}
@@ -1466,12 +1474,12 @@
 				"type": "Sentry Post"
 			},
 			{
-				"name": "Aerith Vanguard Academy",
-				"type": "Federation Military Academy"
+				"name": "Fenrisil Agri-Transit",
+				"type": "Solas-Corp Corporate Silo Platform"
 			},
 			{
-				"name": "Solas-Corp Agri-Transit",
-				"type": "Corporate Silo Platform"
+				"name": "Velrisa Mining Station",
+				"type": "Aegis Asteroid Mining Base"
 			}
 		],
 		"description": "A prosperous agricultural system conquered by the Federation 10 years ago. Although some underground freedom fighters persist, the Federation installed a puppet regime that officially integrated the system, and the native population largely supports the Union due to economic growth."
@@ -1942,7 +1950,7 @@
 		"bases": [
 			{
 				"name": "Libertas Hub",
-				"type": "Subsidized Corporate Refinery"
+				"type": "Subsidized Corporate Refinery and Central Hub"
 			},
 			{
 				"name": "Vesta Orbital Station",
