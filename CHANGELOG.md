@@ -1,6 +1,16 @@
 # Changelog
 
-## 1.10.0 (2026-07-28)
+### 1.10.1 (2026-10-13)
+
+#### Bug Fixes
+
+- ui: light theme panel, NaN number inputs and drag-click selection (7fb943e)
+
+#### Continuous Integration
+
+- deploy only from main, serialize runs and pin SSH host key (418ad94)
+
+## v1.10.0 (2026-07-28)
 
 #### Features
 
