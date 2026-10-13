@@ -1,6 +1,21 @@
 # Changelog
 
-### 1.10.1 (2026-10-13)
+## 1.11.0 (2026-10-13)
+
+#### Features
+
+- ui: light mode for system inspector and map (54d0738)
+
+#### Documentation
+
+- correct dev server port in README (1488e8c)
+- reformat README and use a generic version badge example (4395ff2)
+
+#### Continuous Integration
+
+- update foonver action to v1.2.0 (1f8f8e6)
+
+### v1.10.1 (2026-10-13)
 
 #### Bug Fixes
 
