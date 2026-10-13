@@ -70,6 +70,13 @@ const emit = defineEmits([
 	"update-faction",
 ]);
 
+// Ignore transient non-numeric input (e.g. a cleared field) instead of storing NaN
+const updateFactionNumber = (fac, field, raw) => {
+	const value = parseInt(raw);
+	if (Number.isNaN(value)) return;
+	emit("update-faction", { ...fac, [field]: value });
+};
+
 // Find actual system records for origin/destination
 const originSystem = computed(() =>
 	props.systems.find((s) => s.id === props.originId),
@@ -96,7 +103,7 @@ const routeStats = computed(() => {
 
 <template>
 	<div
-		class="fixed top-20 left-4 bottom-4 w-80 z-30 bg-slate-900/90 dark:bg-space-900/90 border border-slate-200 dark:border-slate-800/80 backdrop-blur rounded-xl shadow-2xl flex flex-col overflow-hidden text-slate-800 dark:text-slate-100 font-sans"
+		class="fixed top-20 left-4 bottom-4 w-80 z-30 bg-white/90 dark:bg-space-900/90 border border-slate-200 dark:border-slate-800/80 backdrop-blur rounded-xl shadow-2xl flex flex-col overflow-hidden text-slate-800 dark:text-slate-100 font-sans"
 	>
 		<!-- Title Header -->
 		<div
@@ -159,12 +166,7 @@ const routeStats = computed(() => {
 								<input
 									type="number"
 									:value="fac.x"
-									@input="
-										emit('update-faction', {
-											...fac,
-											x: parseInt($event.target.value),
-										})
-									"
+									@input="updateFactionNumber(fac, 'x', $event.target.value)"
 									class="bg-slate-200 dark:bg-slate-900 text-[10px] rounded px-1 w-full outline-none"
 								/>
 							</div>
@@ -173,12 +175,7 @@ const routeStats = computed(() => {
 								<input
 									type="number"
 									:value="fac.y"
-									@input="
-										emit('update-faction', {
-											...fac,
-											y: parseInt($event.target.value),
-										})
-									"
+									@input="updateFactionNumber(fac, 'y', $event.target.value)"
 									class="bg-slate-200 dark:bg-slate-900 text-[10px] rounded px-1 w-full outline-none"
 								/>
 							</div>
@@ -187,12 +184,7 @@ const routeStats = computed(() => {
 								<input
 									type="number"
 									:value="fac.fontSize"
-									@input="
-										emit('update-faction', {
-											...fac,
-											fontSize: parseInt($event.target.value),
-										})
-									"
+									@input="updateFactionNumber(fac, 'fontSize', $event.target.value)"
 									class="bg-slate-200 dark:bg-slate-900 text-[10px] rounded px-1 w-full outline-none"
 								/>
 							</div>
@@ -201,12 +193,7 @@ const routeStats = computed(() => {
 								<input
 									type="number"
 									:value="fac.rotate"
-									@input="
-										emit('update-faction', {
-											...fac,
-											rotate: parseInt($event.target.value),
-										})
-									"
+									@input="updateFactionNumber(fac, 'rotate', $event.target.value)"
 									class="bg-slate-200 dark:bg-slate-900 text-[10px] rounded px-1 w-full outline-none"
 								/>
 							</div>

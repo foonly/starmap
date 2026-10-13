@@ -118,6 +118,13 @@ const handleInputChange = (field, value) => {
 	});
 };
 
+// Ignore transient non-numeric input (e.g. a cleared field) instead of storing NaN
+const handleNumberChange = (field, raw) => {
+	const value = parseInt(raw);
+	if (Number.isNaN(value)) return;
+	handleInputChange(field, value);
+};
+
 const handleNestedInputChange = (index, field, value, listName) => {
 	const newList = [...props.system[listName]];
 	newList[index] = { ...newList[index], [field]: value };
@@ -351,9 +358,7 @@ const availableSystemsToConnect = computed(() => {
 									<input
 										type="number"
 										:value="system.x"
-										@input="
-											handleInputChange('x', parseInt($event.target.value))
-										"
+										@input="handleNumberChange('x', $event.target.value)"
 										class="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors"
 									/>
 								</div>
@@ -365,9 +370,7 @@ const availableSystemsToConnect = computed(() => {
 									<input
 										type="number"
 										:value="system.y"
-										@input="
-											handleInputChange('y', parseInt($event.target.value))
-										"
+										@input="handleNumberChange('y', $event.target.value)"
 										class="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors"
 									/>
 								</div>

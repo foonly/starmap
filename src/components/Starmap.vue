@@ -59,6 +59,18 @@ const dragStart = ref({ x: 0, y: 0 });
 const draggedSystemId = ref(null);
 const systemDragOffset = ref({ x: 0, y: 0 });
 
+// Suppress the click that follows a pan or star drag, so dropping onto a star
+// doesn't select it (which would re-center the view)
+const DRAG_THRESHOLD = 3;
+const pointerDownPos = { x: 0, y: 0 };
+let didDrag = false;
+
+const startPointerTracking = (e) => {
+	pointerDownPos.x = e.clientX;
+	pointerDownPos.y = e.clientY;
+	didDrag = false;
+};
+
 // Compute direct transform string for the SVG main group
 const transformString = computed(() => {
 	return `translate(${panX.value}, ${panY.value}) scale(${zoom.value})`;
@@ -68,6 +80,7 @@ const transformString = computed(() => {
 const onMouseDown = (e) => {
 	// Only pan on left click
 	if (e.button !== 0) return;
+	startPointerTracking(e);
 
 	// If clicking a system in edit mode, don't pan the map
 	if (props.isEditMode && draggedSystemId.value) {
@@ -82,6 +95,14 @@ const onMouseDown = (e) => {
 };
 
 const onMouseMove = (e) => {
+	if (
+		(isDragging.value || draggedSystemId.value) &&
+		Math.hypot(e.clientX - pointerDownPos.x, e.clientY - pointerDownPos.y) >
+			DRAG_THRESHOLD
+	) {
+		didDrag = true;
+	}
+
 	if (props.isEditMode && draggedSystemId.value) {
 		const rect = svgContainer.value.getBoundingClientRect();
 		const mouseX = e.clientX - rect.left;
@@ -112,9 +133,15 @@ const onMouseUp = () => {
 };
 
 const onSystemMouseDown = (e, sysId) => {
-	if (!props.isEditMode) return;
+	if (!props.isEditMode || e.button !== 0) return;
 	e.stopPropagation();
+	startPointerTracking(e);
 	draggedSystemId.value = sysId;
+};
+
+const onSystemClick = (sysId) => {
+	if (didDrag) return;
+	emit("select-system", sysId);
 };
 
 const onWheel = (e) => {
@@ -434,7 +461,7 @@ const getLaneColor = (type) => {
 						]"
 						@mouseenter="emit('hover-system', star.id)"
 						@mouseleave="emit('hover-system', null)"
-						@click="emit('select-system', star.id)"
+						@click="onSystemClick(star.id)"
 						@mousedown="onSystemMouseDown($event, star.id)"
 					>
 						<!-- A. Dynamic Map Indicators (Origin / Dest / Selection Rings) -->
