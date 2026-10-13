@@ -303,11 +303,11 @@ const getLaneColor = (type) => {
 <template>
 	<div
 		ref="svgContainer"
-		class="w-full h-full cursor-grab active:cursor-grabbing select-none outline-none relative bg-slate-50 dark:bg-space-950 transition-colors duration-200"
+		class="w-full h-full cursor-grab active:cursor-grabbing select-none outline-none relative bg-slate-700 dark:bg-space-950 transition-colors duration-200"
 	>
 		<!-- Grid Overlay for Sci-Fi styling -->
 		<div
-			class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none opacity-45 dark:opacity-35"
+			class="absolute inset-0 bg-[radial-gradient(#64748b_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none opacity-60 dark:opacity-35"
 		></div>
 
 		<!-- Map UI Toolbar -->
@@ -384,7 +384,7 @@ const getLaneColor = (type) => {
 						:font-size="fac.fontSize"
 						:transform="`rotate(${fac.rotate || 0}, ${fac.x}, ${fac.y})`"
 						text-anchor="middle"
-						class="font-display font-black tracking-[0.25em] select-none pointer-events-none fill-slate-300/40 dark:fill-slate-800/35 uppercase"
+						class="font-display font-black tracking-[0.25em] select-none pointer-events-none fill-slate-400/25 dark:fill-slate-800/35 uppercase"
 					>
 						{{ fac.name }}
 					</text>
@@ -417,9 +417,7 @@ const getLaneColor = (type) => {
 							:stroke-width="isConnectionInRoute(conn) ? 3 : 1"
 							:class="[
 								'transition-all duration-200 pointer-events-none',
-								conn.type === 'class 3'
-									? 'stroke-slate-950 dark:stroke-slate-200'
-									: '',
+								conn.type === 'class 3' ? 'stroke-slate-200' : '',
 								// Dim lanes if search is active or hover focus is isolated
 								hoveredSystemId && !isLaneConnectedToHover(conn)
 									? 'opacity-10 dark:opacity-[0.05]'
@@ -533,7 +531,7 @@ const getLaneColor = (type) => {
 							:cy="star.y"
 							:r="star.type === 'black_hole' ? 24 : 15"
 							fill="transparent"
-							class="stroke-slate-300/30 dark:stroke-slate-800/40 opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none"
+							class="stroke-slate-400/40 dark:stroke-slate-800/40 opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none"
 							stroke-width="1"
 						/>
 
@@ -587,8 +585,8 @@ const getLaneColor = (type) => {
 							:class="[
 								'font-display tracking-wider select-none pointer-events-none transition-all duration-200',
 								star.type === 'black_hole'
-									? 'text-[11px] font-black dark:font-extrabold fill-slate-900 dark:fill-slate-100'
-									: 'text-[9.5px] font-medium font-mono fill-slate-700 dark:fill-slate-300',
+									? 'text-[11px] font-black dark:font-extrabold fill-white dark:fill-slate-100'
+									: 'text-[9.5px] font-medium font-mono fill-slate-200 dark:fill-slate-300',
 								// Highlight labels belonging to matches, dim others
 								isSystemFiltered(star.id)
 									? 'opacity-100 scale-100 font-semibold'

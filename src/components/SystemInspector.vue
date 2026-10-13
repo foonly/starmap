@@ -224,25 +224,25 @@ const availableSystemsToConnect = computed(() => {
 	>
 		<div
 			v-if="system"
-			class="fixed right-4 top-20 bottom-4 w-96 z-40 bg-slate-900/95 border border-slate-700/50 backdrop-blur-md rounded-xl shadow-2xl flex flex-col overflow-hidden text-slate-100 font-sans"
+			class="fixed right-4 top-20 bottom-4 w-96 z-40 bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-slate-700/50 backdrop-blur-md rounded-xl shadow-2xl flex flex-col overflow-hidden text-slate-800 dark:text-slate-100 font-sans"
 		>
 			<!-- Technical Grid Header Background -->
 			<div
-				class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none"
+				class="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none"
 			></div>
 
 			<!-- Header -->
 			<div
-				class="p-5 border-b border-slate-800/80 flex items-start justify-between relative z-10 bg-slate-950/40"
+				class="p-5 border-b border-slate-200 dark:border-slate-800/80 flex items-start justify-between relative z-10 bg-slate-50 dark:bg-slate-950/40"
 			>
 				<div>
 					<div class="flex items-center gap-2 mb-1">
 						<span
-							class="w-3 h-3 rounded-full inline-block animate-pulse shrink-0"
+							class="w-3 h-3 rounded-full inline-block animate-pulse shrink-0 ring-1 ring-slate-900/15 dark:ring-0"
 							:style="{ backgroundColor: system.color }"
 						></span>
 						<span
-							class="text-[10px] tracking-widest font-mono text-slate-400 uppercase font-bold"
+							class="text-[10px] tracking-widest font-mono text-slate-500 dark:text-slate-400 uppercase font-bold"
 						>
 							{{
 								system.type === "black_hole"
@@ -252,7 +252,7 @@ const availableSystemsToConnect = computed(() => {
 						</span>
 					</div>
 					<h2
-						class="text-xl font-display font-black text-slate-50 tracking-wide uppercase"
+						class="text-xl font-display font-black text-slate-900 dark:text-slate-50 tracking-wide uppercase"
 					>
 						{{ system.name }}
 					</h2>
@@ -262,7 +262,7 @@ const availableSystemsToConnect = computed(() => {
 				</div>
 				<button
 					@click="emit('close')"
-					class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-slate-200 border border-slate-700/50 transition-colors"
+					class="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 border border-slate-200 dark:border-slate-700/50 transition-colors"
 				>
 					<X class="w-4 h-4" />
 				</button>
@@ -276,7 +276,7 @@ const availableSystemsToConnect = computed(() => {
 				<div v-if="isEditMode" class="space-y-6">
 					<div class="space-y-4">
 						<h3
-							class="text-[10px] tracking-widest font-mono text-amber-500 uppercase font-black border-b border-amber-500/20 pb-2"
+							class="text-[10px] tracking-widest font-mono text-amber-600 dark:text-amber-500 uppercase font-black border-b border-amber-500/20 pb-2"
 						>
 							CORE SYSTEM DATA
 						</h3>
@@ -291,7 +291,7 @@ const availableSystemsToConnect = computed(() => {
 									type="text"
 									:value="system.name"
 									@input="handleInputChange('name', $event.target.value)"
-									class="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors"
+									class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors"
 								/>
 							</div>
 
@@ -304,7 +304,7 @@ const availableSystemsToConnect = computed(() => {
 									<select
 										:value="system.type"
 										@change="handleInputChange('type', $event.target.value)"
-										class="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors"
+										class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors"
 									>
 										<option value="star">Star</option>
 										<option value="black_hole">Black Hole</option>
@@ -320,13 +320,13 @@ const availableSystemsToConnect = computed(() => {
 											type="color"
 											:value="system.color"
 											@input="handleInputChange('color', $event.target.value)"
-											class="w-10 h-9 bg-slate-950 border border-slate-700 rounded cursor-pointer"
+											class="w-10 h-9 bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded cursor-pointer"
 										/>
 										<input
 											type="text"
 											:value="system.color"
 											@input="handleInputChange('color', $event.target.value)"
-											class="flex-1 bg-slate-950 border border-slate-700 rounded p-2 text-[10px] font-mono focus:border-blue-500 outline-none transition-colors uppercase"
+											class="flex-1 bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-2 text-[10px] font-mono focus:border-blue-500 outline-none transition-colors uppercase"
 										/>
 									</div>
 								</div>
@@ -340,7 +340,7 @@ const availableSystemsToConnect = computed(() => {
 								<select
 									:value="system.faction"
 									@change="handleInputChange('faction', $event.target.value)"
-									class="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors"
+									class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors"
 								>
 									<option value="">None / Independent</option>
 									<option v-for="fac in factions" :key="fac.id" :value="fac.id">
@@ -359,7 +359,7 @@ const availableSystemsToConnect = computed(() => {
 										type="number"
 										:value="system.x"
 										@input="handleNumberChange('x', $event.target.value)"
-										class="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors"
+										class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors"
 									/>
 								</div>
 								<div>
@@ -371,7 +371,7 @@ const availableSystemsToConnect = computed(() => {
 										type="number"
 										:value="system.y"
 										@input="handleNumberChange('y', $event.target.value)"
-										class="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors"
+										class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors"
 									/>
 								</div>
 							</div>
@@ -385,7 +385,7 @@ const availableSystemsToConnect = computed(() => {
 									:value="system.description"
 									@input="handleInputChange('description', $event.target.value)"
 									rows="4"
-									class="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors resize-none"
+									class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-2 text-sm focus:border-blue-500 outline-none transition-colors resize-none"
 								></textarea>
 							</div>
 
@@ -403,7 +403,7 @@ const availableSystemsToConnect = computed(() => {
 					<div class="space-y-4">
 						<div class="flex items-center justify-between">
 							<h3
-								class="text-[10px] tracking-widest font-mono text-amber-500 uppercase font-black"
+								class="text-[10px] tracking-widest font-mono text-amber-600 dark:text-amber-500 uppercase font-black"
 							>
 								HYPERLANE CONNECTIONS
 							</h3>
@@ -413,11 +413,11 @@ const availableSystemsToConnect = computed(() => {
 							<div
 								v-for="lane in adjacentLanes"
 								:key="lane.system.id"
-								class="flex items-center justify-between p-2 bg-slate-950/50 border border-slate-800 rounded"
+								class="flex items-center justify-between p-2 bg-slate-50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 rounded"
 							>
 								<div class="flex items-center gap-2">
 									<span
-										class="w-1.5 h-1.5 rounded-full"
+										class="w-1.5 h-1.5 rounded-full ring-1 ring-slate-900/15 dark:ring-0"
 										:style="{ backgroundColor: lane.system.color }"
 									></span>
 									<span class="text-xs font-mono">{{ lane.system.name }}</span>
@@ -432,7 +432,7 @@ const availableSystemsToConnect = computed(() => {
 												type: $event.target.value,
 											})
 										"
-										class="bg-slate-900 border border-slate-700 text-[9px] font-mono rounded px-1 py-0.5"
+										class="bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-[9px] font-mono rounded px-1 py-0.5"
 									>
 										<option value="class 1">Class 1</option>
 										<option value="class 2">Class 2</option>
@@ -446,7 +446,7 @@ const availableSystemsToConnect = computed(() => {
 												to: lane.system.id,
 											})
 										"
-										class="text-slate-500 hover:text-red-400"
+										class="text-slate-500 hover:text-red-500 dark:hover:text-red-400"
 									>
 										<X class="w-3.5 h-3.5" />
 									</button>
@@ -465,7 +465,7 @@ const availableSystemsToConnect = computed(() => {
 											$event.target.value = '';
 										}
 									"
-									class="w-full bg-slate-950 border border-slate-700 rounded p-2 text-xs focus:border-blue-500 outline-none transition-colors"
+									class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-2 text-xs focus:border-blue-500 outline-none transition-colors"
 								>
 									<option value="">+ CONNECT TO SYSTEM...</option>
 									<option
@@ -483,13 +483,13 @@ const availableSystemsToConnect = computed(() => {
 					<div class="space-y-4">
 						<div class="flex items-center justify-between">
 							<h3
-								class="text-[10px] tracking-widest font-mono text-amber-500 uppercase font-black"
+								class="text-[10px] tracking-widest font-mono text-amber-600 dark:text-amber-500 uppercase font-black"
 							>
 								PLANETARY SURVEY
 							</h3>
 							<button
 								@click="addItem('planets')"
-								class="text-[10px] font-mono bg-blue-500/20 text-blue-400 px-2 py-1 rounded border border-blue-500/30 hover:bg-blue-500/30 transition-colors"
+								class="text-[10px] font-mono bg-blue-500/20 text-blue-600 dark:text-blue-400 px-2 py-1 rounded border border-blue-500/30 hover:bg-blue-500/30 transition-colors"
 							>
 								+ ADD PLANET
 							</button>
@@ -499,11 +499,11 @@ const availableSystemsToConnect = computed(() => {
 							<div
 								v-for="(planet, idx) in system.planets"
 								:key="idx"
-								class="p-3 bg-slate-950/50 border border-slate-800 rounded-lg space-y-2 relative"
+								class="p-3 bg-slate-50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 rounded-lg space-y-2 relative"
 							>
 								<button
 									@click="removeItem(idx, 'planets')"
-									class="absolute top-2 right-2 text-slate-500 hover:text-red-400 transition-colors"
+									class="absolute top-2 right-2 text-slate-500 hover:text-red-500 dark:hover:text-red-400 transition-colors"
 								>
 									<X class="w-3.5 h-3.5" />
 								</button>
@@ -519,7 +519,7 @@ const availableSystemsToConnect = computed(() => {
 										)
 									"
 									placeholder="Planet Name"
-									class="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-xs focus:border-blue-500 outline-none"
+									class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-1.5 text-xs focus:border-blue-500 outline-none"
 								/>
 								<input
 									type="text"
@@ -533,7 +533,7 @@ const availableSystemsToConnect = computed(() => {
 										)
 									"
 									placeholder="Planet Type"
-									class="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-xs focus:border-blue-500 outline-none"
+									class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-1.5 text-xs focus:border-blue-500 outline-none"
 								/>
 								<textarea
 									:value="planet.description"
@@ -547,7 +547,7 @@ const availableSystemsToConnect = computed(() => {
 									"
 									placeholder="Description"
 									rows="2"
-									class="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-xs focus:border-blue-500 outline-none resize-none"
+									class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-1.5 text-xs focus:border-blue-500 outline-none resize-none"
 								></textarea>
 
 								<div class="grid grid-cols-2 gap-2">
@@ -563,7 +563,7 @@ const availableSystemsToConnect = computed(() => {
 											)
 										"
 										placeholder="Gravity (e.g. 1.0g)"
-										class="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-[10px] focus:border-blue-500 outline-none"
+										class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-1.5 text-[10px] focus:border-blue-500 outline-none"
 									/>
 									<input
 										type="text"
@@ -577,21 +577,21 @@ const availableSystemsToConnect = computed(() => {
 											)
 										"
 										placeholder="Population"
-										class="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-[10px] focus:border-blue-500 outline-none"
+										class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-1.5 text-[10px] focus:border-blue-500 outline-none"
 									/>
 								</div>
 
 								<!-- Moons Edit Section -->
-								<div class="mt-3 pt-3 border-t border-slate-800/80 space-y-2">
+								<div class="mt-3 pt-3 border-t border-slate-200 dark:border-slate-800/80 space-y-2">
 									<div class="flex items-center justify-between">
 										<span
-											class="text-[9px] font-mono text-indigo-400 font-bold uppercase tracking-wider"
+											class="text-[9px] font-mono text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider"
 											>Moons ({{ (planet.moons || []).length }})</span
 										>
 										<button
 											type="button"
 											@click="addSubNestedItem(idx, 'moons')"
-											class="text-[9px] font-mono bg-indigo-500/10 text-indigo-400 px-1.5 py-0.5 rounded border border-indigo-500/20 hover:bg-indigo-500/20 transition-colors"
+											class="text-[9px] font-mono bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 px-1.5 py-0.5 rounded border border-indigo-500/20 hover:bg-indigo-500/20 transition-colors"
 										>
 											+ ADD MOON
 										</button>
@@ -603,12 +603,12 @@ const availableSystemsToConnect = computed(() => {
 										<div
 											v-for="(moon, mIdx) in planet.moons"
 											:key="mIdx"
-											class="space-y-1.5 relative bg-slate-900/30 p-2 rounded border border-slate-800/60"
+											class="space-y-1.5 relative bg-white dark:bg-slate-900/30 p-2 rounded border border-slate-200 dark:border-slate-800/60"
 										>
 											<button
 												type="button"
 												@click="removeSubNestedItem(idx, mIdx, 'moons')"
-												class="absolute top-1.5 right-1.5 text-slate-500 hover:text-red-400 transition-colors"
+												class="absolute top-1.5 right-1.5 text-slate-500 hover:text-red-500 dark:hover:text-red-400 transition-colors"
 											>
 												<X class="w-3 h-3" />
 											</button>
@@ -625,7 +625,7 @@ const availableSystemsToConnect = computed(() => {
 													)
 												"
 												placeholder="Moon Name"
-												class="w-[calc(100%-16px)] bg-slate-950 border border-slate-800 rounded p-1 text-[10px] focus:border-indigo-500 outline-none"
+												class="w-[calc(100%-16px)] bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded p-1 text-[10px] focus:border-indigo-500 outline-none"
 											/>
 											<div class="grid grid-cols-2 gap-1.5">
 												<input
@@ -641,7 +641,7 @@ const availableSystemsToConnect = computed(() => {
 														)
 													"
 													placeholder="Moon Type"
-													class="w-full bg-slate-950 border border-slate-800 rounded p-1 text-[10px] focus:border-indigo-500 outline-none"
+													class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded p-1 text-[10px] focus:border-indigo-500 outline-none"
 												/>
 												<input
 													type="text"
@@ -656,7 +656,7 @@ const availableSystemsToConnect = computed(() => {
 														)
 													"
 													placeholder="Moon Description"
-													class="w-full bg-slate-950 border border-slate-800 rounded p-1 text-[10px] focus:border-indigo-500 outline-none"
+													class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded p-1 text-[10px] focus:border-indigo-500 outline-none"
 												/>
 											</div>
 										</div>
@@ -664,10 +664,10 @@ const availableSystemsToConnect = computed(() => {
 								</div>
 
 								<!-- POIs Edit Section -->
-								<div class="mt-3 pt-3 border-t border-slate-800/80 space-y-2">
+								<div class="mt-3 pt-3 border-t border-slate-200 dark:border-slate-800/80 space-y-2">
 									<div class="flex items-center justify-between">
 										<span
-											class="text-[9px] font-mono text-amber-500 font-bold uppercase tracking-wider"
+											class="text-[9px] font-mono text-amber-600 dark:text-amber-500 font-bold uppercase tracking-wider"
 											>Points of Interest ({{
 												(planet.points_of_interest || []).length
 											}})</span
@@ -675,7 +675,7 @@ const availableSystemsToConnect = computed(() => {
 										<button
 											type="button"
 											@click="addSubNestedItem(idx, 'points_of_interest')"
-											class="text-[9px] font-mono bg-amber-500/10 text-amber-400 px-1.5 py-0.5 rounded border border-amber-500/20 hover:bg-amber-500/20 transition-colors"
+											class="text-[9px] font-mono bg-amber-500/10 text-amber-600 dark:text-amber-400 px-1.5 py-0.5 rounded border border-amber-500/20 hover:bg-amber-500/20 transition-colors"
 										>
 											+ ADD POI
 										</button>
@@ -690,14 +690,14 @@ const availableSystemsToConnect = computed(() => {
 										<div
 											v-for="(poi, pIdx) in planet.points_of_interest"
 											:key="pIdx"
-											class="space-y-1.5 relative bg-slate-900/30 p-2 rounded border border-slate-800/60"
+											class="space-y-1.5 relative bg-white dark:bg-slate-900/30 p-2 rounded border border-slate-200 dark:border-slate-800/60"
 										>
 											<button
 												type="button"
 												@click="
 													removeSubNestedItem(idx, pIdx, 'points_of_interest')
 												"
-												class="absolute top-1.5 right-1.5 text-slate-500 hover:text-red-400 transition-colors"
+												class="absolute top-1.5 right-1.5 text-slate-500 hover:text-red-500 dark:hover:text-red-400 transition-colors"
 											>
 												<X class="w-3 h-3" />
 											</button>
@@ -714,7 +714,7 @@ const availableSystemsToConnect = computed(() => {
 													)
 												"
 												placeholder="POI Name"
-												class="w-[calc(100%-16px)] bg-slate-950 border border-slate-800 rounded p-1 text-[10px] focus:border-amber-500 outline-none"
+												class="w-[calc(100%-16px)] bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded p-1 text-[10px] focus:border-amber-500 outline-none"
 											/>
 											<input
 												type="text"
@@ -729,7 +729,7 @@ const availableSystemsToConnect = computed(() => {
 													)
 												"
 												placeholder="POI Description"
-												class="w-full bg-slate-950 border border-slate-800 rounded p-1 text-[10px] focus:border-amber-500 outline-none"
+												class="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded p-1 text-[10px] focus:border-amber-500 outline-none"
 											/>
 										</div>
 									</div>
@@ -741,13 +741,13 @@ const availableSystemsToConnect = computed(() => {
 					<div class="space-y-4">
 						<div class="flex items-center justify-between">
 							<h3
-								class="text-[10px] tracking-widest font-mono text-amber-500 uppercase font-black"
+								class="text-[10px] tracking-widest font-mono text-amber-600 dark:text-amber-500 uppercase font-black"
 							>
 								ORBITAL INFRASTRUCTURE
 							</h3>
 							<button
 								@click="addItem('bases')"
-								class="text-[10px] font-mono bg-blue-500/20 text-blue-400 px-2 py-1 rounded border border-blue-500/30 hover:bg-blue-500/30 transition-colors"
+								class="text-[10px] font-mono bg-blue-500/20 text-blue-600 dark:text-blue-400 px-2 py-1 rounded border border-blue-500/30 hover:bg-blue-500/30 transition-colors"
 							>
 								+ ADD BASE
 							</button>
@@ -757,11 +757,11 @@ const availableSystemsToConnect = computed(() => {
 							<div
 								v-for="(base, idx) in system.bases"
 								:key="idx"
-								class="p-3 bg-slate-950/50 border border-slate-800 rounded-lg space-y-2 relative"
+								class="p-3 bg-slate-50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 rounded-lg space-y-2 relative"
 							>
 								<button
 									@click="removeItem(idx, 'bases')"
-									class="absolute top-2 right-2 text-slate-500 hover:text-red-400 transition-colors"
+									class="absolute top-2 right-2 text-slate-500 hover:text-red-500 dark:hover:text-red-400 transition-colors"
 								>
 									<X class="w-3.5 h-3.5" />
 								</button>
@@ -777,7 +777,7 @@ const availableSystemsToConnect = computed(() => {
 										)
 									"
 									placeholder="Base Name"
-									class="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-xs focus:border-blue-500 outline-none"
+									class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-1.5 text-xs focus:border-blue-500 outline-none"
 								/>
 								<input
 									type="text"
@@ -791,7 +791,7 @@ const availableSystemsToConnect = computed(() => {
 										)
 									"
 									placeholder="Base Type"
-									class="w-full bg-slate-950 border border-slate-700 rounded p-1.5 text-xs focus:border-blue-500 outline-none"
+									class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded p-1.5 text-xs focus:border-blue-500 outline-none"
 								/>
 							</div>
 						</div>
@@ -803,10 +803,15 @@ const availableSystemsToConnect = computed(() => {
 					<!-- Faction Badge -->
 					<div
 						v-if="faction"
-						class="p-3 rounded-lg border flex items-center gap-3 bg-slate-950/20"
-						:style="{ borderColor: `${system.color}30` }"
+						class="p-3 rounded-lg border flex items-center gap-3 bg-slate-50/60 dark:bg-slate-950/20 border-slate-200 dark:border-[color:var(--sys-color-faint)]"
+						:style="{
+							'--sys-color': system.color,
+							'--sys-color-faint': `${system.color}30`,
+						}"
 					>
-						<Shield class="w-5 h-5 shrink-0" :style="{ color: system.color }" />
+						<Shield
+							class="w-5 h-5 shrink-0 text-slate-500 dark:text-[color:var(--sys-color)]"
+						/>
 						<div>
 							<div
 								class="text-[9px] font-mono tracking-widest text-slate-500 uppercase"
@@ -814,8 +819,7 @@ const availableSystemsToConnect = computed(() => {
 								CONTROLLING REGIME
 							</div>
 							<div
-								class="text-sm font-bold tracking-wide"
-								:style="{ color: system.color }"
+								class="text-sm font-bold tracking-wide text-slate-800 dark:text-[color:var(--sys-color)]"
 							>
 								{{ faction.name }}
 							</div>
@@ -824,16 +828,16 @@ const availableSystemsToConnect = computed(() => {
 
 					<div
 						v-else
-						class="p-3 rounded-lg border border-slate-800 flex items-center gap-3 bg-slate-950/20"
+						class="p-3 rounded-lg border border-slate-200 dark:border-slate-800 flex items-center gap-3 bg-slate-50/60 dark:bg-slate-950/20"
 					>
-						<Shield class="w-5 h-5 shrink-0 text-slate-600" />
+						<Shield class="w-5 h-5 shrink-0 text-slate-400 dark:text-slate-600" />
 						<div>
 							<div
 								class="text-[9px] font-mono tracking-widest text-slate-500 uppercase"
 							>
 								POLITICAL STATUS
 							</div>
-							<div class="text-sm font-bold tracking-wide text-slate-400">
+							<div class="text-sm font-bold tracking-wide text-slate-500 dark:text-slate-400">
 								INDEPENDENT / NEUTRAL
 							</div>
 						</div>
@@ -846,13 +850,13 @@ const availableSystemsToConnect = computed(() => {
 							:class="[
 								'py-2 px-3 rounded-lg border text-xs font-mono font-bold flex items-center justify-center gap-1.5 transition-all',
 								isOrigin
-									? 'bg-green-950/50 text-green-400 border-green-500/50 shadow-[0_0_10px_rgba(34,197,94,0.15)]'
-									: 'bg-slate-950/40 hover:bg-slate-800 text-slate-300 border-slate-800 hover:border-slate-700',
+									? 'bg-green-50 dark:bg-green-950/50 text-green-600 dark:text-green-400 border-green-500/50 shadow-[0_0_10px_rgba(34,197,94,0.15)]'
+									: 'bg-slate-50 dark:bg-slate-950/40 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700',
 							]"
 						>
 							<MapPin
 								class="w-3.5 h-3.5"
-								:class="isOrigin ? 'text-green-400' : 'text-slate-400'"
+								:class="isOrigin ? 'text-green-600 dark:text-green-400' : 'text-slate-500 dark:text-slate-400'"
 							/>
 							{{ isOrigin ? "ORIGIN" : "SET ORIGIN" }}
 						</button>
@@ -862,13 +866,13 @@ const availableSystemsToConnect = computed(() => {
 							:class="[
 								'py-2 px-3 rounded-lg border text-xs font-mono font-bold flex items-center justify-center gap-1.5 transition-all',
 								isDestination
-									? 'bg-rose-950/50 text-rose-400 border-rose-500/50 shadow-[0_0_10px_rgba(244,63,94,0.15)]'
-									: 'bg-slate-950/40 hover:bg-slate-800 text-slate-300 border-slate-800 hover:border-slate-700',
+									? 'bg-rose-50 dark:bg-rose-950/50 text-rose-600 dark:text-rose-400 border-rose-500/50 shadow-[0_0_10px_rgba(244,63,94,0.15)]'
+									: 'bg-slate-50 dark:bg-slate-950/40 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700',
 							]"
 						>
 							<MapPin
 								class="w-3.5 h-3.5"
-								:class="isDestination ? 'text-rose-400' : 'text-slate-400'"
+								:class="isDestination ? 'text-rose-600 dark:text-rose-400' : 'text-slate-500 dark:text-slate-400'"
 							/>
 							{{ isDestination ? "DESTINATION" : "SET DEST" }}
 						</button>
@@ -877,13 +881,13 @@ const availableSystemsToConnect = computed(() => {
 					<!-- Description / Lore -->
 					<div class="space-y-2">
 						<h3
-							class="text-xs font-mono tracking-widest text-slate-400 uppercase font-bold flex items-center gap-1.5"
+							class="text-xs font-mono tracking-widest text-slate-500 dark:text-slate-400 uppercase font-bold flex items-center gap-1.5"
 						>
-							<Radio class="w-3.5 h-3.5 text-blue-400" />
+							<Radio class="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
 							Galactic Lore Database
 						</h3>
 						<p
-							class="text-sm text-slate-300 leading-relaxed bg-slate-950/30 p-3 rounded-lg border border-slate-800/40"
+							class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-slate-50 dark:bg-slate-950/30 p-3 rounded-lg border border-slate-200 dark:border-slate-800/40"
 						>
 							{{
 								system.description ||
@@ -898,9 +902,9 @@ const availableSystemsToConnect = computed(() => {
 						v-if="system.planets && system.planets.length > 0"
 					>
 						<h3
-							class="text-xs font-mono tracking-widest text-slate-400 uppercase font-bold flex items-center gap-1.5"
+							class="text-xs font-mono tracking-widest text-slate-500 dark:text-slate-400 uppercase font-bold flex items-center gap-1.5"
 						>
-							<Orbit class="w-3.5 h-3.5 text-indigo-400" />
+							<Orbit class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
 							Planetary Survey ({{ system.planets.length }})
 						</h3>
 
@@ -908,33 +912,33 @@ const availableSystemsToConnect = computed(() => {
 							<div
 								v-for="planet in system.planets"
 								:key="planet.name"
-								class="bg-slate-950/40 p-3 rounded-lg border border-slate-800/50 hover:border-slate-700/50 transition-colors"
+								class="bg-slate-50 dark:bg-slate-950/40 p-3 rounded-lg border border-slate-200 dark:border-slate-800/50 hover:border-slate-300 dark:hover:border-slate-700/50 transition-colors"
 							>
 								<div class="flex items-center justify-between mb-1">
 									<span
-										class="font-semibold text-sm text-slate-100 flex items-center gap-1.5"
+										class="font-semibold text-sm text-slate-800 dark:text-slate-100 flex items-center gap-1.5"
 									>
 										<Disc class="w-3 h-3 text-slate-500 shrink-0" />
 										{{ planet.name }}
 									</span>
 									<span
-										class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-slate-800 text-slate-400"
+										class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400"
 									>
 										{{ planet.type }}
 									</span>
 								</div>
-								<p class="text-xs text-slate-400 leading-normal mb-2">
+								<p class="text-xs text-slate-500 dark:text-slate-400 leading-normal mb-2">
 									{{ planet.description }}
 								</p>
 								<div
 									v-if="planet.gravity || planet.population"
-									class="flex gap-3 border-t border-slate-800/50 pt-2"
+									class="flex gap-3 border-t border-slate-200 dark:border-slate-800/50 pt-2"
 								>
 									<div v-if="planet.gravity">
 										<span class="text-[9px] font-mono text-slate-500 block"
 											>GRAVITY</span
 										>
-										<span class="text-[10px] font-bold text-slate-300">{{
+										<span class="text-[10px] font-bold text-slate-600 dark:text-slate-300">{{
 											planet.gravity
 										}}</span>
 									</div>
@@ -942,7 +946,7 @@ const availableSystemsToConnect = computed(() => {
 										<span class="text-[9px] font-mono text-slate-500 block"
 											>POPULATION</span
 										>
-										<span class="text-[10px] font-bold text-slate-300">{{
+										<span class="text-[10px] font-bold text-slate-600 dark:text-slate-300">{{
 											planet.population
 										}}</span>
 									</div>
@@ -955,14 +959,14 @@ const availableSystemsToConnect = computed(() => {
 										(planet.points_of_interest &&
 											planet.points_of_interest.length > 0)
 									"
-									class="flex flex-wrap gap-2 mt-2 pt-2 border-t border-slate-800/30 text-[10px] font-mono"
+									class="flex flex-wrap gap-2 mt-2 pt-2 border-t border-slate-200 dark:border-slate-800/30 text-[10px] font-mono"
 								>
 									<button
 										v-if="planet.moons && planet.moons.length > 0"
 										@click="toggleMoons(planet.name)"
-										class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-slate-800/40 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors"
+										class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800/40 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
 									>
-										<Orbit class="w-3 h-3 text-indigo-400 shrink-0" />
+										<Orbit class="w-3 h-3 text-indigo-600 dark:text-indigo-400 shrink-0" />
 										Moons ({{ planet.moons.length }})
 										<ChevronDown
 											v-if="!expandedMoons[planet.name]"
@@ -976,9 +980,9 @@ const availableSystemsToConnect = computed(() => {
 											planet.points_of_interest.length > 0
 										"
 										@click="togglePOIs(planet.name)"
-										class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-slate-800/40 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors"
+										class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800/40 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
 									>
-										<MapPin class="w-3 h-3 text-amber-400 shrink-0" />
+										<MapPin class="w-3 h-3 text-amber-600 dark:text-amber-400 shrink-0" />
 										Points of Interest ({{ planet.points_of_interest.length }})
 										<ChevronDown
 											v-if="!expandedPOIs[planet.name]"
@@ -995,7 +999,7 @@ const availableSystemsToConnect = computed(() => {
 										planet.moons.length > 0 &&
 										expandedMoons[planet.name]
 									"
-									class="mt-2 pl-3 border-l-2 border-indigo-500/30 space-y-2 bg-slate-950/20 p-2 rounded-r-lg"
+									class="mt-2 pl-3 border-l-2 border-indigo-500/30 space-y-2 bg-slate-50/60 dark:bg-slate-950/20 p-2 rounded-r-lg"
 								>
 									<div
 										v-for="moon in planet.moons"
@@ -1003,19 +1007,19 @@ const availableSystemsToConnect = computed(() => {
 										class="text-xs"
 									>
 										<div class="flex items-center justify-between">
-											<span class="font-semibold text-slate-200">{{
+											<span class="font-semibold text-slate-700 dark:text-slate-200">{{
 												moon.name
 											}}</span>
 											<span
 												v-if="moon.type"
-												class="text-[9px] font-mono text-indigo-400 bg-indigo-950/40 px-1.5 py-0.5 rounded"
+												class="text-[9px] font-mono text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/40 px-1.5 py-0.5 rounded"
 											>
 												{{ moon.type }}
 											</span>
 										</div>
 										<p
 											v-if="moon.description"
-											class="text-[11px] text-slate-400 mt-0.5 leading-normal"
+											class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-normal"
 										>
 											{{ moon.description }}
 										</p>
@@ -1029,17 +1033,17 @@ const availableSystemsToConnect = computed(() => {
 										planet.points_of_interest.length > 0 &&
 										expandedPOIs[planet.name]
 									"
-									class="mt-2 pl-3 border-l-2 border-amber-500/30 space-y-2 bg-slate-950/20 p-2 rounded-r-lg"
+									class="mt-2 pl-3 border-l-2 border-amber-500/30 space-y-2 bg-slate-50/60 dark:bg-slate-950/20 p-2 rounded-r-lg"
 								>
 									<div
 										v-for="poi in planet.points_of_interest"
 										:key="poi.name"
 										class="text-xs"
 									>
-										<span class="font-semibold text-slate-200 block">{{
+										<span class="font-semibold text-slate-700 dark:text-slate-200 block">{{
 											poi.name
 										}}</span>
-										<p class="text-[11px] text-slate-400 mt-0.5 leading-normal">
+										<p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 leading-normal">
 											{{ poi.description }}
 										</p>
 									</div>
@@ -1051,9 +1055,9 @@ const availableSystemsToConnect = computed(() => {
 					<!-- Bases / Outposts List -->
 					<div class="space-y-3" v-if="system.bases && system.bases.length > 0">
 						<h3
-							class="text-xs font-mono tracking-widest text-slate-400 uppercase font-bold flex items-center gap-1.5"
+							class="text-xs font-mono tracking-widest text-slate-500 dark:text-slate-400 uppercase font-bold flex items-center gap-1.5"
 						>
-							<Shield class="w-3.5 h-3.5 text-emerald-400" />
+							<Shield class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
 							Orbital Infrastructure ({{ system.bases.length }})
 						</h3>
 
@@ -1061,10 +1065,10 @@ const availableSystemsToConnect = computed(() => {
 							<div
 								v-for="base in system.bases"
 								:key="base.name"
-								class="bg-slate-950/40 p-3 rounded-lg border border-slate-800/50 flex items-center justify-between"
+								class="bg-slate-50 dark:bg-slate-950/40 p-3 rounded-lg border border-slate-200 dark:border-slate-800/50 flex items-center justify-between"
 							>
 								<div>
-									<div class="font-semibold text-sm text-slate-100">
+									<div class="font-semibold text-sm text-slate-800 dark:text-slate-100">
 										{{ base.name }}
 									</div>
 									<div
@@ -1074,7 +1078,7 @@ const availableSystemsToConnect = computed(() => {
 									</div>
 								</div>
 								<Star
-									class="w-3.5 h-3.5 text-amber-400 fill-amber-400/20 shrink-0"
+									class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 fill-amber-400/20 shrink-0"
 								/>
 							</div>
 						</div>
@@ -1083,9 +1087,9 @@ const availableSystemsToConnect = computed(() => {
 					<!-- Connected Adjacent Jump Lanes -->
 					<div class="space-y-3">
 						<h3
-							class="text-xs font-mono tracking-widest text-slate-400 uppercase font-bold flex items-center gap-1.5"
+							class="text-xs font-mono tracking-widest text-slate-500 dark:text-slate-400 uppercase font-bold flex items-center gap-1.5"
 						>
-							<ArrowRight class="w-3.5 h-3.5 text-purple-400" />
+							<ArrowRight class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400" />
 							Active Jump Corridors ({{ adjacentLanes.length }})
 						</h3>
 
@@ -1094,15 +1098,15 @@ const availableSystemsToConnect = computed(() => {
 								v-for="lane in adjacentLanes"
 								:key="lane.system.id + '-' + lane.type"
 								@click="emit('select-system', lane.system.id)"
-								class="w-full text-left bg-slate-950/40 hover:bg-slate-800/80 p-3 rounded-lg border border-slate-800/40 hover:border-slate-700/80 transition-all flex items-center justify-between group"
+								class="w-full text-left bg-slate-50 dark:bg-slate-950/40 hover:bg-slate-100 dark:hover:bg-slate-800/80 p-3 rounded-lg border border-slate-200 dark:border-slate-800/40 hover:border-slate-300 dark:hover:border-slate-700/80 transition-all flex items-center justify-between group"
 							>
 								<div class="flex items-center gap-2.5">
 									<span
-										class="w-2 h-2 rounded-full inline-block shrink-0"
+										class="w-2 h-2 rounded-full inline-block shrink-0 ring-1 ring-slate-900/15 dark:ring-0"
 										:style="{ backgroundColor: lane.system.color }"
 									></span>
 									<span
-										class="text-sm font-medium text-slate-200 group-hover:text-white transition-colors"
+										class="text-sm font-medium text-slate-700 dark:text-slate-200 group-hover:text-slate-900 dark:group-hover:text-white transition-colors"
 									>
 										{{ lane.system.name }}
 									</span>
@@ -1115,7 +1119,7 @@ const availableSystemsToConnect = computed(() => {
 										{{ lane.type }}
 									</span>
 									<ArrowRight
-										class="w-3.5 h-3.5 text-slate-500 group-hover:text-slate-300 group-hover:translate-x-0.5 transition-all"
+										class="w-3.5 h-3.5 text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300 group-hover:translate-x-0.5 transition-all"
 									/>
 								</div>
 							</button>
@@ -1135,10 +1139,16 @@ const availableSystemsToConnect = computed(() => {
 	background: transparent;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-	background: #334155;
+	background: #cbd5e1;
 	border-radius: 4px;
 }
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+	background: #334155;
+}
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #94a3b8;
+}
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
 	background: #475569;
 }
 </style>
