@@ -170,7 +170,7 @@ To launch the local development environment with Hot Module Replacement (HMR):
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
+Open [http://localhost:5183](http://localhost:5183) in your browser to view the application.
 
 ### Building for Production
 
